@@ -1,4 +1,68 @@
-/Temp
-/Library
-/Logs
-/.vs
+# =========================
+
+# Unity Generated Folders
+
+# =========================
+
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+UserSettings/
+
+# =========================
+
+# Auto Generated Files
+
+# =========================
+
+*.csproj
+*.unityproj
+*.sln
+*.suo
+*.tmp
+*.user
+*.userprefs
+*.pidb
+*.booproj
+*.svd
+
+# =========================
+
+# IDE (Visual Studio / VSCode)
+
+# =========================
+
+.vs/
+.vscode/
+
+# =========================
+
+# OS Files
+
+# =========================
+
+.DS_Store
+Thumbs.db
+
+# =========================
+
+# Crash Reports
+
+# =========================
+
+sysinfo.txt
+
+# =========================
+
+# Addressables / Asset Bundles (optional)
+
+# =========================
+
+# Uncomment if you generate them
+
+# Assets/AddressableAssetsData/*
+
+# ServerData/
