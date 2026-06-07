@@ -11,6 +11,7 @@ public class GameManager : SingletonBehaviour<GameManager>
         DontDestroyOnLoad(this);
 
         DataManager.Instance.Initialize();
+        PopupManager.Instance.Initialize();
         ModelCenter.ReleaseInstance();
     }
 

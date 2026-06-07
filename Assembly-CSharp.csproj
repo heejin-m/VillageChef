@@ -51,6 +51,7 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\Data\Recipe.cs" />
     <Compile Include="Assets\Scripts\Model\ModelCenter.cs" />
+    <Compile Include="Assets\Scripts\Enum\PopupEnum.cs" />
     <Compile Include="Assets\Scripts\BaseWindow.cs" />
     <Compile Include="Assets\Scripts\Manager\DataManager.cs" />
     <Compile Include="Assets\Scripts\RecipeInfo.cs" />
@@ -60,18 +61,20 @@
     <Compile Include="Assets\Scripts\Model\AbstractModel.cs" />
     <Compile Include="Assets\Scripts\StartInfoSet.cs" />
     <Compile Include="Assets\Scripts\Model\GameManager.cs" />
+    <Compile Include="Assets\Scripts\HomeWindow.cs" />
     <Compile Include="Assets\Scripts\Manager\WaterfallProcess.cs" />
     <Compile Include="Assets\Scripts\Common\ImageExtension.cs" />
+    <Compile Include="Assets\Scripts\Manager\PopupManager.cs" />
     <Compile Include="Assets\Scripts\Model\SingletonBehaviour.cs" />
     <Compile Include="Assets\Scripts\Manager\LoginManager.cs" />
     <Compile Include="Assets\Scripts\Model\RecipeModel.cs" />
+    <Compile Include="Assets\Scripts\Common\Utils.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile-2-Pass.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
-    <None Include="Assets\TextMesh Pro\Glyph Report.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
