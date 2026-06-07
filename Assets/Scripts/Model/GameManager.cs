@@ -1,16 +1,16 @@
-using UnityEngine;
-
 public class GameManager : SingletonBehaviour<GameManager>
 {
     private void Awake()
     {
-        if (GameManager.Instance != null && GameManager.Instance != this)
+        if (Instance != null && Instance != this)
         {
             Destroy(this.gameObject);
             return;
         }
 
         DontDestroyOnLoad(this);
+
+        DataManager.Instance.Initialize();
         ModelCenter.ReleaseInstance();
     }
 

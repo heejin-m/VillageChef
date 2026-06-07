@@ -1,0 +1,19 @@
+{
+    "recipes": [
+        {
+            "id": 1,
+            "name": "감자수프",
+            "description": "따뜻한 감자 수프"
+        },
+        {
+            "id": 2,
+            "name": "햄버거",
+            "description": "육즙 가득 햄버거"
+        },
+        {
+            "id": 3,
+            "name": "샐러드",
+            "description": "신선한 채소 샐러드"
+        }
+    ]
+}
