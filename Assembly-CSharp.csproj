@@ -49,7 +49,21 @@
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\6000.3.13f1\Editor\Data\Tools\BuildPipeline\Unity.SourceGenerators\Unity.UIToolkit.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\Model\ModelCenter.cs" />
     <Compile Include="Assets\Scripts\BaseWindow.cs" />
+    <Compile Include="Assets\Scripts\RecipeInfo.cs" />
+    <Compile Include="Assets\Scripts\Manager\SaveManager.cs" />
+    <Compile Include="Assets\Scripts\Model\PlayerModel.cs" />
+    <Compile Include="Assets\Scripts\Model\AbstractModel.cs" />
+    <Compile Include="Assets\Scripts\StartInfoSet.cs" />
+    <Compile Include="Assets\Scripts\Model\GameManager.cs" />
+    <Compile Include="Assets\Scripts\Manager\WaterfallProcess.cs" />
+    <Compile Include="Assets\Scripts\Model\SingletonBehaviour.cs" />
+    <Compile Include="Assets\Scripts\Manager\LoginManager.cs" />
+    <Compile Include="Assets\Scripts\Model\RecipeModel.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\FreePixelFood\ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

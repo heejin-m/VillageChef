@@ -23,11 +23,6 @@ public abstract class SingletonBehaviour<T> : MonoBehaviour where T : MonoBehavi
         }
     }
 
-    public static T it
-    {
-        get => Instance;
-    }
-
     protected virtual void OnDestroy()
     {
         if (IsMyInstance())
