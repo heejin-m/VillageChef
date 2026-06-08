@@ -10,7 +10,7 @@ public class HomeWindow : BaseWindow
 
     public void Awake()
     {
-        tesetbutton.onClick.AddListener(Test);
+        tesetbutton.SetOnClickEvent(Test);
     }
 
     public void Test()
