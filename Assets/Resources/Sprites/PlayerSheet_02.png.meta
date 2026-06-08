@@ -1,0 +1,306 @@
+fileFormatVersion: 2
+guid: f05b19d01618cbe47be272241375976d
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Walk_Side_3
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 558
+        width: 62
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 603ad39ed821259479f0c6624c2d9d3b
+      internalID: 875863540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Side_0
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 376
+        width: 64
+        height: 134
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b28d5e44d7e2da46a0f7bc9a96859f3
+      internalID: -2082930450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Side_1
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 376
+        width: 69
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3ee0cb0ba6e87643a05f2e4fc188819
+      internalID: -327487817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Side_2
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 377
+        width: 68
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88ddaa1f3098e204a8517f2e66de1e75
+      internalID: 1065137991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Side_4
+      rect:
+        serializedVersion: 2
+        x: 363
+        y: 377
+        width: 73
+        height: 134
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9679a6cfd911bf74fa0e40ae9f3db13c
+      internalID: -158787038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 70ba0e32627a9cf4eab4aa77e2845e8e
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceOnImport
+        value: False
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":114.0,"y":171.0},"gridSpriteOffset":{"x":0.0,"y":71.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      Idle_Down_0: -753178365
+      Idle_Down_1: 1854074021
+      Idle_Side_1: 845400486
+      Idle_Up_0: 578332739
+      Idle_Up_1: -1192155955
+      Jump_0: 1851010466
+      Jump_1: -1860403320
+      Jump_2: 436793446
+      Jump_3: 89287801
+      Land_0: 1708147744
+      Land_1: -1972739456
+      Land_2: 400366755
+      PlayerSheet_01_0: 1888403108
+      PlayerSheet_01_1: 884559345
+      PlayerSheet_01_16: -342692027
+      PlayerSheet_01_17: 203136938
+      PlayerSheet_01_18: -887210267
+      PlayerSheet_01_19: 504462252
+      PlayerSheet_01_2: -451762664
+      PlayerSheet_01_20: 334893485
+      PlayerSheet_01_21: -786239191
+      PlayerSheet_01_3: 1706452833
+      PlayerSheet_01_34: 759736449
+      PlayerSheet_01_35: 442603681
+      PlayerSheet_01_36: -1581367190
+      PlayerSheet_01_37: 707445644
+      PlayerSheet_01_38: -1925244838
+      PlayerSheet_01_39: 1969423190
+      PlayerSheet_01_4: 72856728
+      PlayerSheet_01_5: 2105609020
+      PlayerSheet_01_52: -1170557265
+      PlayerSheet_01_54: -1394261675
+      PlayerSheet_01_55: 983119424
+      PlayerSheet_01_6: 1650174905
+      PlayerSheet_01_7: 867589961
+      PlayerSheet_01_8: 1910606488
+      PlayerSheet_01_9: 1399093124
+      Run_Down_0: 1352446823
+      Run_Down_1: 666282049
+      Run_Down_2: 54809047
+      Run_Down_3: -73012893
+      Run_Side_0: -182297589
+      Run_Side_1: 1156866097
+      Run_Side_2: 846469621
+      Run_Side_3: 1534811385
+      Run_Up_0: -1758656068
+      Run_Up_1: -1003417880
+      Run_Up_2: 2071159668
+      Run_Up_3: 492138941
+      Walk_Down_0: -441803123
+      Walk_Down_1: -1109254214
+      Walk_Down_2: 148293093
+      Walk_Down_3: -836150750
+      Walk_Side_0: -2082930450
+      Walk_Side_1: -327487817
+      Walk_Side_2: 1065137991
+      Walk_Side_3: 875863540
+      Walk_Side_4: -158787038
+      Walk_Up_0: -1562088398
+      Walk_Up_1: -690161680
+      Walk_Up_2: 2087524407
+      Walk_Up_3: 294313822
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
