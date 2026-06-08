@@ -54,6 +54,7 @@
     <Compile Include="Assets\Scripts\Model\ModelCenter.cs" />
     <Compile Include="Assets\Scripts\Enum\PopupEnum.cs" />
     <Compile Include="Assets\Scripts\BaseWindow.cs" />
+    <Compile Include="Assets\Scripts\Player\MyCharacterMove.cs" />
     <Compile Include="Assets\Scripts\Manager\DataManager.cs" />
     <Compile Include="Assets\Scripts\RecipeInfo.cs" />
     <Compile Include="Assets\Scripts\Data\RecipeData.cs" />
