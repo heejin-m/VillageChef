@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Atlas
+  m_EditorClassIdentifier: Unity.Addressables.Editor::UnityEditor.AddressableAssets.Settings.AddressableAssetGroup
+  m_GroupName: Atlas
+  m_GUID: 1dabc0c2468cd944a9514677fc17af98
+  m_SerializeEntries:
+  - m_GUID: 5740b179724dfb440a7f2f9c632f65fd
+    m_Address: Assets/AddressableAssets/Atlas/FoodUI.spriteatlasv2
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f3b7a999fae6f80408c947ca62f322f4
+    m_Address: Assets/AddressableAssets/Atlas/CommonUI.spriteatlasv2
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 991152a455d9cd2468c135036fc10c2f, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 5873c36d20a4a79498b621f9e50619bf, type: 2}
+    - {fileID: 11400000, guid: d4fed8cac1cb70c44968ded044ec3f96, type: 2}

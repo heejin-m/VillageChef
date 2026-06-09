@@ -74,3 +74,5 @@ Assembly-CSharp.csproj
 UserSettings/Layouts/default-6000.dwlt
 UserSettings/EditorUserSettings.asset
 Assembly-CSharp.csproj
+/Logs
+Logs/shadercompiler-UnityShaderCompiler.exe-0.log

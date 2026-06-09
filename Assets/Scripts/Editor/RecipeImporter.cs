@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using System.IO;
 using UnityEditor;
@@ -53,9 +52,7 @@ public class RecipeImporter
 
         Directory.CreateDirectory("Assets/Resources");
 
-        File.WriteAllText(
-            "Assets/Resources/RecipeData.json",
-            json);
+        File.WriteAllText("Assets/Resources/RecipeData.json", json);
 
         AssetDatabase.Refresh();
 
