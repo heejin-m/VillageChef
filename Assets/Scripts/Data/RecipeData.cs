@@ -1,6 +1,9 @@
 using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using UnityEngine;
+using UnityEngine.AddressableAssets;
+using UnityEngine.ResourceManagement.AsyncOperations;
 
 [Serializable]
 public class RecipeDatabase
@@ -13,14 +16,28 @@ public class RecipeData : IData
 {
     public Dictionary<ushort, Recipe> Recipes { get; private set; } = new();
 
-    public void Initialize()
+    private const string ADDRESS = "RecipeData.json";
+    private AsyncOperationHandle<TextAsset> _handle;
+
+    public async Task Initialize()
     {
-        LoadRecipes();
+        await LoadRecipes();
     }
 
-    private void LoadRecipes()
+    public void Release()
     {
-        TextAsset jsonFile = Resources.Load<TextAsset>("RecipeData");
+        if (_handle.IsValid())
+        {
+            Addressables.Release(_handle);
+        }
+    }
+
+    private async Task LoadRecipes()
+    {
+        Release();
+
+        _handle = Addressables.LoadAssetAsync<TextAsset>(ADDRESS);
+        TextAsset jsonFile = await _handle.Task;
 
         if (jsonFile == null)
         {
@@ -31,6 +48,7 @@ public class RecipeData : IData
         RecipeDatabase database = JsonUtility.FromJson<RecipeDatabase>(jsonFile.text);
 
         Recipes.Clear();
+
         foreach (var recipe in database.recipes)
         {
             if (!Recipes.ContainsKey(recipe.id))

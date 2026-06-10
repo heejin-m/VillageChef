@@ -33,9 +33,8 @@ public class LoginManager : MonoBehaviour
         StartCoroutine(GaugeRoutine(minLoadingTime));
 
         WaterfallProcess waterfall = new();
-
+        waterfall.Add(GetData);
         waterfall.Add(GetStartInfoSet);
-
         waterfall.Start(result =>
         {
             isSuccess = result;
@@ -45,7 +44,6 @@ public class LoginManager : MonoBehaviour
         yield return new WaitUntil(() => isFinished);
 
         float elapsed = Time.time - startTime;
-
         if (elapsed < minLoadingTime)
         {
             yield return new WaitForSeconds(minLoadingTime - elapsed);
@@ -78,6 +76,13 @@ public class LoginManager : MonoBehaviour
     {
         StartInfoSet data = SaveManager.Load();
         ModelCenter.Recipe.Set(data.recipeInfos);
+
+        onFinished?.Invoke(true);
+    }
+
+    private async void GetData(Action<bool> onFinished)
+    {
+        await DataManager.Instance.Initialize();
 
         onFinished?.Invoke(true);
     }

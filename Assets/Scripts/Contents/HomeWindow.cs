@@ -1,6 +1,6 @@
 using UnityEngine.UI;
 
-public class HomeWindow : BaseWindow
+public class HomeWindow : FrameWindow
 {
     #region Insepctor
 

@@ -1,4 +1,7 @@
+using System.Threading.Tasks;
+
 public interface IData
 {
-    void Initialize();
+    Task Initialize();
+    void Release();
 }

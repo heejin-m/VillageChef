@@ -4,7 +4,8 @@ public class PopupEnum
 {
     public enum ePopup
     {
-        [Description("Prefabs/Popup/RecipePopup")]
+        [Description("Assets/AddressableAssets/Prefabs/Popup/RecipePopup.prefab")]
         RecipePopup,
+
     }
 }

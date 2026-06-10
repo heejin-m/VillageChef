@@ -15,8 +15,8 @@ MonoBehaviour:
   m_GroupName: Json
   m_GUID: ddf2e988206052d4dbc98d9d6f20e6c0
   m_SerializeEntries:
-  - m_GUID: 8701254f3b3094a4681e38b430dd2515
-    m_Address: Assets/AddressableAssets/Json
+  - m_GUID: 2e3072731db6a1248b624f0a3e5bbe80
+    m_Address: RecipeData.json
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0

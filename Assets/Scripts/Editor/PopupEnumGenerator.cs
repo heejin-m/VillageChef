@@ -5,7 +5,7 @@ using UnityEngine;
 
 public static class PopupEnumGenerator
 {
-    private const string PopupPrefabFolder = "Assets/Resources/Prefabs/Popup";
+    private const string PopupPrefabFolder = "Assets/AddressableAssets/Prefabs/Popup";
     private const string OutputPath = "Assets/Scripts/Enum/PopupEnum.cs";
 
     [MenuItem("Tools/Generate/Popup Enum")]
@@ -33,9 +33,7 @@ public static class PopupEnumGenerator
             string assetPath = AssetDatabase.GUIDToAssetPath(guid);
             string fileName = Path.GetFileNameWithoutExtension(assetPath);
 
-            string resourcePath = assetPath
-                .Replace("Assets/Resources/", "")
-                .Replace(".prefab", "");
+            string resourcePath = assetPath;
 
             sb.AppendLine($"        [Description(\"{resourcePath}\")]");
             sb.AppendLine($"        {fileName},");

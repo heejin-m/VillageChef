@@ -1,27 +1,21 @@
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Reflection;
+using System.Threading.Tasks;
 using UnityEngine;
 
 public class DataManager : SingletonBehaviour<DataManager>
 {
     private readonly Dictionary<Type, IData> dataMap = new();
 
-    public void Initialize()
+    public async Task Initialize()
     {
-        GenerateData();
+        await AddData<RecipeData>();
     }
 
-    private void GenerateData()
-    {
-        AddData<RecipeData>();
-    }
-
-    private void AddData<T>() where T : IData, new()
+    private async Task AddData<T>() where T : IData, new()
     {
         T data = new();
-        data.Initialize();
+        await data.Initialize();
         dataMap.Add(typeof(T), data);
     }
 
