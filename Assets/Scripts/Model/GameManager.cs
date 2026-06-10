@@ -16,6 +16,7 @@ public class GameManager : SingletonBehaviour<GameManager>
 
     public void Release()
     {
+        PopupManager.Instance.Release();
         ModelCenter.ReleaseInstance();
     }
 }

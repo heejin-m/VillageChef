@@ -5,23 +5,6 @@ using UnityEngine.AddressableAssets;
 using UnityEngine.ResourceManagement.AsyncOperations;
 using static PopupEnum;
 
-public class PopupEntry
-{
-    private ePopup _ePopup;
-    private GameObject _popupObj;
-    private AsyncOperationHandle<GameObject> _handle;
-
-    public ePopup GetPopupType() => _ePopup;
-    public GameObject GetObj() => _popupObj;
-    public AsyncOperationHandle<GameObject> GetHandle() => _handle;
-
-    public PopupEntry(ePopup ePopup, GameObject popupObj, AsyncOperationHandle<GameObject> handle) : base()
-    {
-        _ePopup = ePopup;
-        _popupObj = popupObj;
-        handle = _handle;
-    }
-}
 
 public class PopupManager : SingletonBehaviour<PopupManager>
 {
@@ -30,7 +13,8 @@ public class PopupManager : SingletonBehaviour<PopupManager>
     /// <summary>
     /// 팝업 스택
     /// </summary>
-    private readonly Stack<PopupEntry> _popupStack = new();
+    private readonly Stack<GameObject> _popupStack = new();
+    private readonly Dictionary<ePopup, AsyncOperationHandle<GameObject>> _cachedHandles = new();
 
     /// <summary>
     /// 초기화
@@ -38,6 +22,49 @@ public class PopupManager : SingletonBehaviour<PopupManager>
     public void Initialize()
     {
         this.CloseAll();
+    }
+
+    public void Release()
+    {
+        this.CloseAll();
+    }
+
+    /// <summary>
+    /// 팝업 로드
+    /// </summary>
+    /// <param name="ePopup"></param>
+    /// <returns></returns>
+    private async Task<GameObject> LoadPopupPrefab(ePopup ePopup)
+    {
+        if (_cachedHandles.TryGetValue(ePopup, out var cachedHandle))
+        {
+            if (cachedHandle.IsValid())
+            {
+                return cachedHandle.Result;
+            }
+
+            _cachedHandles.Remove(ePopup);
+        }
+
+        string path = ePopup.GetDescription();
+        var handle = Addressables.LoadAssetAsync<GameObject>(path);
+
+        GameObject prefab = await handle.Task;
+
+        if (handle.Status != AsyncOperationStatus.Succeeded || prefab == null)
+        {
+            Debug.LogError($"Popup prefab load failed: {path}");
+
+            if (handle.IsValid())
+            {
+                Addressables.Release(handle);
+            }
+
+            return null;
+        }
+
+        _cachedHandles.Add(ePopup, handle);
+        return prefab;
     }
 
     /// <summary>
@@ -48,26 +75,25 @@ public class PopupManager : SingletonBehaviour<PopupManager>
     /// <returns></returns>
     public async Task<T> OpenPopup<T>(ePopup ePopup) where T : PopupWindow
     {
-        string path = ePopup.GetDescription();
-        var handle = Addressables.LoadAssetAsync<GameObject>(path);
+        GameObject prefab = await LoadPopupPrefab(ePopup);
 
-        GameObject prefab = await handle.Task;
-        if (handle.Status != AsyncOperationStatus.Succeeded || prefab == null)
+        if (prefab == null)
         {
-            Debug.LogError($"Popup prefab load failed: {path}");
-
-            if (handle.IsValid())
-            {
-                handle.Release();
-            }
-
             return null;
         }
 
         GameObject obj = Instantiate(prefab, popupRoot);
-        _popupStack.Push(new PopupEntry(ePopup, obj, handle));
-
         T popup = obj.GetComponent<T>();
+
+        if (popup == null)
+        {
+            Debug.LogError($"Popup component missing: {typeof(T).Name}");
+            Destroy(obj);
+            return null;
+        }
+
+        _popupStack.Push(obj);
+
         popup.Open();
 
         return popup;
@@ -82,17 +108,10 @@ public class PopupManager : SingletonBehaviour<PopupManager>
             return;
 
         // 팝업 오브젝트 Destroy
-        PopupEntry entry = _popupStack.Pop();
-        if (entry != null)
+        GameObject obj = _popupStack.Pop();
+        if (obj != null)
         {
-            Destroy(entry.GetObj());
-        }
-
-        // 핸들 Release
-        var handle = entry.GetHandle();
-        if (handle.IsValid())
-        {
-            handle.Release();
+            Destroy(obj);
         }
     }
 
@@ -107,19 +126,30 @@ public class PopupManager : SingletonBehaviour<PopupManager>
         // 팝업 오브젝트 Destroy
         while (_popupStack.Count > 0)
         {
-            PopupEntry entry = _popupStack.Pop();
+            GameObject obj = _popupStack.Pop();
 
-            if (entry != null)
+            if (obj != null)
             {
-                Destroy(entry.GetObj());
-
-                // 핸들 Release
-                var handle = entry.GetHandle();
-                if (handle.IsValid())
-                {
-                    handle.Release();
-                }
+                Destroy(obj);
             }
         }
+
+        ReleaseCache();
+    }
+
+    /// <summary>
+    /// 캐시 Release
+    /// </summary>
+    public void ReleaseCache()
+    {
+        foreach (var handle in _cachedHandles.Values)
+        {
+            if (handle.IsValid())
+            {
+                Addressables.Release(handle);
+            }
+        }
+
+        _cachedHandles.Clear();
     }
 }

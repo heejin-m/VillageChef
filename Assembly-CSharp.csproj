@@ -64,6 +64,7 @@
     <Compile Include="Assets\Scripts\StartInfoSet.cs" />
     <Compile Include="Assets\Scripts\Contents\Player\MyCharacterMove.cs" />
     <Compile Include="Assets\Scripts\Data\IData.cs" />
+    <Compile Include="Assets\Scripts\Contents\RecipePopup\RecipePopup.cs" />
     <Compile Include="Assets\Scripts\Model\GameManager.cs" />
     <Compile Include="Assets\Scripts\Contents\RecipePopup\RecipeInfo.cs" />
     <Compile Include="Assets\Scripts\Manager\WaterfallProcess.cs" />
