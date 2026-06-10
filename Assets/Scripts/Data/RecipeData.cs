@@ -9,7 +9,7 @@ public class RecipeDatabase
 }
 
 // 제이슨 파일을 가져와서 읽고 dictionary 형태의 자료구조로 정리.
-public class RecipeData
+public class RecipeData : IData
 {
     public Dictionary<ushort, Recipe> Recipes { get; private set; } = new();
 

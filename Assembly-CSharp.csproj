@@ -62,6 +62,7 @@
     <Compile Include="Assets\Scripts\Model\PlayerModel.cs" />
     <Compile Include="Assets\Scripts\Model\AbstractModel.cs" />
     <Compile Include="Assets\Scripts\StartInfoSet.cs" />
+    <Compile Include="Assets\Scripts\Data\IData.cs" />
     <Compile Include="Assets\Scripts\Model\GameManager.cs" />
     <Compile Include="Assets\Scripts\HomeWindow.cs" />
     <Compile Include="Assets\Scripts\Manager\WaterfallProcess.cs" />
@@ -1210,10 +1211,6 @@
       <HintPath>Library\ScriptAssemblies\UnityEngine.Purchasing.SecurityCore.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Unity.Analytics.DataPrivacy">
-      <HintPath>Library\ScriptAssemblies\Unity.Analytics.DataPrivacy.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="Unity.Rider.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.Rider.Editor.dll</HintPath>
       <Private>False</Private>
@@ -1224,6 +1221,10 @@
     </Reference>
     <Reference Include="Unity.AI.Navigation.Editor.ConversionSystem">
       <HintPath>Library\ScriptAssemblies\Unity.AI.Navigation.Editor.ConversionSystem.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.Analytics.DataPrivacy">
+      <HintPath>Library\ScriptAssemblies\Unity.Analytics.DataPrivacy.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Analytics">
@@ -1258,12 +1259,12 @@
       <HintPath>Library\ScriptAssemblies\UnityEditor.XR.LegacyInputHelpers.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="UnityEngine.Purchasing.Stores">
-      <HintPath>Library\ScriptAssemblies\UnityEngine.Purchasing.Stores.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="Unity.Profiling.Core">
       <HintPath>Library\ScriptAssemblies\Unity.Profiling.Core.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.Purchasing.Stores">
+      <HintPath>Library\ScriptAssemblies\UnityEngine.Purchasing.Stores.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.Timeline.Editor">

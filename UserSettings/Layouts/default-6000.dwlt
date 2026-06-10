@@ -1280,7 +1280,7 @@ MonoBehaviour:
   m_AudioPlay: 0
   m_DebugDrawModesUseInteractiveLightBakingData: 0
   m_Position:
-    m_Target: {x: 0.97786576, y: 0.07652595, z: 0.050936405}
+    m_Target: {x: 1438.816, y: 88.28117, z: 1.6633902}
     speed: 2
     m_Value: {x: 0.97786576, y: 0.07652595, z: 0.050936405}
   m_RenderMode: 0
@@ -1332,7 +1332,7 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 4.641039
+    m_Target: 80.53367
     speed: 2
     m_Value: 4.641039
   m_Ortho:
@@ -1489,7 +1489,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Resources/Animator/Player
+    - Assets/Resources
     m_Globs: []
     m_ProductIds: 
     m_AnyWithAssetOrigin: 0
@@ -1513,8 +1513,8 @@ MonoBehaviour:
       m_Data: 33624
     m_ExpandedIDs:
     - m_Data: 0
-    - m_Data: 33188
-    - m_Data: 33190
+    - m_Data: 35956
+    - m_Data: 35958
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1547,8 +1547,8 @@ MonoBehaviour:
       m_Data: 0
     m_ExpandedIDs:
     - m_Data: 0
-    - m_Data: 33188
-    - m_Data: 33190
+    - m_Data: 35956
+    - m_Data: 35958
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
