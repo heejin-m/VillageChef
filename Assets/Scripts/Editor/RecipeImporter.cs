@@ -8,7 +8,7 @@ public class RecipeImporter
     [MenuItem("Tools/Import Recipe CSV")]
     public static void Import()
     {
-        string csvPath = "Assets/Datas/RecipeData.csv";
+        string csvPath = "Assets/CSV/RecipeData.csv";
 
         if (!File.Exists(csvPath))
         {
@@ -50,9 +50,9 @@ public class RecipeImporter
 
         string json = JsonUtility.ToJson(database, true);
 
-        Directory.CreateDirectory("Assets/Resources");
+        Directory.CreateDirectory("Assets/CSV");
 
-        File.WriteAllText("Assets/Resources/RecipeData.json", json);
+        File.WriteAllText("Assets/AddressableAssets/RecipeData.json", json);
 
         AssetDatabase.Refresh();
 

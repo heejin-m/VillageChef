@@ -1,4 +1,5 @@
 using System.Threading.Tasks;
+using UnityEngine;
 using UnityEngine.AddressableAssets;
 using UnityEngine.ResourceManagement.AsyncOperations;
 using UnityEngine.ResourceManagement.ResourceProviders;
@@ -16,7 +17,7 @@ public class SceneLoadManager : SingletonBehaviour<SceneLoadManager>
         {
             await Addressables.UnloadSceneAsync(_currentSceneHandle).Task;
         }
-
+        
         var handle = Addressables.LoadSceneAsync(eScene.GetDescription(), LoadSceneMode.Single);
 
         SceneInstance scene = await handle.Task;
@@ -32,5 +33,23 @@ public class SceneLoadManager : SingletonBehaviour<SceneLoadManager>
         }
 
         _currentSceneHandle = handle;
+        await OpenSceneWindow(scene.Scene);
+    }
+
+    private async Task OpenSceneWindow(Scene scene)
+    {
+        foreach (GameObject rootObject in scene.GetRootGameObjects())
+        {
+            FrameWindow frameWindow = rootObject.GetComponentInChildren<FrameWindow>(true);
+            if (frameWindow == null)
+            {
+                continue;
+            }
+
+            await frameWindow.Open();
+            return;
+        }
+
+        Debug.LogWarning($"{scene.name} scene does not have a FrameWindow.");
     }
 }

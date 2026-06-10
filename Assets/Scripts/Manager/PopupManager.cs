@@ -94,7 +94,7 @@ public class PopupManager : SingletonBehaviour<PopupManager>
 
         _popupStack.Push(obj);
 
-        popup.Open();
+        await popup.Open();
 
         return popup;
     }
