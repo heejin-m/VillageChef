@@ -1,8 +1,8 @@
 using System;
 using System.Collections;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using static SceneEnum;
 
 public class LoginManager : MonoBehaviour
 {
@@ -55,7 +55,7 @@ public class LoginManager : MonoBehaviour
             yield break;
         }
 
-        SceneManager.LoadScene("Home", LoadSceneMode.Single);
+        LoadHomeScene();
     }
 
     private IEnumerator GaugeRoutine(float duration)
@@ -72,6 +72,18 @@ public class LoginManager : MonoBehaviour
         gauge.fillAmount = 1f;
     }
 
+    private async void LoadHomeScene()
+    {
+        try
+        {
+            await SceneLoadManager.Instance.SingleSceneLoad(eScene.Home);
+        }
+        catch (Exception e)
+        {
+            Debug.LogError(e);
+        }
+    }
+
     private void GetStartInfoSet(Action<bool> onFinished)
     {
         StartInfoSet data = SaveManager.Load();
@@ -82,8 +94,15 @@ public class LoginManager : MonoBehaviour
 
     private async void GetData(Action<bool> onFinished)
     {
-        await DataManager.Instance.Initialize();
-
-        onFinished?.Invoke(true);
+        try
+        {
+            await DataManager.Instance.Initialize();
+            onFinished?.Invoke(true);
+        }
+        catch (Exception e)
+        {
+            Debug.LogError(e);
+            onFinished?.Invoke(false);
+        }
     }
 }

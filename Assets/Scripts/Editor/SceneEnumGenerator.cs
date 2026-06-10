@@ -3,12 +3,12 @@ using System.Text;
 using UnityEditor;
 using UnityEngine;
 
-public static class PopupEnumGenerator
+public class SceneEnumGenerator : MonoBehaviour
 {
-    private const string POPUP_PREFAB_FOLDER = "Assets/AddressableAssets/Prefabs/Popup";
-    private const string OUTPUT_PATH = "Assets/Scripts/Enum/PopupEnum.cs";
+    private const string POPUP_PREFAB_FOLDER = "Assets/AddressableAssets/Scenes";
+    private const string OUTPUT_PATH = "Assets/Scripts/Enum/SceneEnum.cs";
 
-    [MenuItem("Tools/Generate/Popup Enum")]
+    [MenuItem("Tools/Generate/Scene Enum")]
     public static void Generate()
     {
         if (!Directory.Exists(POPUP_PREFAB_FOLDER))
@@ -17,15 +17,15 @@ public static class PopupEnumGenerator
             return;
         }
 
-        string[] prefabGuids = AssetDatabase.FindAssets("t:Prefab", new[] { POPUP_PREFAB_FOLDER });
+        string[] prefabGuids = AssetDatabase.FindAssets("t:Scene", new[] { POPUP_PREFAB_FOLDER });
 
         StringBuilder sb = new StringBuilder();
 
         sb.AppendLine("using System.ComponentModel;");
         sb.AppendLine();
-        sb.AppendLine("public class PopupEnum");
+        sb.AppendLine("public class SceneEnum");
         sb.AppendLine("{");
-        sb.AppendLine("    public enum ePopup");
+        sb.AppendLine("    public enum eScene");
         sb.AppendLine("    {");
 
         foreach (string guid in prefabGuids)
@@ -33,7 +33,8 @@ public static class PopupEnumGenerator
             string assetPath = AssetDatabase.GUIDToAssetPath(guid);
             string fileName = Path.GetFileNameWithoutExtension(assetPath);
 
-            string resourcePath = assetPath;
+            string resourcePath = assetPath
+                            .Replace("Assets/AddressableAssets/Scenes/", "");
 
             sb.AppendLine($"        [Description(\"{resourcePath}\")]");
             sb.AppendLine($"        {fileName},");
