@@ -455,6 +455,7 @@ GameObject:
   - component: {fileID: 759946134}
   - component: {fileID: 759946136}
   - component: {fileID: 759946135}
+  - component: {fileID: 759946137}
   m_Layer: 0
   m_Name: RecipeCollider
   m_TagString: Untagged
@@ -550,6 +551,18 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1.1039686, y: 1.4366674}
   m_EdgeRadius: 0
+--- !u!114 &759946137
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 759946133}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1b4928ace11b524b9619fe4d259b8fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionEventTrigger2D
 --- !u!1 &782666174
 GameObject:
   m_ObjectHideFlags: 0
@@ -677,7 +690,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 869d67d2f9013f54fa52244fad907173, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HomeWindow
-  playerRoot: {fileID: 1396927647}
+  playerSpawnPoint: {fileID: 1396927647}
+  recipeBookCollider: {fileID: 759946137}
+  bedCollider: {fileID: 2078151851}
 --- !u!224 &810976320
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1814,8 +1829,8 @@ Transform:
   m_GameObject: {fileID: 1396927646}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -539.99994, y: -303.74997, z: 0}
-  m_LocalScale: {x: 0.56249994, y: 0.56249994, z: 0.56249994}
+  m_LocalPosition: {x: -540.3, y: -303.79, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 810976320}
@@ -1914,6 +1929,7 @@ GameObject:
   - component: {fileID: 2078151848}
   - component: {fileID: 2078151850}
   - component: {fileID: 2078151849}
+  - component: {fileID: 2078151851}
   m_Layer: 0
   m_Name: BedCollider
   m_TagString: Untagged
@@ -1997,7 +2013,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 2.50232, y: -1.4442492}
+  m_Offset: {x: 2.5467873, y: -1.5136564}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -2007,8 +2023,20 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1.0162883, y: 1.0651655}
+  m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &2078151851
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2078151847}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1b4928ace11b524b9619fe4d259b8fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionEventTrigger2D
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

@@ -68,6 +68,7 @@
     <Compile Include="Assets\Scripts\Contents\RecipePopup\RecipePopup.cs" />
     <Compile Include="Assets\Scripts\Model\GameManager.cs" />
     <Compile Include="Assets\Scripts\Contents\RecipePopup\RecipeInfo.cs" />
+    <Compile Include="Assets\Scripts\Common\CollisionEventTrigger2D.cs" />
     <Compile Include="Assets\Scripts\Manager\WaterfallProcess.cs" />
     <Compile Include="Assets\Scripts\Window\FrameWindow.cs" />
     <Compile Include="Assets\Scripts\Common\ImageExtension.cs" />
