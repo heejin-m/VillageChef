@@ -8,7 +8,7 @@ using UnityEngine.ResourceManagement.AsyncOperations;
 [Serializable]
 public class RecipeDatabase
 {
-    public List<Recipe> recipes;
+    public List<Recipe> rows;
 }
 
 // 제이슨 파일을 가져와서 읽고 dictionary 형태의 자료구조로 정리.
@@ -21,7 +21,7 @@ public class RecipeData : IData
 
     public async Task Initialize()
     {
-        await LoadRecipes();
+        await Load();
     }
 
     public void Release()
@@ -32,7 +32,7 @@ public class RecipeData : IData
         }
     }
 
-    private async Task LoadRecipes()
+    private async Task Load()
     {
         Release();
 
@@ -49,7 +49,15 @@ public class RecipeData : IData
 
         Recipes.Clear();
 
-        foreach (var recipe in database.recipes)
+        List<Recipe> rows = database.rows;
+
+        if (rows == null)
+        {
+            Debug.LogError("RecipeData.json 데이터 없음");
+            return;
+        }
+
+        foreach (var recipe in rows)
         {
             if (!Recipes.ContainsKey(recipe.id))
             {
