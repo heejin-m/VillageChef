@@ -4,7 +4,6 @@ using UnityEngine.AddressableAssets;
 using UnityEngine.ResourceManagement.AsyncOperations;
 using UnityEngine.ResourceManagement.ResourceProviders;
 using UnityEngine.SceneManagement;
-using static SceneEnum;
 
 public class SceneLoadManager : SingletonBehaviour<SceneLoadManager>
 {
@@ -17,7 +16,7 @@ public class SceneLoadManager : SingletonBehaviour<SceneLoadManager>
         {
             await Addressables.UnloadSceneAsync(_currentSceneHandle).Task;
         }
-        
+
         var handle = Addressables.LoadSceneAsync(eScene.GetDescription(), LoadSceneMode.Single);
 
         SceneInstance scene = await handle.Task;

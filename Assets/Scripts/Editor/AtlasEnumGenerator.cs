@@ -25,10 +25,8 @@ public static class AtlasEnumGenerator
 
         sb.AppendLine("using System.ComponentModel;");
         sb.AppendLine();
-        sb.AppendLine("public class AtlasEnum");
+        sb.AppendLine("public enum eAtlas");
         sb.AppendLine("{");
-        sb.AppendLine("    public enum eAtlas");
-        sb.AppendLine("    {");
 
         foreach (string assetPath in atlasPaths)
         {
@@ -36,12 +34,10 @@ public static class AtlasEnumGenerator
 
             string resourcePath = assetPath.Replace("\\", "/");
 
-            sb.AppendLine($"        [Description(\"{resourcePath}\")]");
-            sb.AppendLine($"        {fileName},");
-            sb.AppendLine();
+            sb.AppendLine($"    [Description(\"{resourcePath}\")]");
+            sb.AppendLine($"    {fileName},");
         }
 
-        sb.AppendLine("    }");
         sb.AppendLine("}");
 
         string outputDir = Path.GetDirectoryName(OUTPUT_PATH);

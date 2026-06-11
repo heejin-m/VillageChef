@@ -16,7 +16,7 @@ public class RecipeItem : MonoBehaviour
         var ingredientData = DataManager.Instance.GetData<IngredientData>();
         var data = ingredientData.GetData(id);
 
-        AtlasLoadManager.SetImageSprite(img, AtlasEnum.eAtlas.FoodUI, data.resourceName);
-        title.text = data.name;
+        AtlasLoadManager.SetImageSprite(img, eAtlas.FoodUI, data.ResourceName);
+        title.text = data.Name;
     }
 }

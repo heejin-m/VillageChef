@@ -58,11 +58,11 @@ public partial class RecipeData : IData
             return;
         }
 
-        foreach (var recipe in rows)
+        foreach (var row in rows)
         {
-            if (!Datas.ContainsKey(recipe.id))
+            if (!Datas.ContainsKey(row.id))
             {
-                Datas.Add(recipe.id, recipe);
+                Datas.Add(row.id, row);
             }
         }
 

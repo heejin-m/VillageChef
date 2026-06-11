@@ -1,12 +1,17 @@
 using TMPro;
+using UnityEngine;
 using UnityEngine.UI;
 
 public class RecipePopup : PopupWindow
 {
     #region Inspector
 
+    public GameObject knownObj;
+    public GameObject unknownObj;
+
     public TMP_Text title;
     public TMP_Text desc;
+    public TMP_Text index;
 
     public ObjectPool pool;
 
@@ -52,8 +57,14 @@ public class RecipePopup : PopupWindow
     private void UpdateUI()
     {
         var data = _recipeData.GetData(_currentIndex);
-        title.text = data.name;
-        desc.text = data.description;
+        var isHave = ModelCenter.Recipe.IsHave(data.id);
+
+        knownObj.SetActive(isHave);
+        unknownObj.SetActive(!isHave);
+
+        title.text = data.Name;
+        desc.text = data.Description;
+        index.text = _currentIndex.ToString();
 
         UpdateIngredientUI(data);
     }

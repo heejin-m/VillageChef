@@ -3,7 +3,6 @@ using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
 using UnityEngine.ResourceManagement.AsyncOperations;
-using static PopupEnum;
 
 
 public class PopupManager : SingletonBehaviour<PopupManager>

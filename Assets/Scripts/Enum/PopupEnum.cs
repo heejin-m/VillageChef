@@ -1,11 +1,7 @@
 ﻿using System.ComponentModel;
 
-public class PopupEnum
+public enum ePopup
 {
-    public enum ePopup
-    {
-        [Description("Assets/AddressableAssets/Prefabs/Popup/RecipePopup.prefab")]
-        RecipePopup,
-
-    }
+    [Description("Assets/AddressableAssets/Prefabs/Popup/RecipePopup.prefab")]
+    RecipePopup,
 }

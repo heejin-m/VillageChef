@@ -2,285 +2,191 @@
     "rows": [
         {
             "id": 1,
-            "name": "사과",
-            "description": "새콤달콤한 과즙이 풍부한 기본 과일 재료",
-            "resourceName": "Apple"
+            "inventoryItemId": 1
         },
         {
             "id": 2,
-            "name": "아보카도",
-            "description": "부드럽고 고소한 풍미를 더하는 녹색 과일",
-            "resourceName": "Avocado"
+            "inventoryItemId": 2
         },
         {
             "id": 3,
-            "name": "베이컨",
-            "description": "짭짤한 감칠맛과 바삭한 식감을 주는 훈제 고기",
-            "resourceName": "Bacon"
+            "inventoryItemId": 3
         },
         {
             "id": 4,
-            "name": "돼지고기",
-            "description": "진한 육향이 살아 있는 고기 재료",
-            "resourceName": "Boar"
+            "inventoryItemId": 4
         },
         {
             "id": 5,
-            "name": "빵",
-            "description": "여러 요리의 바탕이 되는 담백한 빵",
-            "resourceName": "Bread"
+            "inventoryItemId": 5
         },
         {
             "id": 6,
-            "name": "벌레",
-            "description": "독특한 식감을 가진 특별한 단백질 재료",
-            "resourceName": "Bug"
+            "inventoryItemId": 6
         },
         {
             "id": 7,
-            "name": "치즈",
-            "description": "고소하고 진한 맛을 더하는 숙성 유제품",
-            "resourceName": "Cheese"
+            "inventoryItemId": 7
         },
         {
             "id": 8,
-            "name": "체리",
-            "description": "작고 달콤한 향이 좋은 붉은 과일",
-            "resourceName": "Cherry"
+            "inventoryItemId": 8
         },
         {
             "id": 9,
-            "name": "닭고기",
-            "description": "담백하고 활용도가 높은 기본 육류 재료",
-            "resourceName": "Chicken"
+            "inventoryItemId": 9
         },
         {
             "id": 10,
-            "name": "닭다리",
-            "description": "쫄깃한 살과 진한 맛이 있는 닭고기 부위",
-            "resourceName": "ChickenLeg"
+            "inventoryItemId": 10
         },
         {
             "id": 11,
-            "name": "용과",
-            "description": "화려한 색과 산뜻한 단맛을 가진 열대 과일",
-            "resourceName": "DragonFruit"
+            "inventoryItemId": 11
         },
         {
             "id": 12,
-            "name": "가지",
-            "description": "부드러운 식감으로 양념을 잘 머금는 채소",
-            "resourceName": "Eggplant"
+            "inventoryItemId": 12
         },
         {
             "id": 13,
-            "name": "달걀",
-            "description": "다양한 요리에 쓰이는 부드러운 기본 재료",
-            "resourceName": "Eggs"
+            "inventoryItemId": 13
         },
         {
             "id": 14,
-            "name": "생선",
-            "description": "신선한 바다 향을 품은 해산물 재료",
-            "resourceName": "Fish"
+            "inventoryItemId": 14
         },
         {
             "id": 15,
-            "name": "생선살",
-            "description": "손질되어 바로 쓰기 좋은 부드러운 생선살",
-            "resourceName": "FishFillet"
+            "inventoryItemId": 15
         },
         {
             "id": 16,
-            "name": "생선 스테이크",
-            "description": "두툼하게 썬 생선 고기 재료",
-            "resourceName": "FishSteak"
+            "inventoryItemId": 16
         },
         {
             "id": 17,
-            "name": "굼벵이",
-            "description": "진한 풍미가 있는 특수 단백질 재료",
-            "resourceName": "Grub"
+            "inventoryItemId": 17
         },
         {
             "id": 18,
-            "name": "굼벵이 묶음",
-            "description": "여러 마리를 모아 둔 특별한 식재료",
-            "resourceName": "Grubs"
+            "inventoryItemId": 18
         },
         {
             "id": 19,
-            "name": "꿀",
-            "description": "진한 단맛과 향을 더하는 황금빛 감미료",
-            "resourceName": "Honey"
+            "inventoryItemId": 19
         },
         {
             "id": 20,
-            "name": "벌집",
-            "description": "꿀의 향과 식감이 살아 있는 자연 재료",
-            "resourceName": "Honeycomb"
+            "inventoryItemId": 20
         },
         {
             "id": 21,
-            "name": "잼",
-            "description": "과일의 단맛을 졸여 만든 달콤한 재료",
-            "resourceName": "Jam"
+            "inventoryItemId": 21
         },
         {
             "id": 22,
-            "name": "레몬",
-            "description": "상큼한 산미와 향을 더하는 노란 과일",
-            "resourceName": "Lemon"
+            "inventoryItemId": 22
         },
         {
             "id": 23,
-            "name": "마멀레이드",
-            "description": "감귤 향이 짙은 달콤쌉싸름한 과일 절임",
-            "resourceName": "Marmalade"
+            "inventoryItemId": 23
         },
         {
             "id": 24,
-            "name": "칸탈루프 멜론",
-            "description": "향긋하고 달콤한 주황빛 멜론",
-            "resourceName": "MelonCantaloupe"
+            "inventoryItemId": 24
         },
         {
             "id": 25,
-            "name": "허니듀 멜론",
-            "description": "부드럽고 산뜻한 단맛의 초록 멜론",
-            "resourceName": "MelonHoneydew"
+            "inventoryItemId": 25
         },
         {
             "id": 26,
-            "name": "수박",
-            "description": "시원한 과즙이 많은 여름 과일",
-            "resourceName": "MelonWater"
+            "inventoryItemId": 26
         },
         {
             "id": 27,
-            "name": "올리브",
-            "description": "짭짤하고 고소한 향을 가진 작은 열매",
-            "resourceName": "Olive"
+            "inventoryItemId": 27
         },
         {
             "id": 28,
-            "name": "양파",
-            "description": "익힐수록 단맛이 깊어지는 향신 채소",
-            "resourceName": "Onion"
+            "inventoryItemId": 28
         },
         {
             "id": 29,
-            "name": "복숭아",
-            "description": "부드러운 과육과 향긋한 단맛의 과일",
-            "resourceName": "Peach"
+            "inventoryItemId": 29
         },
         {
             "id": 30,
-            "name": "초록 피망",
-            "description": "아삭하고 산뜻한 향을 가진 초록 채소",
-            "resourceName": "PepperGreen"
+            "inventoryItemId": 30
         },
         {
             "id": 31,
-            "name": "페퍼로니",
-            "description": "짭짤하고 매콤한 맛을 내는 가공 고기",
-            "resourceName": "Pepperoni"
+            "inventoryItemId": 31
         },
         {
             "id": 32,
-            "name": "빨간 피망",
-            "description": "달큰하고 선명한 색을 더하는 붉은 채소",
-            "resourceName": "PepperRed"
+            "inventoryItemId": 32
         },
         {
             "id": 33,
-            "name": "피클",
-            "description": "새콤하게 절여 입맛을 돋우는 채소 절임",
-            "resourceName": "Pickle"
+            "inventoryItemId": 33
         },
         {
             "id": 34,
-            "name": "파인애플",
-            "description": "달콤한 과즙과 상큼한 산미의 열대 과일",
-            "resourceName": "Pineapple"
+            "inventoryItemId": 34
         },
         {
             "id": 35,
-            "name": "감자",
-            "description": "든든하고 포근한 맛을 내는 뿌리채소",
-            "resourceName": "Potato"
+            "inventoryItemId": 35
         },
         {
             "id": 36,
-            "name": "붉은 감자",
-            "description": "고소한 맛과 단단한 식감의 감자",
-            "resourceName": "PotatoRed"
+            "inventoryItemId": 36
         },
         {
             "id": 37,
-            "name": "갈비",
-            "description": "뼈 주변의 진한 맛이 살아 있는 고기 부위",
-            "resourceName": "Ribs"
+            "inventoryItemId": 37
         },
         {
             "id": 38,
-            "name": "정어리",
-            "description": "작지만 깊은 바다 풍미를 가진 생선",
-            "resourceName": "Sardines"
+            "inventoryItemId": 38
         },
         {
             "id": 39,
-            "name": "소시지",
-            "description": "양념한 고기를 채워 만든 풍미 좋은 재료",
-            "resourceName": "Sausages"
+            "inventoryItemId": 39
         },
         {
             "id": 40,
-            "name": "새우",
-            "description": "탱글한 식감과 단맛이 좋은 해산물",
-            "resourceName": "Shrimp"
+            "inventoryItemId": 40
         },
         {
             "id": 41,
-            "name": "스테이크 고기",
-            "description": "두툼하고 육즙이 풍부한 고기 재료",
-            "resourceName": "Steak"
+            "inventoryItemId": 41
         },
         {
             "id": 42,
-            "name": "딸기",
-            "description": "상큼하고 달콤한 붉은 과일",
-            "resourceName": "Strawberry"
+            "inventoryItemId": 42
         },
         {
             "id": 43,
-            "name": "토마토",
-            "description": "신선한 산미와 감칠맛을 가진 붉은 채소",
-            "resourceName": "Tomato"
+            "inventoryItemId": 43
         },
         {
             "id": 44,
-            "name": "순무",
-            "description": "은은한 단맛과 아삭한 식감의 뿌리채소",
-            "resourceName": "Turnip"
+            "inventoryItemId": 44
         },
         {
             "id": 45,
-            "name": "초콜릿",
-            "description": "진하고 달콤한 풍미를 더하는 디저트 재료",
-            "resourceName": "Chocolate"
+            "inventoryItemId": 45
         },
         {
             "id": 46,
-            "name": "옥수수",
-            "description": "고소하고 달콤한 맛을 가진 노란 곡물",
-            "resourceName": "Corn"
+            "inventoryItemId": 46
         },
         {
             "id": 47,
-            "name": "땅콩",
-            "description": "고소한 향과 바삭한 식감을 가진 견과류",
-            "resourceName": "Peanut"
+            "inventoryItemId": 47
         }
     ]
 }

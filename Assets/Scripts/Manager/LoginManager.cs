@@ -2,7 +2,6 @@ using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
-using static SceneEnum;
 
 public class LoginManager : MonoBehaviour
 {
@@ -84,14 +83,6 @@ public class LoginManager : MonoBehaviour
         }
     }
 
-    private void GetStartInfoSet(Action<bool> onFinished)
-    {
-        StartInfoSet data = SaveManager.Load();
-        ModelCenter.Recipe.Set(data.recipeInfos);
-
-        onFinished?.Invoke(true);
-    }
-
     private async void GetData(Action<bool> onFinished)
     {
         try
@@ -104,5 +95,14 @@ public class LoginManager : MonoBehaviour
             Debug.LogError(e);
             onFinished?.Invoke(false);
         }
+    }
+
+    private void GetStartInfoSet(Action<bool> onFinished)
+    {
+        StartInfoSet data = SaveManager.Load();
+        ModelCenter.Recipe.Set(data.recipeInfos);
+        ModelCenter.Inventory.Set(data.inventoryItemInfo);
+
+        onFinished?.Invoke(true);
     }
 }

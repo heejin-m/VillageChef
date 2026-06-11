@@ -1,18 +1,14 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class InventoryModel : AbstractModel
 {
-    //public Dictionary<ushort, RecipeInfo> _recipeInfoDict = new Dictionary<ushort, RecipeInfo>();
+    /// <summary>
+    /// id 딕셔너리
+    /// </summary>
+    public Dictionary<ushort, InventoryItemInfo> _inventoryItemInfoDict = new Dictionary<ushort, InventoryItemInfo>();
 
-    //public void Set(List<RecipeInfo> recipeInfos)
-    //{
-    //    _recipeInfoDict.Clear();
-
-    //    if (recipeInfos == null) return;
-
-    //    foreach (var info in recipeInfos)
-    //    {
-    //        _recipeInfoDict.Add(info.id, info);
-    //    }
-    //}
+    public void Set(List<InventoryItemInfo> inventoryItemInfos)
+    {
+    }
 }

@@ -53,7 +53,7 @@ public class HomeWindow : FrameWindow
             return;
         }
 
-        var popup = await PopupManager.Instance.OpenPopup<RecipePopup>(PopupEnum.ePopup.RecipePopup);
+        var popup = await PopupManager.Instance.OpenPopup<RecipePopup>(ePopup.RecipePopup);
     }
 
     private async void OnRecipeExit(Collision2D other)

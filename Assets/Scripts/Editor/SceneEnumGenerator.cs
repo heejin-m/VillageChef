@@ -23,10 +23,8 @@ public class SceneEnumGenerator : MonoBehaviour
 
         sb.AppendLine("using System.ComponentModel;");
         sb.AppendLine();
-        sb.AppendLine("public class SceneEnum");
+        sb.AppendLine("public enum eScene");
         sb.AppendLine("{");
-        sb.AppendLine("    public enum eScene");
-        sb.AppendLine("    {");
 
         foreach (string guid in prefabGuids)
         {
@@ -36,12 +34,10 @@ public class SceneEnumGenerator : MonoBehaviour
             string resourcePath = assetPath
                             .Replace("Assets/AddressableAssets/Scenes/", "");
 
-            sb.AppendLine($"        [Description(\"{resourcePath}\")]");
-            sb.AppendLine($"        {fileName},");
-            sb.AppendLine();
+            sb.AppendLine($"    [Description(\"{resourcePath}\")]");
+            sb.AppendLine($"    {fileName},");
         }
 
-        sb.AppendLine("    }");
         sb.AppendLine("}");
 
         string outputDir = Path.GetDirectoryName(OUTPUT_PATH);
@@ -52,6 +48,6 @@ public class SceneEnumGenerator : MonoBehaviour
 
         AssetDatabase.Refresh();
 
-        Debug.Log($"PopupEnum 생성 완료: {OUTPUT_PATH}");
+        Debug.Log($"SceneEnum 생성 완료: {OUTPUT_PATH}");
     }
 }

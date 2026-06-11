@@ -1,0 +1,91 @@
+id,name,description,type,category,resourceName,maxStack,isCanUse,sortOrder,sellPrice,buyPrice,isDiscardable
+1,사과,새콤달콤한 과즙이 풍부한 기본 과일 재료,Ingredient,Fruit,Apple,99,0,1,0,0,1
+2,아보카도,부드럽고 고소한 풍미를 더하는 녹색 과일,Ingredient,Fruit,Avocado,99,0,2,0,0,1
+3,베이컨,짭짤한 감칠맛과 바삭한 식감을 주는 훈제 고기,Ingredient,Meat,Bacon,99,0,3,0,0,1
+4,돼지고기,진한 육향이 살아 있는 고기 재료,Ingredient,Meat,Boar,99,0,4,0,0,1
+5,빵,여러 요리의 바탕이 되는 담백한 빵,Ingredient,Grain,Bread,99,0,5,0,0,1
+6,벌레,독특한 식감을 가진 특별한 단백질 재료,Ingredient,Special,Bug,99,0,6,0,0,1
+7,치즈,고소하고 진한 맛을 더하는 숙성 유제품,Ingredient,Dairy,Cheese,99,0,7,0,0,1
+8,체리,작고 달콤한 향이 좋은 붉은 과일,Ingredient,Fruit,Cherry,99,0,8,0,0,1
+9,닭고기,담백하고 활용도가 높은 기본 육류 재료,Ingredient,Meat,Chicken,99,0,9,0,0,1
+10,닭다리,쫄깃한 살과 진한 맛이 있는 닭고기 부위,Ingredient,Meat,ChickenLeg,99,0,10,0,0,1
+11,용과,화려한 색과 산뜻한 단맛을 가진 열대 과일,Ingredient,Fruit,DragonFruit,99,0,11,0,0,1
+12,가지,부드러운 식감으로 양념을 잘 머금는 채소,Ingredient,Vegetable,Eggplant,99,0,12,0,0,1
+13,달걀,다양한 요리에 쓰이는 부드러운 기본 재료,Ingredient,Dairy,Eggs,99,0,13,0,0,1
+14,생선,신선한 바다 향을 품은 해산물 재료,Ingredient,Seafood,Fish,99,0,14,0,0,1
+15,생선살,손질되어 바로 쓰기 좋은 부드러운 생선살,Ingredient,Seafood,FishFillet,99,0,15,0,0,1
+16,생선 스테이크,두툼하게 썬 생선 고기 재료,Ingredient,Seafood,FishSteak,99,0,16,0,0,1
+17,굼벵이,진한 풍미가 있는 특수 단백질 재료,Ingredient,Special,Grub,99,0,17,0,0,1
+18,굼벵이 묶음,여러 마리를 모아 둔 특별한 식재료,Ingredient,Special,Grubs,99,0,18,0,0,1
+19,꿀,진한 단맛과 향을 더하는 황금빛 감미료,Ingredient,Sweet,Honey,99,0,19,0,0,1
+20,벌집,꿀의 향과 식감이 살아 있는 자연 재료,Ingredient,Sweet,Honeycomb,99,0,20,0,0,1
+21,잼,과일의 단맛을 졸여 만든 달콤한 재료,Ingredient,Sweet,Jam,99,0,21,0,0,1
+22,레몬,상큼한 산미와 향을 더하는 노란 과일,Ingredient,Fruit,Lemon,99,0,22,0,0,1
+23,마멀레이드,감귤 향이 짙은 달콤쌉싸름한 과일 절임,Ingredient,Sweet,Marmalade,99,0,23,0,0,1
+24,칸탈루프 멜론,향긋하고 달콤한 주황빛 멜론,Ingredient,Fruit,MelonCantaloupe,99,0,24,0,0,1
+25,허니듀 멜론,부드럽고 산뜻한 단맛의 초록 멜론,Ingredient,Fruit,MelonHoneydew,99,0,25,0,0,1
+26,수박,시원한 과즙이 많은 여름 과일,Ingredient,Fruit,MelonWater,99,0,26,0,0,1
+27,올리브,짭짤하고 고소한 향을 가진 작은 열매,Ingredient,Vegetable,Olive,99,0,27,0,0,1
+28,양파,익힐수록 단맛이 깊어지는 향신 채소,Ingredient,Vegetable,Onion,99,0,28,0,0,1
+29,복숭아,부드러운 과육과 향긋한 단맛의 과일,Ingredient,Fruit,Peach,99,0,29,0,0,1
+30,초록 피망,아삭하고 산뜻한 향을 가진 초록 채소,Ingredient,Vegetable,PepperGreen,99,0,30,0,0,1
+31,페퍼로니,짭짤하고 매콤한 맛을 내는 가공 고기,Ingredient,Meat,Pepperoni,99,0,31,0,0,1
+32,빨간 피망,달큰하고 선명한 색을 더하는 붉은 채소,Ingredient,Vegetable,PepperRed,99,0,32,0,0,1
+33,피클,새콤하게 절여 입맛을 돋우는 채소 절임,Ingredient,Vegetable,Pickle,99,0,33,0,0,1
+34,파인애플,달콤한 과즙과 상큼한 산미의 열대 과일,Ingredient,Fruit,Pineapple,99,0,34,0,0,1
+35,감자,든든하고 포근한 맛을 내는 뿌리채소,Ingredient,Vegetable,Potato,99,0,35,0,0,1
+36,붉은 감자,고소한 맛과 단단한 식감의 감자,Ingredient,Vegetable,PotatoRed,99,0,36,0,0,1
+37,갈비,뼈 주변의 진한 맛이 살아 있는 고기 부위,Ingredient,Meat,Ribs,99,0,37,0,0,1
+38,정어리,작지만 깊은 바다 풍미를 가진 생선,Ingredient,Seafood,Sardines,99,0,38,0,0,1
+39,소시지,양념한 고기를 채워 만든 풍미 좋은 재료,Ingredient,Meat,Sausages,99,0,39,0,0,1
+40,새우,탱글한 식감과 단맛이 좋은 해산물,Ingredient,Seafood,Shrimp,99,0,40,0,0,1
+41,스테이크 고기,두툼하고 육즙이 풍부한 고기 재료,Ingredient,Meat,Steak,99,0,41,0,0,1
+42,딸기,상큼하고 달콤한 붉은 과일,Ingredient,Fruit,Strawberry,99,0,42,0,0,1
+43,토마토,신선한 산미와 감칠맛을 가진 붉은 채소,Ingredient,Vegetable,Tomato,99,0,43,0,0,1
+44,순무,은은한 단맛과 아삭한 식감의 뿌리채소,Ingredient,Vegetable,Turnip,99,0,44,0,0,1
+45,초콜릿,진하고 달콤한 풍미를 더하는 디저트 재료,Ingredient,Sweet,Chocolate,99,0,45,0,0,1
+46,옥수수,고소하고 달콤한 맛을 가진 노란 곡물,Ingredient,Grain,Corn,99,0,46,0,0,1
+47,땅콩,고소한 향과 바삭한 식감을 가진 견과류,Ingredient,Grain,Peanut,99,0,47,0,0,1
+48,벌레 사과,벌레가 파먹은 모양의 장난스러운 사과 요리,Food,Dish,AppleWorm,99,1,1,0,0,1
+49,맥주,시원하게 즐기는 거품 가득한 발효 음료,Food,Dish,Beer,99,1,2,0,0,1
+50,브라우니,진한 초콜릿 풍미가 가득한 달콤한 디저트,Food,Dish,Brownie,99,1,3,0,0,1
+51,체리볼,싱그러운 체리를 한가득 담은 과일 그릇,Food,Dish,CherryBowl,99,1,4,0,0,1
+52,초코 츄러스,바삭한 츄러스에 초콜릿을 더한 달콤한 간식,Food,Dish,ChocoChuros,99,1,5,0,0,1
+53,초콜릿 샌드위치,부드러운 빵 사이에 초콜릿을 넣은 디저트,Food,Dish,chocolateSandwich,99,1,6,0,0,1
+54,초코 팝콘,고소한 팝콘에 초콜릿을 입힌 간식,Food,Dish,ChocoPopcorn,99,1,7,0,0,1
+55,커피,따뜻하고 향긋하게 즐기는 진한 음료,Food,Dish,Coffee,99,1,8,0,0,1
+56,쿠키,바삭하고 달콤하게 구운 작은 과자,Food,Dish,Cookie,99,1,9,0,0,1
+57,솜사탕,입안에서 사르르 녹는 폭신한 설탕 간식,Food,Dish,CottonCandy,99,1,10,0,0,1
+58,달걀볼,달걀을 담아 간단히 준비한 부드러운 요리,Food,Dish,EggBowl,99,1,11,0,0,1
+59,그린 주스,신선한 초록 재료를 갈아 만든 건강 음료,Food,Dish,GreenJuice,99,1,12,0,0,1
+60,녹차,은은한 향과 깔끔한 맛이 좋은 차,Food,Dish,GreenTea,99,1,13,0,0,1
+61,햄버거,빵과 속재료를 푸짐하게 쌓은 든든한 요리,Food,Dish,Hamburger,99,1,14,0,0,1
+62,육포,고기를 말려 짭짤하게 만든 저장 음식,Food,Dish,Jerky,99,1,15,0,0,1
+63,진저브레드,향신료 향이 은은한 달콤한 구운 과자,Food,Dish,JingerBread,99,1,16,0,0,1
+64,조자 콜라,톡 쏘는 탄산이 시원한 병 음료,Food,Dish,JojaCola,99,1,17,0,0,1
+65,문샤인,강한 향과 독특한 맛을 가진 증류주,Food,Dish,Moonshine,99,1,18,0,0,1
+66,오트밀,귀리를 부드럽게 끓여 만든 따뜻한 식사,Food,Dish,Oatmeal,99,1,19,0,0,1
+67,뜯은 땅콩칩,봉지를 연 뒤 바로 먹기 좋은 고소한 칩,Food,Dish,OpenPeanutChip,99,1,20,0,0,1
+68,땅콩칩,고소한 땅콩 향이 나는 바삭한 스낵,Food,Dish,PeanutChip,99,1,21,0,0,1
+69,절인 달걀,새콤짭짤하게 절여 풍미를 더한 달걀 요리,Food,Dish,PickledEggs,99,1,22,0,0,1
+70,사과 파이,달콤한 사과를 넣어 구운 바삭한 파이,Food,Dish,PieApple,99,1,23,0,0,1
+71,레몬 파이,상큼한 레몬 향이 돋보이는 달콤한 파이,Food,Dish,PieLemon,99,1,24,0,0,1
+72,호박 파이,부드러운 호박 속을 채운 고소한 파이,Food,Dish,PiePumpkin,99,1,25,0,0,1
+73,피자,치즈와 토핑을 올려 구운 대표적인 요리,Food,Dish,Pizza,99,1,26,0,0,1
+74,팝콘,가볍고 고소하게 튀긴 옥수수 간식,Food,Dish,Popcorn,99,1,27,0,0,1
+75,감자튀김,바삭하게 튀겨낸 고소한 감자 요리,Food,Dish,PotatoFried,99,1,28,0,0,1
+76,프레첼,짭짤하고 쫄깃한 매듭 모양 빵 간식,Food,Dish,Pretzel,99,1,29,0,0,1
+77,무지개 사탕,알록달록한 색이 즐거운 달콤한 사탕,Food,Dish,RainbowCandy,99,1,30,0,0,1
+78,롤빵,부드럽게 말아 구운 작은 빵,Food,Dish,Roll,99,1,31,0,0,1
+79,사케,깔끔한 향을 가진 쌀 발효주,Food,Dish,Saki,99,1,32,0,0,1
+80,사시미,신선한 생선을 얇게 썬 차가운 요리,Food,Dish,Sashimi,99,1,33,0,0,1
+81,별 쿠키,별 모양으로 구운 귀여운 쿠키,Food,Dish,StartCookie,99,1,34,0,0,1
+82,맥주잔,거품이 오른 음료를 담은 묵직한 잔,Food,Dish,Stein,99,1,35,0,0,1
+83,설탕볼,달콤한 설탕 재료를 둥글게 뭉친 간식,Food,Dish,SugarBall,99,1,36,0,0,1
+84,슈퍼 그린 주스,초록 재료를 듬뿍 넣은 진한 건강 음료,Food,Dish,SuperGreenJuice,99,1,37,0,0,1
+85,초밥,밥과 신선한 재료를 한입 크기로 빚은 요리,Food,Dish,Sushi,99,1,38,0,0,1
+86,타르트,바삭한 틀에 달콤한 속을 채운 디저트,Food,Dish,Tart,99,1,39,0,0,1
+87,와플,격자 모양으로 구워낸 달콤하고 고소한 빵,Food,Dish,Waffles,99,1,40,0,0,1
+88,수박 젤리,수박 향을 담아 말랑하게 만든 젤리,Food,Dish,WaterMelonJelly,99,1,41,0,0,1
+89,위스키,묵직한 향과 깊은 맛을 가진 숙성주,Food,Dish,Whiskey,99,1,42,0,0,1
+90,와인,과일 향과 부드러운 풍미가 있는 발효주,Food,Dish,Wine,99,1,43,0,0,1

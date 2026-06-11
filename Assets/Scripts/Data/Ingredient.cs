@@ -1,10 +1,14 @@
 using System;
 
 [Serializable]
-public class Ingredient
+public partial class Ingredient
 {
+    /// <summary>
+    /// ID
+    /// </summary>
     public ushort id;
-    public string name;
-    public string description;
-    public string resourceName;
+    /// <summary>
+    /// 인벤토리 데이터 ID
+    /// </summary>
+    public int inventoryItemId;
 }

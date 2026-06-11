@@ -23,10 +23,8 @@ public static class PopupEnumGenerator
 
         sb.AppendLine("using System.ComponentModel;");
         sb.AppendLine();
-        sb.AppendLine("public class PopupEnum");
+        sb.AppendLine("public enum ePopup");
         sb.AppendLine("{");
-        sb.AppendLine("    public enum ePopup");
-        sb.AppendLine("    {");
 
         foreach (string guid in prefabGuids)
         {
@@ -35,12 +33,10 @@ public static class PopupEnumGenerator
 
             string resourcePath = assetPath;
 
-            sb.AppendLine($"        [Description(\"{resourcePath}\")]");
-            sb.AppendLine($"        {fileName},");
-            sb.AppendLine();
+            sb.AppendLine($"    [Description(\"{resourcePath}\")]");
+            sb.AppendLine($"    {fileName},");
         }
 
-        sb.AppendLine("    }");
         sb.AppendLine("}");
 
         string outputDir = Path.GetDirectoryName(OUTPUT_PATH);
