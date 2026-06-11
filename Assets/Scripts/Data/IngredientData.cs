@@ -14,14 +14,14 @@ public class IngredientDatabase
 // 제이슨 파일을 가져와서 읽고 dictionary 형태의 자료구조로 정리.
 public class IngredientData : IData
 {
-    public Dictionary<ushort, Ingredient> Ingredients { get; private set; } = new();
+    public Dictionary<ushort, Ingredient> Datas { get; private set; } = new();
 
     private const string ADDRESS = "IngedientData.json";
     private AsyncOperationHandle<TextAsset> _handle;
 
     public async Task Initialize()
     {
-        await LoadR();
+        await Load();
     }
 
     public void Release()
@@ -32,7 +32,7 @@ public class IngredientData : IData
         }
     }
 
-    private async Task LoadR()
+    private async Task Load()
     {
         Release();
 
@@ -47,7 +47,7 @@ public class IngredientData : IData
 
         IngredientDatabase database = JsonUtility.FromJson<IngredientDatabase>(jsonFile.text);
 
-        Ingredients.Clear();
+        Datas.Clear();
 
         List<Ingredient> rows = database.rows;
 
@@ -59,12 +59,12 @@ public class IngredientData : IData
 
         foreach (var recipe in rows)
         {
-            if (!Ingredients.ContainsKey(recipe.id))
+            if (!Datas.ContainsKey(recipe.id))
             {
-                Ingredients.Add(recipe.id, recipe);
+                Datas.Add(recipe.id, recipe);
             }
         }
 
-        Debug.Log($"{Ingredients.Count}개 로드");
+        Debug.Log($"{Datas.Count}개 로드");
     }
 }
