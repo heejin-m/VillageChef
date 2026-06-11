@@ -11,8 +11,12 @@ public class RecipeItem : MonoBehaviour
 
     #endregion
 
-    public void Set(Ingredient ingredient)
+    public void Set(byte id)
     {
-        title.text = ingredient.name;
+        var ingredientData = DataManager.Instance.GetData<IngredientData>();
+        var data = ingredientData.GetData(id);
+
+        AtlasLoadManager.SetImageSprite(img, AtlasEnum.eAtlas.FoodUI, data.resourceName);
+        title.text = data.name;
     }
 }

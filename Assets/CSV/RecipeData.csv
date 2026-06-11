@@ -1,4 +1,4 @@
-id,name,description,ingedientId1,ingedientId2,ingedientId3,ingedientId4,ingedientId5,ingedientId6,ingedientId7,ingedientId8,ingedientId9,ingedientId10,resourceName
+id,name,description,ingredientId1,ingredientId2,ingredientId3,ingredientId4,ingredientId5,ingredientId6,ingredientId7,ingredientId8,ingredientId9,ingredientId10,resourceName
 1,벌레 사과,벌레가 파먹은 모양의 장난스러운 사과 요리,1,6,0,0,0,0,0,0,0,0,AppleWorm
 2,맥주,시원하게 즐기는 거품 가득한 발효 음료,46,19,0,0,0,0,0,0,0,0,Beer
 3,브라우니,진한 초콜릿 풍미가 가득한 달콤한 디저트,45,13,19,5,0,0,0,0,0,0,Brownie

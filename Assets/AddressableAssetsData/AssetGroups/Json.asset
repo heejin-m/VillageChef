@@ -20,8 +20,8 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: bf52a0b85e8c9de4185ee925aeaf3af3
-    m_Address: IngedientData.json
+  - m_GUID: 906bb62dec43493499cd15bf61badccd
+    m_Address: IngredientData.json
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0

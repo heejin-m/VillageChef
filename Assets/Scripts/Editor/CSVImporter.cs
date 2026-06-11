@@ -5,7 +5,7 @@ using System.Text;
 using UnityEditor;
 using UnityEngine;
 
-public class RecipeImporter
+public class CSVImporter
 {
     [MenuItem("Tools/Import CSV")]
     public static void Import()

@@ -15,7 +15,7 @@ public class RecipePopup : PopupWindow
     public Button closeButton;
 
     #endregion
-    
+
     /// <summary>
     /// 레시피 데이터
     /// </summary>
@@ -28,6 +28,8 @@ public class RecipePopup : PopupWindow
 
     public override void Awake()
     {
+        pool.Create();
+
         leftArrow.SetOnClickEvent(OnClickLeftButton);
         rightArrow.SetOnClickEvent(OnClickRightButton);
         closeButton.SetOnClickEvent(OnClickCloseButton);
@@ -52,6 +54,23 @@ public class RecipePopup : PopupWindow
         var data = _recipeData.GetData(_currentIndex);
         title.text = data.name;
         desc.text = data.description;
+
+        UpdateIngredientUI(data);
+    }
+
+    private void UpdateIngredientUI(Recipe data)
+    {
+        pool.HideAll();
+
+        var ingredientList = data.GetIngredientIdList();
+        foreach (var ingredient in ingredientList)
+        {
+            var go = pool.Get<RecipeItem>();
+            go.transform.SetParent(pool.transform);
+            go.transform.Initialize();
+            go.Set(ingredient);
+            go.gameObject.SetActive(true);
+        }
     }
 
     private void OnClickLeftButton()

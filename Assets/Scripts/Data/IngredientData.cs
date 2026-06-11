@@ -12,11 +12,11 @@ public class IngredientDatabase
 }
 
 // 제이슨 파일을 가져와서 읽고 dictionary 형태의 자료구조로 정리.
-public class IngredientData : IData
+public partial class IngredientData : IData
 {
     public Dictionary<ushort, Ingredient> Datas { get; private set; } = new();
 
-    private const string ADDRESS = "IngedientData.json";
+    private const string ADDRESS = "IngredientData.json";
     private AsyncOperationHandle<TextAsset> _handle;
 
     public async Task Initialize()
