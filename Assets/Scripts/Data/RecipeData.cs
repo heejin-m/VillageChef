@@ -12,9 +12,9 @@ public class RecipeDatabase
 }
 
 // 제이슨 파일을 가져와서 읽고 dictionary 형태의 자료구조로 정리.
-public class RecipeData : IData
+public partial class RecipeData : IData
 {
-    public Dictionary<ushort, Recipe> Recipes { get; private set; } = new();
+    public Dictionary<ushort, Recipe> Datas { get; private set; } = null;
 
     private const string ADDRESS = "RecipeData.json";
     private AsyncOperationHandle<TextAsset> _handle;
@@ -47,7 +47,8 @@ public class RecipeData : IData
 
         RecipeDatabase database = JsonUtility.FromJson<RecipeDatabase>(jsonFile.text);
 
-        Recipes.Clear();
+        Datas ??= new();
+        Datas.Clear();
 
         List<Recipe> rows = database.rows;
 
@@ -59,12 +60,12 @@ public class RecipeData : IData
 
         foreach (var recipe in rows)
         {
-            if (!Recipes.ContainsKey(recipe.id))
+            if (!Datas.ContainsKey(recipe.id))
             {
-                Recipes.Add(recipe.id, recipe);
+                Datas.Add(recipe.id, recipe);
             }
         }
 
-        Debug.Log($"{Recipes.Count}개 로드");
+        Debug.Log($"{Datas.Count}개 로드");
     }
 }

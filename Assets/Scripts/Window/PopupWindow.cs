@@ -3,7 +3,9 @@ using UnityEngine;
 
 public class PopupWindow : MonoBehaviour, IWindow
 {
-    public virtual async Task Open()
+    private bool _isOpenStarted;
+
+    public virtual void Awake()
     {
     }
 
@@ -12,8 +14,20 @@ public class PopupWindow : MonoBehaviour, IWindow
         return Task.FromResult(true);
     }
 
-    public virtual void Awake()
+    public virtual async Task Open()
     {
+        if (_isOpenStarted)
+        {
+            return;
+        }
+
+        if (!await OpenReady())
+        {
+            return;
+        }
+
+        _isOpenStarted = true;
+        StartProcess();
     }
 
     public virtual void StartProcess()

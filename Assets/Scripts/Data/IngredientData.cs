@@ -16,7 +16,7 @@ public class IngredientData : IData
 {
     public Dictionary<ushort, Ingredient> Ingredients { get; private set; } = new();
 
-    private const string ADDRESS = "Ingredient.json";
+    private const string ADDRESS = "IngedientData.json";
     private AsyncOperationHandle<TextAsset> _handle;
 
     public async Task Initialize()

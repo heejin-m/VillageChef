@@ -10,6 +10,7 @@ public class DataManager : SingletonBehaviour<DataManager>
     public async Task Initialize()
     {
         await AddData<RecipeData>();
+        await AddData<IngredientData>();
     }
 
     private async Task AddData<T>() where T : IData, new()
