@@ -614,6 +614,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1063454754456883085}
   - component: {fileID: 2539785668804396248}
+  - component: {fileID: 2133033100187913115}
   m_Layer: 0
   m_Name: RightArrowButton
   m_TagString: Untagged
@@ -685,6 +686,21 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &2133033100187913115
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2992170292677690831}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aefe19720be27814f842e6bdb6481a4f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UIFx
+  isActiveScale: 1
+  pressedScale: {x: 1.05, y: 1.05, z: 1}
+  openScaleDuration: 0.25
 --- !u!1 &2994354679937946515
 GameObject:
   m_ObjectHideFlags: 0
@@ -1096,6 +1112,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8045892910010662277}
   - component: {fileID: 4672577839233697682}
+  - component: {fileID: 6161110862458849566}
   m_Layer: 0
   m_Name: LeftArrowButton
   m_TagString: Untagged
@@ -1167,6 +1184,21 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &6161110862458849566
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5051633758301600971}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aefe19720be27814f842e6bdb6481a4f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UIFx
+  isActiveScale: 1
+  pressedScale: {x: 1.05, y: 1.05, z: 1}
+  openScaleDuration: 0.25
 --- !u!1 &5911523087603135967
 GameObject:
   m_ObjectHideFlags: 0
@@ -1697,7 +1729,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1862354994953878467}
+  - {fileID: 4688191300909725277}
   - {fileID: 8045892910010662277}
   - {fileID: 1063454754456883085}
   m_Father: {fileID: 7269175755448042093}
@@ -1771,7 +1803,6 @@ MonoBehaviour:
   pool: {fileID: 4167500053099483305}
   leftArrow: {fileID: 4672577839233697682}
   rightArrow: {fileID: 2539785668804396248}
-  closeButton: {fileID: 2877556932864177142}
 --- !u!223 &125782888547090313
 Canvas:
   m_ObjectHideFlags: 0
@@ -2161,7 +2192,7 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!1001 &6858654967449858955
+--- !u!1001 &574615207775288853
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -2199,11 +2230,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5113481523877070920, guid: 60620d4654a209b4daacb6329036548e, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 90
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 5113481523877070920, guid: 60620d4654a209b4daacb6329036548e, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 90
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 5113481523877070920, guid: 60620d4654a209b4daacb6329036548e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2235,11 +2266,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5113481523877070920, guid: 60620d4654a209b4daacb6329036548e, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 794
+      value: 795
       objectReference: {fileID: 0}
     - target: {fileID: 5113481523877070920, guid: 60620d4654a209b4daacb6329036548e, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 438
+      value: 441
       objectReference: {fileID: 0}
     - target: {fileID: 5113481523877070920, guid: 60620d4654a209b4daacb6329036548e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -2258,19 +2289,8 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 60620d4654a209b4daacb6329036548e, type: 3}
---- !u!224 &1862354994953878467 stripped
+--- !u!224 &4688191300909725277 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5113481523877070920, guid: 60620d4654a209b4daacb6329036548e, type: 3}
-  m_PrefabInstance: {fileID: 6858654967449858955}
+  m_PrefabInstance: {fileID: 574615207775288853}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &2877556932864177142 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8701504865098383485, guid: 60620d4654a209b4daacb6329036548e, type: 3}
-  m_PrefabInstance: {fileID: 6858654967449858955}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button

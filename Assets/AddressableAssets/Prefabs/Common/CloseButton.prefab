@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 5113481523877070920}
   - component: {fileID: 8701504865098383485}
+  - component: {fileID: 6893208782596700788}
+  - component: {fileID: 4571201551833705503}
   m_Layer: 5
   m_Name: CloseButton
   m_TagString: Untagged
@@ -81,6 +83,33 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &6893208782596700788
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1896365145355935043}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aefe19720be27814f842e6bdb6481a4f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UIFx
+  isActiveScale: 1
+  pressedScale: {x: 1.05, y: 1.05, z: 1}
+  openScaleDuration: 0.25
+--- !u!114 &4571201551833705503
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1896365145355935043}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 568682c1c62d27f478abe899affa325e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CloseButton
 --- !u!1 &5299076507126891990
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,12 +1,7 @@
 public enum eInventoryItemType
 {
     Ingredient = 0,
-    Food,
-    Tool,
-    Quest,
-    Seed,
-    Material,
-    Consumable,
+    Dish,
 }
 
 public enum eInventoryItemCategory
@@ -18,6 +13,8 @@ public enum eInventoryItemCategory
     Dairy,
     Sweet,
     Special,
+    Grain,
+    Dish,
 }
 
 public partial class InventoryItem

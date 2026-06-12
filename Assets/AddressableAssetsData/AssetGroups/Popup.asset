@@ -20,6 +20,11 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4b8d790cc1adf344181453f40e83b271
+    m_Address: Assets/AddressableAssets/Prefabs/Popup/InventoryPopup.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 991152a455d9cd2468c135036fc10c2f, type: 2}
   m_SchemaSet:

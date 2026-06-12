@@ -17,7 +17,6 @@ public class RecipePopup : PopupWindow
 
     public Button leftArrow;
     public Button rightArrow;
-    public Button closeButton;
 
     #endregion
 
@@ -37,7 +36,6 @@ public class RecipePopup : PopupWindow
 
         leftArrow.SetOnClickEvent(OnClickLeftButton);
         rightArrow.SetOnClickEvent(OnClickRightButton);
-        closeButton.SetOnClickEvent(OnClickCloseButton);
     }
 
     public override void StartProcess()
@@ -94,10 +92,5 @@ public class RecipePopup : PopupWindow
     {
         _currentIndex = _currentIndex + 1 >= lastData.id ? lastData.id : (ushort)(_currentIndex + 1);
         UpdateUI();
-    }
-
-    private void OnClickCloseButton()
-    {
-        UISystemManager.Instance.BackPress();
     }
 }
