@@ -4,28 +4,14 @@ public class RecipeModel : AbstractModel
 {
     public Dictionary<ushort, RecipeInfo> _recipeInfoDict = new Dictionary<ushort, RecipeInfo>();
 
-    public void Set(List<RecipeInfo> recipeInfos)
+    public void Set(List<RecipeSaveInfo> saveInfos)
     {
         _recipeInfoDict.Clear();
         var recipeData = DataManager.Instance.GetData<RecipeData>();
         foreach (var data in recipeData.Datas)
         {
-            if (recipeInfos != null)
-            {
-                var info = recipeInfos.Find(d => d.id == data.Key);
-                if (info == null)
-                {
-                    _recipeInfoDict.Add(data.Key, null);
-                }
-                else
-                {
-                    _recipeInfoDict.Add(info.id, info);
-                }
-            }
-            else
-            {
-                _recipeInfoDict.Add(data.Key, null);
-            }
+            RecipeSaveInfo saveInfo = saveInfos?.Find(d => d.id == data.Key);
+            _recipeInfoDict.Add(data.Key, new RecipeInfo(data.Key, saveInfo));
         }
     }
 
@@ -38,7 +24,7 @@ public class RecipeModel : AbstractModel
     {
         if (_recipeInfoDict.TryGetValue(id, out RecipeInfo info))
         {
-            return info != null;
+            return info.IsHave;
         }
 
         return false;

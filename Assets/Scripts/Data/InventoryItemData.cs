@@ -14,7 +14,7 @@ public class InventoryItemDatabase
 // 제이슨 파일을 가져와서 읽고 dictionary 형태의 자료구조로 정리.
 public partial class InventoryItemData : IData
 {
-    public Dictionary<int, InventoryItem> Datas { get; private set; } = new();
+    public Dictionary<int, InventoryItem> Datas { get; private set; } = null;
 
     private const string ADDRESS = "InventoryItemData.json";
     private AsyncOperationHandle<TextAsset> _handle;
@@ -47,6 +47,7 @@ public partial class InventoryItemData : IData
 
         InventoryItemDatabase database = JsonUtility.FromJson<InventoryItemDatabase>(jsonFile.text);
 
+        Datas ??= new();
         Datas.Clear();
 
         List<InventoryItem> rows = database.rows;

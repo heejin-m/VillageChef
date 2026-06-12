@@ -1,11 +1,32 @@
 public class RecipeInfo
 {
     /// <summary>
-    /// 레시피 데이터 ID
+    /// ID
     /// </summary>
-    public ushort id;
+    public int ID { get; private set; }
     /// <summary>
-    /// 레시피 소유 중인지
+    /// 저장 정보
     /// </summary>
-    public bool isHave;
+    public RecipeSaveInfo SaveInfo { get; private set; }
+    /// <summary>
+    /// 데이터
+    /// </summary>
+    public Recipe Recipe { get; private set; }
+    /// <summary>
+    /// 레시피 보유 여부
+    /// </summary>
+    public bool IsHave => SaveInfo != null;
+
+    #region ## Construct ##
+
+    public RecipeInfo(ushort id, RecipeSaveInfo info) : base()
+    {
+        var data = DataManager.Instance.GetData<RecipeData>();
+
+        this.ID = id;
+        this.Recipe = data.GetData(id);
+        this.SaveInfo = info;
+    }
+
+    #endregion
 }
