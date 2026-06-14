@@ -6,4 +6,6 @@ public enum ePopup
     InventoryPopup,
     [Description("Assets/AddressableAssets/Prefabs/Popup/RecipePopup.prefab")]
     RecipePopup,
+    [Description("Assets/AddressableAssets/Prefabs/Popup/ShopPopup.prefab")]
+    ShopPopup,
 }

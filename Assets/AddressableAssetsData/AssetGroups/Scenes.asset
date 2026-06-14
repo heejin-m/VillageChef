@@ -15,6 +15,11 @@ MonoBehaviour:
   m_GroupName: Scenes
   m_GUID: cc36dff9b5e542848a3dacaf63c3fb35
   m_SerializeEntries:
+  - m_GUID: 1b5db7e3d8bb805429bc37c0a8433035
+    m_Address: Village.unity
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 975f40ef816c1674881e14dc3bf01e6c
     m_Address: Home.unity
     m_ReadOnly: 0

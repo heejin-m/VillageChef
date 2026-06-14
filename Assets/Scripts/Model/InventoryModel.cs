@@ -78,4 +78,19 @@ public class InventoryModel : AbstractModel
 
         return null;
     }
+
+    /// <summary>
+    /// 아이템 추가
+    /// </summary>
+    public void TESTSAVEItem(int id, int cnt)
+    {
+        InventoryItemSaveInfo saveInfo = new InventoryItemSaveInfo
+        {
+            id = id,
+            cnt = cnt
+        };
+
+        SaveManager.Save(saveInfo);
+        Set(ModelCenter.StartInfoSetData.inventoryItemSaveInfo);
+    }
 }

@@ -14,7 +14,7 @@ public class RecipeDatabase
 // 제이슨 파일을 가져와서 읽고 dictionary 형태의 자료구조로 정리.
 public partial class RecipeData : IData
 {
-    public Dictionary<ushort, Recipe> Datas { get; private set; } = null;
+    public Dictionary<int, Recipe> Datas { get; private set; } = null;
 
     private const string ADDRESS = "RecipeData.json";
     private AsyncOperationHandle<TextAsset> _handle;

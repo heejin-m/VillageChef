@@ -100,6 +100,7 @@ public class LoginManager : MonoBehaviour
     private void GetStartInfoSet(Action<bool> onFinished)
     {
         StartInfoSet data = SaveManager.Load();
+        ModelCenter.StartInfoSetData = data;
         ModelCenter.Recipe.Set(data.recipeSaveInfos);
         ModelCenter.Inventory.Set(data.inventoryItemSaveInfo);
 

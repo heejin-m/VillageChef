@@ -2,7 +2,7 @@ using System.Collections.Generic;
 
 public class RecipeModel : AbstractModel
 {
-    public Dictionary<ushort, RecipeInfo> _recipeInfoDict = new Dictionary<ushort, RecipeInfo>();
+    public Dictionary<int, RecipeInfo> _recipeInfoDict = new Dictionary<int, RecipeInfo>();
 
     public void Set(List<RecipeSaveInfo> saveInfos)
     {
@@ -20,7 +20,7 @@ public class RecipeModel : AbstractModel
     /// </summary>
     /// <param name="id"></param>
     /// <returns></returns>
-    public bool IsHave(ushort id)
+    public bool IsHave(int id)
     {
         if (_recipeInfoDict.TryGetValue(id, out RecipeInfo info))
         {
@@ -28,5 +28,19 @@ public class RecipeModel : AbstractModel
         }
 
         return false;
+    }
+
+    /// <summary>
+    /// 레시피 추가
+    /// </summary>
+    public void AddRecipe(int id)
+    {
+        RecipeSaveInfo saveInfo = new RecipeSaveInfo
+        {
+            id = id
+        };
+
+        SaveManager.Save(saveInfo);
+        Set(ModelCenter.StartInfoSetData.recipeSaveInfos);
     }
 }

@@ -7,7 +7,7 @@ public partial class RecipeData
     /// </summary>
     /// <param name="index">인덱스</param>
     /// <returns></returns>
-	public Recipe GetData(ushort index)
+	public Recipe GetData(int index)
     {
         if (Datas != null && Datas.TryGetValue(index, out var data))
         {

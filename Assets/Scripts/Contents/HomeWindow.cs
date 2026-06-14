@@ -8,6 +8,7 @@ public class HomeWindow : FrameWindow
     [SerializeField] private Transform playerSpawnPoint;
     [SerializeField] private CollisionEventTrigger2D recipeBookCollider;
     [SerializeField] private CollisionEventTrigger2D bedCollider;
+    [SerializeField] private CollisionEventTrigger2D doorCollider;
 
     #endregion
 
@@ -32,6 +33,7 @@ public class HomeWindow : FrameWindow
         recipeBookCollider.collisionExited += OnRecipeExit;
         bedCollider.triggerEntered += OnBedEnter;
         bedCollider.triggerExited += OnBedExit;
+        doorCollider.triggerEntered += OnDoorEnter;
     }
 
     public override void CloseProcess()
@@ -40,6 +42,7 @@ public class HomeWindow : FrameWindow
         recipeBookCollider.collisionExited -= OnRecipeExit;
         bedCollider.triggerEntered -= OnBedEnter;
         bedCollider.triggerExited -= OnBedExit;
+        doorCollider.triggerExited -= OnDoorEnter;
 
         base.CloseProcess();
     }
@@ -86,6 +89,16 @@ public class HomeWindow : FrameWindow
 
         // 저장
         //SaveManager.Save();
+    }
+
+    private async void OnDoorEnter(Collider2D other)
+    {
+        if (!other.gameObject.CompareTag("Player"))
+        {
+            return;
+        }
+
+        await SceneLoadManager.Instance.SingleSceneLoad(eScene.Village);
     }
 
     #endregion

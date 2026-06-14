@@ -6,4 +6,6 @@ public enum eScene
     Home,
     [Description("Login.unity")]
     Login,
+    [Description("Village.unity")]
+    Village,
 }

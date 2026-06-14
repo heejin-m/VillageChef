@@ -19,7 +19,7 @@ public class RecipeInfo
 
     #region ## Construct ##
 
-    public RecipeInfo(ushort id, RecipeSaveInfo info) : base()
+    public RecipeInfo(int id, RecipeSaveInfo info) : base()
     {
         var data = DataManager.Instance.GetData<RecipeData>();
 

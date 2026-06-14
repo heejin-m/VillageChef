@@ -25,6 +25,11 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: cf463ae147711b2459fd4acd057b1f5f
+    m_Address: Assets/AddressableAssets/Atlas/GrassAndRoadTileUI.spriteatlasv2
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: f3b7a999fae6f80408c947ca62f322f4
     m_Address: Assets/AddressableAssets/Atlas/CommonUI.spriteatlasv2
     m_ReadOnly: 0
