@@ -54,10 +54,8 @@ public class SpriteExporter
 
     private static Texture2D GetSpriteTexture(Sprite sprite)
     {
-        Rect rect = sprite.rect;
-
+        Rect rect = sprite.textureRect;
         Texture2D sourceTexture = sprite.texture;
-
         Texture2D newTexture = new Texture2D(
             (int)rect.width,
             (int)rect.height,
@@ -65,16 +63,55 @@ public class SpriteExporter
             false
         );
 
-        Color[] pixels = sourceTexture.GetPixels(
-            (int)rect.x,
-            (int)rect.y,
-            (int)rect.width,
-            (int)rect.height
-        );
+        try
+        {
+            Color[] pixels = sourceTexture.GetPixels(
+                (int)rect.x,
+                (int)rect.y,
+                (int)rect.width,
+                (int)rect.height
+            );
 
-        newTexture.SetPixels(pixels);
-        newTexture.Apply();
+            newTexture.SetPixels(pixels);
+            newTexture.Apply();
+        }
+        catch (System.ArgumentException)
+        {
+            CopyPixelsFromRenderTexture(sourceTexture, rect, newTexture);
+        }
+        catch (UnityException)
+        {
+            CopyPixelsFromRenderTexture(sourceTexture, rect, newTexture);
+        }
 
         return newTexture;
+    }
+
+    private static void CopyPixelsFromRenderTexture(
+        Texture2D sourceTexture,
+        Rect rect,
+        Texture2D destinationTexture
+    )
+    {
+        RenderTexture previous = RenderTexture.active;
+        RenderTexture renderTexture = RenderTexture.GetTemporary(
+            sourceTexture.width,
+            sourceTexture.height,
+            0,
+            RenderTextureFormat.ARGB32
+        );
+
+        try
+        {
+            Graphics.Blit(sourceTexture, renderTexture);
+            RenderTexture.active = renderTexture;
+            destinationTexture.ReadPixels(rect, 0, 0);
+            destinationTexture.Apply();
+        }
+        finally
+        {
+            RenderTexture.active = previous;
+            RenderTexture.ReleaseTemporary(renderTexture);
+        }
     }
 }
