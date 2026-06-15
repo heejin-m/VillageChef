@@ -6,11 +6,15 @@ public partial class Recipe
     /// <summary>
     /// Id
     /// </summary>
-    public ushort id;
+    public int id;
     /// <summary>
-    /// 인벤토리 데이터 ID
+    /// 완성품 인벤토리 데이터 ID
     /// </summary>
-    public int inventoryItemId;
+    public int dish_inventoryItemId;
+    /// <summary>
+    /// 레시피 인벤토리 데이터 ID
+    /// </summary>
+    public int recipe_inventoryItemId;
     /// <summary>
     /// 재료 01 ~ 10 ID
     /// </summary>

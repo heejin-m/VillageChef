@@ -2,7 +2,8 @@
     "rows": [
         {
             "id": 1,
-            "inventoryItemId": 48,
+            "dish_inventoryItemId": 48,
+            "recipe_inventoryItemId": 91,
             "ingredientId1": 1,
             "ingredientId2": 6,
             "ingredientId3": 0,
@@ -16,7 +17,8 @@
         },
         {
             "id": 2,
-            "inventoryItemId": 49,
+            "dish_inventoryItemId": 49,
+            "recipe_inventoryItemId": 92,
             "ingredientId1": 46,
             "ingredientId2": 19,
             "ingredientId3": 0,
@@ -30,7 +32,8 @@
         },
         {
             "id": 3,
-            "inventoryItemId": 50,
+            "dish_inventoryItemId": 50,
+            "recipe_inventoryItemId": 93,
             "ingredientId1": 45,
             "ingredientId2": 13,
             "ingredientId3": 19,
@@ -44,7 +47,8 @@
         },
         {
             "id": 4,
-            "inventoryItemId": 51,
+            "dish_inventoryItemId": 51,
+            "recipe_inventoryItemId": 94,
             "ingredientId1": 8,
             "ingredientId2": 0,
             "ingredientId3": 0,
@@ -58,7 +62,8 @@
         },
         {
             "id": 5,
-            "inventoryItemId": 52,
+            "dish_inventoryItemId": 52,
+            "recipe_inventoryItemId": 95,
             "ingredientId1": 45,
             "ingredientId2": 5,
             "ingredientId3": 13,
@@ -72,7 +77,8 @@
         },
         {
             "id": 6,
-            "inventoryItemId": 53,
+            "dish_inventoryItemId": 53,
+            "recipe_inventoryItemId": 96,
             "ingredientId1": 5,
             "ingredientId2": 45,
             "ingredientId3": 19,
@@ -86,7 +92,8 @@
         },
         {
             "id": 7,
-            "inventoryItemId": 54,
+            "dish_inventoryItemId": 54,
+            "recipe_inventoryItemId": 97,
             "ingredientId1": 46,
             "ingredientId2": 45,
             "ingredientId3": 19,
@@ -100,7 +107,8 @@
         },
         {
             "id": 8,
-            "inventoryItemId": 55,
+            "dish_inventoryItemId": 55,
+            "recipe_inventoryItemId": 98,
             "ingredientId1": 45,
             "ingredientId2": 19,
             "ingredientId3": 0,
@@ -114,7 +122,8 @@
         },
         {
             "id": 9,
-            "inventoryItemId": 56,
+            "dish_inventoryItemId": 56,
+            "recipe_inventoryItemId": 99,
             "ingredientId1": 13,
             "ingredientId2": 19,
             "ingredientId3": 0,
@@ -128,7 +137,8 @@
         },
         {
             "id": 10,
-            "inventoryItemId": 57,
+            "dish_inventoryItemId": 57,
+            "recipe_inventoryItemId": 100,
             "ingredientId1": 19,
             "ingredientId2": 0,
             "ingredientId3": 0,
@@ -142,7 +152,8 @@
         },
         {
             "id": 11,
-            "inventoryItemId": 58,
+            "dish_inventoryItemId": 58,
+            "recipe_inventoryItemId": 101,
             "ingredientId1": 13,
             "ingredientId2": 0,
             "ingredientId3": 0,
@@ -156,7 +167,8 @@
         },
         {
             "id": 12,
-            "inventoryItemId": 59,
+            "dish_inventoryItemId": 59,
+            "recipe_inventoryItemId": 102,
             "ingredientId1": 2,
             "ingredientId2": 12,
             "ingredientId3": 30,
@@ -170,7 +182,8 @@
         },
         {
             "id": 13,
-            "inventoryItemId": 60,
+            "dish_inventoryItemId": 60,
+            "recipe_inventoryItemId": 103,
             "ingredientId1": 22,
             "ingredientId2": 19,
             "ingredientId3": 0,
@@ -184,7 +197,8 @@
         },
         {
             "id": 14,
-            "inventoryItemId": 61,
+            "dish_inventoryItemId": 61,
+            "recipe_inventoryItemId": 104,
             "ingredientId1": 5,
             "ingredientId2": 7,
             "ingredientId3": 28,
@@ -198,7 +212,8 @@
         },
         {
             "id": 15,
-            "inventoryItemId": 62,
+            "dish_inventoryItemId": 62,
+            "recipe_inventoryItemId": 105,
             "ingredientId1": 41,
             "ingredientId2": 0,
             "ingredientId3": 0,
@@ -212,7 +227,8 @@
         },
         {
             "id": 16,
-            "inventoryItemId": 63,
+            "dish_inventoryItemId": 63,
+            "recipe_inventoryItemId": 106,
             "ingredientId1": 5,
             "ingredientId2": 13,
             "ingredientId3": 19,
@@ -226,7 +242,8 @@
         },
         {
             "id": 17,
-            "inventoryItemId": 64,
+            "dish_inventoryItemId": 64,
+            "recipe_inventoryItemId": 107,
             "ingredientId1": 19,
             "ingredientId2": 22,
             "ingredientId3": 45,
@@ -240,7 +257,8 @@
         },
         {
             "id": 18,
-            "inventoryItemId": 65,
+            "dish_inventoryItemId": 65,
+            "recipe_inventoryItemId": 108,
             "ingredientId1": 46,
             "ingredientId2": 19,
             "ingredientId3": 0,
@@ -254,7 +272,8 @@
         },
         {
             "id": 19,
-            "inventoryItemId": 66,
+            "dish_inventoryItemId": 66,
+            "recipe_inventoryItemId": 109,
             "ingredientId1": 19,
             "ingredientId2": 42,
             "ingredientId3": 0,
@@ -268,7 +287,8 @@
         },
         {
             "id": 20,
-            "inventoryItemId": 67,
+            "dish_inventoryItemId": 67,
+            "recipe_inventoryItemId": 110,
             "ingredientId1": 47,
             "ingredientId2": 35,
             "ingredientId3": 0,
@@ -282,7 +302,8 @@
         },
         {
             "id": 21,
-            "inventoryItemId": 68,
+            "dish_inventoryItemId": 68,
+            "recipe_inventoryItemId": 111,
             "ingredientId1": 47,
             "ingredientId2": 35,
             "ingredientId3": 0,
@@ -296,7 +317,8 @@
         },
         {
             "id": 22,
-            "inventoryItemId": 69,
+            "dish_inventoryItemId": 69,
+            "recipe_inventoryItemId": 112,
             "ingredientId1": 13,
             "ingredientId2": 33,
             "ingredientId3": 0,
@@ -310,7 +332,8 @@
         },
         {
             "id": 23,
-            "inventoryItemId": 70,
+            "dish_inventoryItemId": 70,
+            "recipe_inventoryItemId": 113,
             "ingredientId1": 1,
             "ingredientId2": 5,
             "ingredientId3": 13,
@@ -324,7 +347,8 @@
         },
         {
             "id": 24,
-            "inventoryItemId": 71,
+            "dish_inventoryItemId": 71,
+            "recipe_inventoryItemId": 114,
             "ingredientId1": 5,
             "ingredientId2": 13,
             "ingredientId3": 19,
@@ -338,7 +362,8 @@
         },
         {
             "id": 25,
-            "inventoryItemId": 72,
+            "dish_inventoryItemId": 72,
+            "recipe_inventoryItemId": 115,
             "ingredientId1": 5,
             "ingredientId2": 13,
             "ingredientId3": 19,
@@ -352,7 +377,8 @@
         },
         {
             "id": 26,
-            "inventoryItemId": 73,
+            "dish_inventoryItemId": 73,
+            "recipe_inventoryItemId": 116,
             "ingredientId1": 5,
             "ingredientId2": 7,
             "ingredientId3": 30,
@@ -366,7 +392,8 @@
         },
         {
             "id": 27,
-            "inventoryItemId": 74,
+            "dish_inventoryItemId": 74,
+            "recipe_inventoryItemId": 117,
             "ingredientId1": 46,
             "ingredientId2": 0,
             "ingredientId3": 0,
@@ -380,7 +407,8 @@
         },
         {
             "id": 28,
-            "inventoryItemId": 75,
+            "dish_inventoryItemId": 75,
+            "recipe_inventoryItemId": 118,
             "ingredientId1": 35,
             "ingredientId2": 36,
             "ingredientId3": 0,
@@ -394,7 +422,8 @@
         },
         {
             "id": 29,
-            "inventoryItemId": 76,
+            "dish_inventoryItemId": 76,
+            "recipe_inventoryItemId": 119,
             "ingredientId1": 5,
             "ingredientId2": 0,
             "ingredientId3": 0,
@@ -408,7 +437,8 @@
         },
         {
             "id": 30,
-            "inventoryItemId": 77,
+            "dish_inventoryItemId": 77,
+            "recipe_inventoryItemId": 120,
             "ingredientId1": 19,
             "ingredientId2": 1,
             "ingredientId3": 22,
@@ -422,7 +452,8 @@
         },
         {
             "id": 31,
-            "inventoryItemId": 78,
+            "dish_inventoryItemId": 78,
+            "recipe_inventoryItemId": 121,
             "ingredientId1": 5,
             "ingredientId2": 13,
             "ingredientId3": 0,
@@ -436,7 +467,8 @@
         },
         {
             "id": 32,
-            "inventoryItemId": 79,
+            "dish_inventoryItemId": 79,
+            "recipe_inventoryItemId": 122,
             "ingredientId1": 46,
             "ingredientId2": 19,
             "ingredientId3": 0,
@@ -450,7 +482,8 @@
         },
         {
             "id": 33,
-            "inventoryItemId": 80,
+            "dish_inventoryItemId": 80,
+            "recipe_inventoryItemId": 123,
             "ingredientId1": 14,
             "ingredientId2": 15,
             "ingredientId3": 38,
@@ -464,7 +497,8 @@
         },
         {
             "id": 34,
-            "inventoryItemId": 81,
+            "dish_inventoryItemId": 81,
+            "recipe_inventoryItemId": 124,
             "ingredientId1": 13,
             "ingredientId2": 19,
             "ingredientId3": 0,
@@ -478,7 +512,8 @@
         },
         {
             "id": 35,
-            "inventoryItemId": 82,
+            "dish_inventoryItemId": 82,
+            "recipe_inventoryItemId": 125,
             "ingredientId1": 46,
             "ingredientId2": 19,
             "ingredientId3": 0,
@@ -492,7 +527,8 @@
         },
         {
             "id": 36,
-            "inventoryItemId": 83,
+            "dish_inventoryItemId": 83,
+            "recipe_inventoryItemId": 126,
             "ingredientId1": 19,
             "ingredientId2": 45,
             "ingredientId3": 0,
@@ -506,7 +542,8 @@
         },
         {
             "id": 37,
-            "inventoryItemId": 84,
+            "dish_inventoryItemId": 84,
+            "recipe_inventoryItemId": 127,
             "ingredientId1": 2,
             "ingredientId2": 12,
             "ingredientId3": 24,
@@ -520,7 +557,8 @@
         },
         {
             "id": 38,
-            "inventoryItemId": 85,
+            "dish_inventoryItemId": 85,
+            "recipe_inventoryItemId": 128,
             "ingredientId1": 14,
             "ingredientId2": 15,
             "ingredientId3": 38,
@@ -534,7 +572,8 @@
         },
         {
             "id": 39,
-            "inventoryItemId": 86,
+            "dish_inventoryItemId": 86,
+            "recipe_inventoryItemId": 129,
             "ingredientId1": 5,
             "ingredientId2": 13,
             "ingredientId3": 19,
@@ -548,7 +587,8 @@
         },
         {
             "id": 40,
-            "inventoryItemId": 87,
+            "dish_inventoryItemId": 87,
+            "recipe_inventoryItemId": 130,
             "ingredientId1": 5,
             "ingredientId2": 13,
             "ingredientId3": 19,
@@ -562,7 +602,8 @@
         },
         {
             "id": 41,
-            "inventoryItemId": 88,
+            "dish_inventoryItemId": 88,
+            "recipe_inventoryItemId": 131,
             "ingredientId1": 26,
             "ingredientId2": 19,
             "ingredientId3": 0,
@@ -576,7 +617,8 @@
         },
         {
             "id": 42,
-            "inventoryItemId": 89,
+            "dish_inventoryItemId": 89,
+            "recipe_inventoryItemId": 132,
             "ingredientId1": 46,
             "ingredientId2": 19,
             "ingredientId3": 0,
@@ -590,7 +632,8 @@
         },
         {
             "id": 43,
-            "inventoryItemId": 90,
+            "dish_inventoryItemId": 90,
+            "recipe_inventoryItemId": 133,
             "ingredientId1": 8,
             "ingredientId2": 29,
             "ingredientId3": 42,

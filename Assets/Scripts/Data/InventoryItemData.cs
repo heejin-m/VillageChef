@@ -54,7 +54,7 @@ public partial class InventoryItemData : IData
 
         if (rows == null)
         {
-            Debug.LogError("InventoryItem.json 데이터 없음");
+            Debug.LogError("InventoryItemData.json 데이터 없음");
             return;
         }
 

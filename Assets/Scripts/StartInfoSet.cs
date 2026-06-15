@@ -11,4 +11,8 @@ public class StartInfoSet
     /// 인벤토리 데이터 리스트
     /// </summary>
     public List<InventoryItemSaveInfo> inventoryItemSaveInfo = new();
+    /// <summary>
+    /// 상품 데이터 리스트
+    /// </summary>
+    public List<ProductSaveInfo> productSaveInfo = new();
 }

@@ -8,4 +8,8 @@ public enum eAtlas
     CommonUI,
     [Description("Assets/AddressableAssets/Atlas/FoodUI.spriteatlasv2")]
     FoodUI,
+    [Description("Assets/AddressableAssets/Atlas/GrassAndRoadTileUI.spriteatlasv2")]
+    GrassAndRoadTileUI,
+    [Description("Assets/AddressableAssets/Atlas/ShopUI.spriteatlasv2")]
+    ShopUI,
 }

@@ -17,6 +17,14 @@ public class InventoryItemInfo
     /// </summary>
     public int Cnt => SaveInfo != null ? SaveInfo.cnt : 0;
     /// <summary>
+    /// 아이템 이름
+    /// </summary>
+    public string Name => this.InventoryItem.name;
+    /// <summary>
+    /// 아이템 설명
+    /// </summary>
+    public string Desc => this.InventoryItem.description;
+    /// <summary>
     /// 보유 여부
     /// </summary>
     public bool IsHave => Cnt > 0;

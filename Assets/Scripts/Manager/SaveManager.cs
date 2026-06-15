@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.IO;
+using System;
 using UnityEngine;
 
 public class SaveManager
@@ -39,62 +40,66 @@ public class SaveManager
         data ??= new StartInfoSet();
         data.recipeSaveInfos ??= new List<RecipeSaveInfo>();
         data.inventoryItemSaveInfo ??= new List<InventoryItemSaveInfo>();
+        data.productSaveInfo ??= new List<ProductSaveInfo>();
         return data;
+    }
+
+    private static void SaveList<T>(List<T> saveInfos, Func<StartInfoSet, List<T>> getList, Func<T, int> getId)
+    {
+        ModelCenter.StartInfoSetData ??= new();
+
+        foreach (var info in saveInfos)
+        {
+            SaveItem(info, getList, getId, false);
+        }
+
+        Save(ModelCenter.StartInfoSetData);
+    }
+
+    private static void SaveItem<T>(T saveInfo, Func<StartInfoSet, List<T>> getList, Func<T, int> getId, bool isSave = true)
+    {
+        ModelCenter.StartInfoSetData ??= new();
+
+        var list = getList(ModelCenter.StartInfoSetData);
+        bool isExists = list.Exists(d => getId(d) == getId(saveInfo));
+        if (!isExists)
+        {
+            list.Add(saveInfo);
+        }
+
+        if (isSave)
+        {
+            Save(ModelCenter.StartInfoSetData);
+        }
     }
 
     public static void Save(List<RecipeSaveInfo> saveInfos)
     {
-        ModelCenter.StartInfoSetData ??= new();
-
-        foreach (var info in saveInfos)
-        {
-            Save(info, false);
-        }
-
-        Save(ModelCenter.StartInfoSetData);
+        SaveList(saveInfos, data => data.recipeSaveInfos, info => info.id);
     }
 
     public static void Save(RecipeSaveInfo saveInfo, bool isSave = true)
     {
-        ModelCenter.StartInfoSetData ??= new();
-
-        bool isExists = ModelCenter.StartInfoSetData.recipeSaveInfos.Exists(d => d.id == saveInfo.id);
-        if (!isExists)
-        {
-            ModelCenter.StartInfoSetData.recipeSaveInfos.Add(saveInfo);
-        }
-
-        if (isSave)
-        {
-            Save(ModelCenter.StartInfoSetData);
-        }
+        SaveItem(saveInfo, data => data.recipeSaveInfos, info => info.id, isSave);
     }
 
     public static void Save(List<InventoryItemSaveInfo> saveInfos)
     {
-        ModelCenter.StartInfoSetData ??= new();
-
-        foreach (var info in saveInfos)
-        {
-            Save(info, false);
-        }
-
-        Save(ModelCenter.StartInfoSetData);
+        SaveList(saveInfos, data => data.inventoryItemSaveInfo, info => info.id);
     }
 
     public static void Save(InventoryItemSaveInfo saveInfo, bool isSave = true)
     {
-        ModelCenter.StartInfoSetData ??= new();
+        SaveItem(saveInfo, data => data.inventoryItemSaveInfo, info => info.id, isSave);
+    }
 
-        bool isExists = ModelCenter.StartInfoSetData.inventoryItemSaveInfo.Exists(d => d.id == saveInfo.id);
-        if (!isExists)
-        {
-            ModelCenter.StartInfoSetData.inventoryItemSaveInfo.Add(saveInfo);
-        }
+    public static void Save(List<ProductSaveInfo> saveInfos)
+    {
+        SaveList(saveInfos, data => data.productSaveInfo, info => info.id);
+    }
 
-        if (isSave)
-        {
-            Save(ModelCenter.StartInfoSetData);
-        }
+    public static void Save(ProductSaveInfo saveInfo, bool isSave = true)
+    {
+        SaveItem(saveInfo, data => data.productSaveInfo, info => info.id, isSave);
     }
 }

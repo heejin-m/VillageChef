@@ -2,18 +2,32 @@ using System.Collections.Generic;
 
 public partial class Recipe
 {
-    public string Name => GetInventoryItem().name;
-    public string Description => GetInventoryItem().description;
-    public string ResourceName => GetInventoryItem().resourceName;
+    public string DishName => GetDishInventoryItem().name;
+    public string DishDescription => GetDishInventoryItem().description;
+    public string DishResourceName => GetDishInventoryItem().resourceName;
+
+    public string RecipeName => GetRecipeInventoryItem().name;
+    public string RecipeDescription => GetRecipeInventoryItem().description;
+    public string RecipeResourceName => GetRecipeInventoryItem().resourceName;
 
     /// <summary>
-    /// 인벤토리 아이템 데이터 가져오기
+    /// 완성품 인벤토리 아이템 데이터 가져오기
     /// </summary>
     /// <returns></returns>
-    public InventoryItem GetInventoryItem()
+    public InventoryItem GetDishInventoryItem()
     {
         var inventoryItemData = DataManager.Instance.GetData<InventoryItemData>();
-        return inventoryItemData.GetData(this.inventoryItemId);
+        return inventoryItemData.GetData(this.dish_inventoryItemId);
+    }
+
+    /// <summary>
+    /// 레시피 인벤토리 아이템 데이터 가져오기
+    /// </summary>
+    /// <returns></returns>
+    public InventoryItem GetRecipeInventoryItem()
+    {
+        var inventoryItemData = DataManager.Instance.GetData<InventoryItemData>();
+        return inventoryItemData.GetData(this.recipe_inventoryItemId);
     }
 
     public List<byte> GetIngredientIdList()

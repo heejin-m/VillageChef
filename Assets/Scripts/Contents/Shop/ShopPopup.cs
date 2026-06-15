@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using TMPro;
+using UnityEngine.UI;
 
 public class ShopPopup : PopupWindow
 {
@@ -11,8 +12,15 @@ public class ShopPopup : PopupWindow
 
     public ShopNPCTalk npcTalkSO;
     public TMP_Text npc_talk;
+    public Image npc_portrait;
 
     #endregion
+
+    /// <summary>
+    /// Shop NPC 초상화 리소스
+    /// </summary>
+    private const string NPC_PORTRAIT_NORMAL = "ShopKeeperPortrait_01";
+    private const string NPC_PORTRAIT_HAPPY = "ShopKeeperPortrait_01_Smile";
 
     /// <summary>
     /// Shop NPC 대사 컬렉션
@@ -53,18 +61,19 @@ public class ShopPopup : PopupWindow
         _shopNPCTalkDict.Clear();
         foreach (var item in npcTalkSO.talkList)
         {
-            if (_shopNPCTalkDict.TryGetValue(item.eNPCTalk, out var list))
+            if (!_shopNPCTalkDict.TryGetValue(item.eNPCTalk, out var list))
             {
-                list ??= new();
-                list.Add(item.talk);
+                list = new List<string>();
+                _shopNPCTalkDict.Add(item.eNPCTalk, list);
             }
-
-            _shopNPCTalkDict.Add(item.eNPCTalk, list);
+            list.Add(item.talk);
         }
     }
 
     private void OnChangeTabIndex(ushort index)
     {
+        Initialize();
+
         shopBuyPage.CloseProcess();
         shopSellPage.CloseProcess();
 
@@ -79,6 +88,11 @@ public class ShopPopup : PopupWindow
         }
     }
 
+    private void Initialize()
+    {
+        AtlasLoadManager.SetImageSprite(npc_portrait, eAtlas.ShopUI, NPC_PORTRAIT_NORMAL);
+    }
+
     private void OnTalkNPC(eNPCTalk eNPCTalk)
     {
         if (_shopNPCTalkDict.TryGetValue(eNPCTalk, out var list))
@@ -89,6 +103,18 @@ public class ShopPopup : PopupWindow
             }
 
             npc_talk.text = RandomSelect(list);
+        }
+
+        switch (eNPCTalk)
+        {
+            case eNPCTalk.Sell_Talk:
+            case eNPCTalk.Sad_Talk:
+                AtlasLoadManager.SetImageSprite(npc_portrait, eAtlas.ShopUI, NPC_PORTRAIT_NORMAL);
+                break;
+            case eNPCTalk.Happy_Talk:
+            case eNPCTalk.Buy_Talk:
+                AtlasLoadManager.SetImageSprite(npc_portrait, eAtlas.ShopUI, NPC_PORTRAIT_HAPPY);
+                break;
         }
     }
 

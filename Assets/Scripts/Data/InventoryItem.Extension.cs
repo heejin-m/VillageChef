@@ -2,6 +2,7 @@ public enum eInventoryItemType
 {
     Ingredient = 0,
     Dish,
+    Recipe,
 }
 
 public enum eInventoryItemCategory
@@ -15,6 +16,7 @@ public enum eInventoryItemCategory
     Special,
     Grain,
     Dish,
+    Recipe,
 }
 
 public partial class InventoryItem

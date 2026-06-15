@@ -11,5 +11,6 @@ public class InventorySlotUI : MonoBehaviour
     public void Set(InventoryItemInfo info)
     {
         itemUI.Set(info);
+        itemUI.SetCnt(info.Cnt);
     }
 }

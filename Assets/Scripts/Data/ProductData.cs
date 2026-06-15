@@ -6,17 +6,17 @@ using UnityEngine.AddressableAssets;
 using UnityEngine.ResourceManagement.AsyncOperations;
 
 [Serializable]
-public class IngredientDatabase
+public class ProductDatabase
 {
-    public List<Ingredient> rows;
+    public List<Product> rows;
 }
 
 // 제이슨 파일을 가져와서 읽고 dictionary 형태의 자료구조로 정리.
-public partial class IngredientData : IData
+public partial class ProductData : IData
 {
-    public Dictionary<int, Ingredient> Datas { get; private set; } = new();
+    public Dictionary<int, Product> Datas { get; private set; } = null;
 
-    private const string ADDRESS = "IngredientData.json";
+    private const string ADDRESS = "ProductData.json";
     private AsyncOperationHandle<TextAsset> _handle;
 
     public async Task Initialize()
@@ -41,19 +41,20 @@ public partial class IngredientData : IData
 
         if (jsonFile == null)
         {
-            Debug.LogError("Ingredient.json 없음");
+            Debug.LogError("ProductData.json 없음");
             return;
         }
 
-        IngredientDatabase database = JsonUtility.FromJson<IngredientDatabase>(jsonFile.text);
+        ProductDatabase database = JsonUtility.FromJson<ProductDatabase>(jsonFile.text);
 
+        Datas ??= new();
         Datas.Clear();
 
-        List<Ingredient> rows = database.rows;
+        List<Product> rows = database.rows;
 
         if (rows == null)
         {
-            Debug.LogError("Ingredient.json 데이터 없음");
+            Debug.LogError("ProductData.json 데이터 없음");
             return;
         }
 

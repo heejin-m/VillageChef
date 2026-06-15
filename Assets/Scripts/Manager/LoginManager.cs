@@ -103,6 +103,7 @@ public class LoginManager : MonoBehaviour
         ModelCenter.StartInfoSetData = data;
         ModelCenter.Recipe.Set(data.recipeSaveInfos);
         ModelCenter.Inventory.Set(data.inventoryItemSaveInfo);
+        ModelCenter.Product.Set(data.productSaveInfo);
 
         onFinished?.Invoke(true);
     }

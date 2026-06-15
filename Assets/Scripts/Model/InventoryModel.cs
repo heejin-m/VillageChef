@@ -49,7 +49,12 @@ public class InventoryModel : AbstractModel
         }
     }
 
-    public InventoryItemInfo GetItemListById(int id)
+    /// <summary>
+    /// ID로 InventoryItemInfo 가져오기
+    /// </summary>
+    /// <param name="id"></param>
+    /// <returns></returns>
+    public InventoryItemInfo GetItemById(int id)
     {
         if (_itemInfoDictByID.TryGetValue(id, out var info))
         {
@@ -59,6 +64,11 @@ public class InventoryModel : AbstractModel
         return null;
     }
 
+    /// <summary>
+    /// 타입으로 InventoryItemInfo 리스트 가져오기
+    /// </summary>
+    /// <param name="type"></param>
+    /// <returns></returns>
     public List<InventoryItemInfo> GetItemListByType(eInventoryItemType type)
     {
         if (_itemInfoDictByType.TryGetValue(type, out var list))
@@ -69,11 +79,55 @@ public class InventoryModel : AbstractModel
         return null;
     }
 
+    /// <summary>
+    /// 타입으로 소유하고 있는 InventoryItemInfo 리스트 가져오기
+    /// </summary>
+    /// <param name="type"></param>
+    /// <returns></returns>
+    public List<InventoryItemInfo> GetHaveItemListByType(eInventoryItemType type)
+    {
+        if (_itemInfoDictByType.TryGetValue(type, out var list))
+        {
+            if (list != null)
+            {
+                return list.FindAll(d => d.IsHave);
+            }
+        }
+
+        return null;
+    }
+
+    /// <summary>
+    /// 카테고리로 InventoryItemInfo 리스트 가져오기
+    /// </summary>
+    /// <param name="category"></param>
+    /// <returns></returns>
     public List<InventoryItemInfo> GetItemListByCategory(eInventoryItemCategory category)
     {
         if (_itemInfoDictByCategory.TryGetValue(category, out var list))
         {
-            return list;
+            if (list != null)
+            {
+                return list.FindAll(d => d.IsHave);
+            }
+        }
+
+        return null;
+    }
+
+    /// <summary>
+    /// 카테고리로 소유하고 있는 InventoryItemInfo 리스트 가져오기
+    /// </summary>
+    /// <param name="category"></param>
+    /// <returns></returns>
+    public List<InventoryItemInfo> GetHaveItemListByCategory(eInventoryItemCategory category)
+    {
+        if (_itemInfoDictByCategory.TryGetValue(category, out var list))
+        {
+            if (list != null)
+            {
+                return list.FindAll(d => d.IsHave);
+            }
         }
 
         return null;

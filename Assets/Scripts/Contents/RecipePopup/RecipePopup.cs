@@ -28,7 +28,7 @@ public class RecipePopup : PopupWindow
     /// <summary>
     /// 현재 페이지 인덱스
     /// </summary>
-    private ushort _currentIndex = 1;
+    private int _currentIndex = 1;
 
     public override void Awake()
     {
@@ -60,8 +60,8 @@ public class RecipePopup : PopupWindow
         knownObj.SetActive(isHave);
         unknownObj.SetActive(!isHave);
 
-        title.text = data.Name;
-        desc.text = data.Description;
+        title.text = data.DishName;
+        desc.text = data.DishDescription;
         index.text = _currentIndex.ToString();
 
         UpdateIngredientUI(data);
@@ -84,13 +84,13 @@ public class RecipePopup : PopupWindow
 
     private void OnClickLeftButton()
     {
-        _currentIndex = _currentIndex - 1 <= 0 ? (ushort)1 : (ushort)(_currentIndex - 1);
+        _currentIndex = _currentIndex - 1 <= 0 ? 1 : _currentIndex - 1;
         UpdateUI();
     }
 
     private void OnClickRightButton()
     {
-        _currentIndex = _currentIndex + 1 >= lastData.id ? lastData.id : (ushort)(_currentIndex + 1);
+        _currentIndex = _currentIndex + 1 >= lastData.id ? lastData.id : _currentIndex + 1;
         UpdateUI();
     }
 }
