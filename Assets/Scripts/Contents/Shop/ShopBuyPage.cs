@@ -9,6 +9,8 @@ public class ShopBuyPage : MonoBehaviour
     public LoopVerticalScrollRectCustom scrollRect;
     public UITabController typeTab;
     public Button buyButton;
+    public GameObject enableButton;
+    public GameObject disableButton;
 
     #endregion
 
@@ -59,6 +61,7 @@ public class ShopBuyPage : MonoBehaviour
         typeTab.SetTab((short)_currentTab);
         SetData();
         SetScrollview(true);
+        UpdateButtonUI();
     }
 
     public void CloseProcess()
@@ -72,11 +75,18 @@ public class ShopBuyPage : MonoBehaviour
         Unselect();
         SetData();
         SetScrollview(true);
+        UpdateButtonUI();
     }
 
     private void SetData()
     {
         _productInfos = ModelCenter.Product.GetProductListByType(_currentTab);
+    }
+
+    private void UpdateButtonUI()
+    {
+        enableButton.SetActive(_selectedItem != null);
+        disableButton.SetActive(_selectedItem == null);
     }
 
     /// <summary>
@@ -142,6 +152,7 @@ public class ShopBuyPage : MonoBehaviour
         Unselect();
         _selectedItem = item;
         _selectedItem.SetSelected(true);
+        UpdateButtonUI();
     }
 
     private void Unselect()
@@ -150,6 +161,8 @@ public class ShopBuyPage : MonoBehaviour
         {
             _selectedItem.SetSelected(false);
             _selectedItem = null;
+
         }
+        UpdateButtonUI();
     }
 }

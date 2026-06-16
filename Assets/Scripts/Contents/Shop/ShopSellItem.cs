@@ -12,6 +12,8 @@ public class ShopSellItem : MonoBehaviour
 
     private Button _button = null;
     private bool _isSelected = false;
+    private InventoryItemInfo _info = null;
+    private System.Action<InventoryItemInfo> _onClick = null;
 
     private void Awake()
     {
@@ -19,23 +21,25 @@ public class ShopSellItem : MonoBehaviour
         _button?.SetOnClickEvent(OnClick);
     }
 
-    public void Set(InventoryItemInfo info)
+    public void Set(InventoryItemInfo info, System.Action<InventoryItemInfo> onClick, bool isSelected)
     {
+        _info = info;
+        _onClick = onClick;
+
         itemUI.Set(info);
         itemUI.SetCnt(info.Cnt);
 
-        _isSelected = false;
+        _isSelected = isSelected;
         UpdateUI();
     }
 
     private void UpdateUI()
     {
-        selectedObj.SetActive(selectedObj);
+        selectedObj?.SetActive(_isSelected);
     }
 
     public void OnClick()
     {
-        _isSelected = !_isSelected;
-        UpdateUI();
+        _onClick?.Invoke(_info);
     }
 }
