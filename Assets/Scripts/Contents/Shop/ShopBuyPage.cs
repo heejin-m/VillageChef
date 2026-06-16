@@ -25,6 +25,10 @@ public class ShopBuyPage : MonoBehaviour
     /// </summary>
     private eInventoryItemType _currentTab = eInventoryItemType.Ingredient;
     /// <summary>
+    /// 현재 선택된 아이템
+    /// </summary>
+    private ShopBuyItem _selectedItem = null;
+    /// <summary>
     /// 초기화 여부
     /// </summary>
     private bool _isInitialized = false;
@@ -50,6 +54,7 @@ public class ShopBuyPage : MonoBehaviour
 
         _onTalkNPC = onTalkNPC;
         _currentTab = eInventoryItemType.Ingredient;
+        Unselect();
 
         typeTab.SetTab((short)_currentTab);
         SetData();
@@ -64,6 +69,7 @@ public class ShopBuyPage : MonoBehaviour
     private void OnChangeTabIndex(ushort index)
     {
         _currentTab = (eInventoryItemType)index;
+        Unselect();
         SetData();
         SetScrollview(true);
     }
@@ -78,6 +84,11 @@ public class ShopBuyPage : MonoBehaviour
     /// </summary>
     private void SetScrollview(bool isRefill)
     {
+        if (isRefill)
+        {
+            Unselect();
+        }
+
         // 스크롤뷰 세팅
         scrollRect.totalCount = _productInfos.Count;
         if (isRefill)
@@ -103,7 +114,7 @@ public class ShopBuyPage : MonoBehaviour
         if (listItem != null && _productInfos != null && idx < _productInfos.Count)
         {
             listItem.gameObject.SetActive(true);
-            listItem.Set(_productInfos[idx]);
+            listItem.Set(_productInfos[idx], OnClickItem);
         }
         else
         {
@@ -113,6 +124,32 @@ public class ShopBuyPage : MonoBehaviour
 
     private void OnClickBuyButton()
     {
+        if (_selectedItem == null) return;
+
         _onTalkNPC?.Invoke(eNPCTalk.Sell_Talk);
+    }
+
+    private void OnClickItem(ShopBuyItem item)
+    {
+        if (item == null) return;
+
+        if (_selectedItem == item && item.IsSelected)
+        {
+            Unselect();
+            return;
+        }
+
+        Unselect();
+        _selectedItem = item;
+        _selectedItem.SetSelected(true);
+    }
+
+    private void Unselect()
+    {
+        if (_selectedItem != null)
+        {
+            _selectedItem.SetSelected(false);
+            _selectedItem = null;
+        }
     }
 }

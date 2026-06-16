@@ -19,9 +19,10 @@ public class ShopSellItem : MonoBehaviour
         _button?.SetOnClickEvent(OnClick);
     }
 
-    public void Set(InventoryItemInfo infos)
+    public void Set(InventoryItemInfo info)
     {
-        itemUI.Set(infos);
+        itemUI.Set(info);
+        itemUI.SetCnt(info.Cnt);
 
         _isSelected = false;
         UpdateUI();
