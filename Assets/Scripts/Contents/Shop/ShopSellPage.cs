@@ -25,16 +25,30 @@ public class ShopSellPage : MonoBehaviour
     /// 현재 탭
     /// </summary>
     private eInventoryItemType _currentTab = eInventoryItemType.Ingredient;
+    /// <summary>
+    /// 초기화 여부
+    /// </summary>
+    private bool _isInitialized = false;
 
     public void Awake()
     {
+        Initialize();
+    }
+
+    private void Initialize()
+    {
+        if (_isInitialized) return;
+
         sellButton.SetOnClickEvent(OnClickSellButton);
         typeTab.onChangeTabIndex += OnChangeTabIndex;
         scrollRect.OnProvideData = OnProvideData;
+        _isInitialized = true;
     }
 
     public void StartProcess(System.Action<eNPCTalk> onTalkNPC)
     {
+        Initialize();
+
         _onTalkNPC = onTalkNPC;
         _currentTab = eInventoryItemType.Ingredient;
 

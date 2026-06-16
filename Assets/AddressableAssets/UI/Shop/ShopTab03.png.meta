@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: d54fb7e19216dab9e175cd4eb32232b1
+guid: c552048ae9624ed4b9bb52ef37c1db65
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -123,13 +123,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: InventoryTypeButton_01
+      name: ShopTab03_0
       rect:
         serializedVersion: 2
-        x: 5
-        y: 6
-        width: 139
-        height: 139
+        x: 0
+        y: 0
+        width: 230
+        height: 123
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -138,8 +138,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 99b284291101e4c40b2e2a38206664f0
-      internalID: -2134925210
+      spriteID: 22ed479c68b37cf43851dbb2aee86dee
+      internalID: -17752535
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5db486c00ec329345a969fa11f0f2fe0
+    spriteID: 3e0216774f534084b83e7b40ed6d7877
     internalID: 0
     vertices: []
     indices: 
@@ -156,9 +156,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      InventoryTypeButton_01: -2134925210
+      ShopTab03_0: -17752535
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -17,8 +17,10 @@ public class ItemUI : MonoBehaviour
         {
             case eInventoryItemType.Ingredient:
             case eInventoryItemType.Dish:
-            case eInventoryItemType.Recipe:
                 AtlasLoadManager.SetImageSprite(img, eAtlas.FoodUI, info.InventoryItem.resourceName);
+                break;
+            case eInventoryItemType.Recipe:
+                AtlasLoadManager.SetImageSprite(img, eAtlas.CommonUI, info.InventoryItem.resourceName);
                 break;
             default:
                 break;
