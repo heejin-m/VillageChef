@@ -8,6 +8,7 @@ public enum eNPCTalk
     Buy_Talk,
     Sad_Talk,
     Happy_Talk,
+    Hello_Talk,
 }
 
 [CreateAssetMenu(fileName = "ShopNPCTalk", menuName = "Scriptable Objects/ShopNPCTalk")]

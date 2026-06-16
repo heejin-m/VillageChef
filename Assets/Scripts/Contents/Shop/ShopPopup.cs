@@ -43,6 +43,16 @@ public class ShopPopup : PopupWindow
     {
         base.Awake();
         shopTab.onChangeTabIndex += OnChangeTabIndex;
+
+        if (_shopNPCTalkDict.TryGetValue(eNPCTalk.Hello_Talk, out var list))
+        {
+            if (list == null || list.Count <= 0)
+            {
+                return;
+            }
+
+            npc_talk.text = RandomSelect(list);
+        }
     }
 
     public override void StartProcess()
@@ -112,6 +122,7 @@ public class ShopPopup : PopupWindow
         {
             case eNPCTalk.Sell_Talk:
             case eNPCTalk.Sad_Talk:
+            case eNPCTalk.Hello_Talk:
                 AtlasLoadManager.SetImageSprite(npc_portrait, eAtlas.ShopUI, NPC_PORTRAIT_NORMAL);
                 break;
             case eNPCTalk.Happy_Talk:

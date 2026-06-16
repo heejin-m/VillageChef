@@ -25,3 +25,8 @@ MonoBehaviour:
     talk: "\uC0C1\uD488\uC774 \uB9C8\uC74C\uC5D0 \uB4E4\uC9C0 \uC54A\uB294\uAC90\uAC00?"
   - eNPCTalk: 3
     talk: "\uC88B\uC544 \uC88B\uC544!"
+  - eNPCTalk: 4
+    talk: "\uBC18\uAC00\uC6CC! \uC5B4\uC11C\uC640\uC694"
+  - eNPCTalk: 4
+    talk: "\uBA4B\uC9C4 \uBB3C\uAC74\uB4E4\uC744 \uCC9C\uCC9C\uD788 \uB458\uB7EC\uBCF4\uACE0
+      \uAC00\uAC8C\uB098"

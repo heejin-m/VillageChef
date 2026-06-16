@@ -9,6 +9,7 @@ public class ShopSellPage : MonoBehaviour
     public LoopGridScrollRectCustom scrollRect;
     public UITabController typeTab;
     public Button sellButton;
+    public GameObject emptyObj;
 
     #endregion
 
@@ -39,6 +40,7 @@ public class ShopSellPage : MonoBehaviour
 
         typeTab.SetTab((short)_currentTab);
         SetData();
+        UpdateUI();
         SetScrollview(true);
     }
 
@@ -51,12 +53,18 @@ public class ShopSellPage : MonoBehaviour
     {
         _currentTab = (eInventoryItemType)index;
         SetData();
+        UpdateUI();
         SetScrollview(true);
     }
 
     private void SetData()
     {
         _haveItemInfos = ModelCenter.Inventory.GetHaveItemListByType(_currentTab);
+    }
+
+    private void UpdateUI()
+    {
+        emptyObj.SetActive(_haveItemInfos == null || _haveItemInfos.Count <= 0);
     }
 
     /// <summary>
