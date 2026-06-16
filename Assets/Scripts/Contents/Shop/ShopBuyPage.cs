@@ -6,7 +6,7 @@ public class ShopBuyPage : MonoBehaviour
 {
     #region Insepctor
 
-    public InfinityScrollRect scrollRect;
+    public LoopVerticalScrollRectCustom scrollRect;
     public UITabController typeTab;
     public Button buyButton;
 
@@ -29,12 +29,7 @@ public class ShopBuyPage : MonoBehaviour
     {
         buyButton.SetOnClickEvent(OnClickBuyButton);
         typeTab.onChangeTabIndex += OnChangeTabIndex;
-    }
-
-    private void OnChangeTabIndex(ushort index)
-    {
-        _currentTab = (eInventoryItemType)index;
-        SetData();
+        scrollRect.OnProvideData = OnProvideData;
     }
 
     public void StartProcess(System.Action<eNPCTalk> onTalkNPC)
@@ -44,7 +39,7 @@ public class ShopBuyPage : MonoBehaviour
 
         typeTab.SetTab((short)_currentTab);
         SetData();
-        SetScrollRect();
+        SetScrollview(true);
     }
 
     public void CloseProcess()
@@ -52,19 +47,54 @@ public class ShopBuyPage : MonoBehaviour
 
     }
 
+    private void OnChangeTabIndex(ushort index)
+    {
+        _currentTab = (eInventoryItemType)index;
+        SetData();
+        SetScrollview(true);
+    }
+
     private void SetData()
     {
         _productInfos = ModelCenter.Product.GetProductListByType(_currentTab);
     }
 
-    private void SetScrollRect()
+    /// <summary>
+    /// 스크롤뷰 리스트 세팅
+    /// </summary>
+    private void SetScrollview(bool isRefill)
     {
-        scrollRect.onUpdateItem.AddListener((item, index) =>
+        // 스크롤뷰 세팅
+        scrollRect.totalCount = _productInfos.Count;
+        if (isRefill)
         {
-            item.GetComponent<ShopBuyItem>().Set(_productInfos[index]);
-        });
+            scrollRect.RefillCells();
+        }
+        else
+        {
+            scrollRect.RefreshCells();
+        }
+    }
 
-        scrollRect.SetTotalCount(_productInfos.Count);
+    /// <summary>
+    /// 스크롤뷰 세팅
+    /// </summary>
+    /// <param name="transform"></param>
+    /// <param name="idx"></param>
+    private void OnProvideData(Transform transform, int idx)
+    {
+        if (transform == null) return;
+
+        ShopBuyItem listItem = transform.GetComponent<ShopBuyItem>();
+        if (listItem != null && _productInfos != null && idx < _productInfos.Count)
+        {
+            listItem.gameObject.SetActive(true);
+            listItem.Set(_productInfos[idx]);
+        }
+        else
+        {
+            transform.gameObject.SetActive(false);
+        }
     }
 
     private void OnClickBuyButton()

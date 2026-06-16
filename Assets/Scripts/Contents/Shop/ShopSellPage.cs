@@ -6,7 +6,7 @@ public class ShopSellPage : MonoBehaviour
 {
     #region Insepctor
 
-    public InfinityScrollRect scrollRect;
+    public LoopGridScrollRectCustom scrollRect;
     public UITabController typeTab;
     public Button sellButton;
 
@@ -29,12 +29,7 @@ public class ShopSellPage : MonoBehaviour
     {
         sellButton.SetOnClickEvent(OnClickSellButton);
         typeTab.onChangeTabIndex += OnChangeTabIndex;
-    }
-
-    private void OnChangeTabIndex(ushort index)
-    {
-        _currentTab = (eInventoryItemType)index;
-        SetData();
+        scrollRect.OnProvideData = OnProvideData;
     }
 
     public void StartProcess(System.Action<eNPCTalk> onTalkNPC)
@@ -44,7 +39,7 @@ public class ShopSellPage : MonoBehaviour
 
         typeTab.SetTab((short)_currentTab);
         SetData();
-        SetScrollRect();
+        SetScrollview(true);
     }
 
     public void CloseProcess()
@@ -52,19 +47,54 @@ public class ShopSellPage : MonoBehaviour
 
     }
 
+    private void OnChangeTabIndex(ushort index)
+    {
+        _currentTab = (eInventoryItemType)index;
+        SetData();
+        SetScrollview(true);
+    }
+
     private void SetData()
     {
         _haveItemInfos = ModelCenter.Inventory.GetHaveItemListByType(_currentTab);
     }
 
-    private void SetScrollRect()
+    /// <summary>
+    /// 스크롤뷰 리스트 세팅
+    /// </summary>
+    private void SetScrollview(bool isRefill)
     {
-        scrollRect.onUpdateItem.AddListener((item, index) =>
+        // 스크롤뷰 세팅
+        scrollRect.totalCount = _haveItemInfos.Count;
+        if (isRefill)
         {
-            item.GetComponent<ShopSellItem>().Set(_haveItemInfos[index]);
-        });
+            scrollRect.RefillCells();
+        }
+        else
+        {
+            scrollRect.RefreshCells();
+        }
+    }
 
-        scrollRect.SetTotalCount(_haveItemInfos.Count);
+    /// <summary>
+    /// 스크롤뷰 세팅
+    /// </summary>
+    /// <param name="transform"></param>
+    /// <param name="idx"></param>
+    private void OnProvideData(Transform transform, int idx)
+    {
+        if (transform == null) return;
+
+        ShopSellItem listItem = transform.GetComponent<ShopSellItem>();
+        if (listItem != null && _haveItemInfos != null && idx < _haveItemInfos.Count)
+        {
+            listItem.gameObject.SetActive(true);
+            listItem.Set(_haveItemInfos[idx]);
+        }
+        else
+        {
+            transform.gameObject.SetActive(false);
+        }
     }
 
     private void OnClickSellButton()

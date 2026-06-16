@@ -49,6 +49,9 @@ public class ShopPopup : PopupWindow
     {
         base.StartProcess();
         SetData();
+
+        Initialize();
+        shopBuyPage.StartProcess(OnTalkNPC);
     }
 
     public override void CloseProcess()
