@@ -311,7 +311,7 @@ public class ShopSellPage : MonoBehaviour
 
         foreach (var info in _wantSellItemInfos)
         {
-            ModelCenter.Player.AddGold(info.GetPrice());
+            ModelCenter.Player.AddGold(info.GetPrice() * info.cnt);
             ModelCenter.Inventory.UseItem(info.id, info.cnt);
         }
 

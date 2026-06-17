@@ -1,6 +1,3 @@
-using UnityEditor.XR;
-using UnityEngine;
-
 public partial class Product
 {
     public InventoryItem GetInventoryItem() => InventoryItem == null ? MakeInventoryItemData() : InventoryItem;

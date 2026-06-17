@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
 using UnityEngine.ResourceManagement.AsyncOperations;
@@ -62,18 +63,49 @@ public static class AtlasLoadManager
     /// </summary>
     /// <param name="type"></param>
     /// <returns></returns>
-    public static SpriteAtlas GetSpriteAtlas(eAtlas type)
+    public static async Task<SpriteAtlas> LoadSpriteAtlasAsync(eAtlas type)
     {
         string key = type.ToString();
         string path = Utils.GetDescription(type);
-        if (!_cachedAtlas.TryGetValue(key, out var handle))
+
+        if (_cachedAtlas.TryGetValue(key, out var cachedHandle))
         {
-            handle = Addressables.LoadAssetAsync<SpriteAtlas>(path);
-            handle.WaitForCompletion();
-            if (!_cachedAtlas.ContainsKey(key))
-                _cachedAtlas.Add(key, handle);
+            if (cachedHandle.IsValid())
+            {
+                return await cachedHandle.Task;
+            }
+
+            _cachedAtlas.Remove(key);
         }
-        return handle.Result;
+
+        var handle = Addressables.LoadAssetAsync<SpriteAtlas>(path);
+        _cachedAtlas.Add(key, handle);
+
+        SpriteAtlas atlas = await handle.Task;
+        if (handle.Status == AsyncOperationStatus.Succeeded && atlas != null)
+        {
+            return atlas;
+        }
+
+        Debug.LogError($"SpriteAtlas load failed: {path}");
+        if (handle.IsValid())
+        {
+            Addressables.Release(handle);
+        }
+
+        _cachedAtlas.Remove(key);
+        return null;
+    }
+
+    public static SpriteAtlas GetSpriteAtlas(eAtlas type)
+    {
+        string key = type.ToString();
+        if (!_cachedAtlas.TryGetValue(key, out var handle) || !handle.IsValid() || !handle.IsDone)
+        {
+            return null;
+        }
+
+        return handle.Status == AsyncOperationStatus.Succeeded ? handle.Result : null;
     }
 
     /// <summary>
@@ -82,12 +114,17 @@ public static class AtlasLoadManager
     /// <param name="img"></param>
     /// <param name="atlasType"></param>
     /// <param name="resourceName"></param>
-    public static void SetImageSprite(Image img, eAtlas atlasType, string resourceName)
+    public static async Task SetImageSpriteAsync(Image img, eAtlas atlasType, string resourceName)
     {
         if (img)
         {
             // 아틀라스 로드
-            SpriteAtlas atlas = GetSpriteAtlas(atlasType);
+            SpriteAtlas atlas = await LoadSpriteAtlasAsync(atlasType);
+            if (!img)
+            {
+                return;
+            }
+
             if (atlas)
             {
                 Sprite sprite = atlas.GetSprite(resourceName);
@@ -98,6 +135,11 @@ public static class AtlasLoadManager
                 }
             }
         }
+    }
+
+    public static void SetImageSprite(Image img, eAtlas atlasType, string resourceName)
+    {
+        _ = SetImageSpriteAsync(img, atlasType, resourceName);
     }
 
     public static Sprite GetSprite(eAtlas atlasType, string resourceName)

@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using TMPro;
 using UnityEngine.UI;
 
@@ -53,6 +54,12 @@ public class ShopPopup : PopupWindow
 
             npc_talk.text = RandomSelect(list);
         }
+    }
+
+    public override async Task<bool> OpenReady()
+    {
+        await AtlasLoadManager.LoadSpriteAtlasAsync(eAtlas.ShopUI);
+        return await base.OpenReady();
     }
 
     public override void StartProcess()
