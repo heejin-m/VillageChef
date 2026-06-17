@@ -50,7 +50,7 @@ public class ProductInfo
         this.Id = id;
         this.ProductData = productData.GetData(id);
         this.InventoryItem = this.ProductData.GetInventoryItem();
-        this.SaveInfo = SaveInfo;
+        this.SaveInfo = saveInfo;
     }
 
     #endregion
