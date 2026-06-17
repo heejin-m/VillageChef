@@ -8,6 +8,10 @@ public class ProductModel : AbstractModel
 
     public void Set(List<ProductSaveInfo> saveInfos)
     {
+        _productInfosById.Clear();
+        _productInfosByType.Clear();
+        _productInfosByCategory.Clear();
+
         var productData = DataManager.Instance.GetData<ProductData>();
         foreach (var data in productData.Datas)
         {
@@ -15,7 +19,10 @@ public class ProductModel : AbstractModel
             ProductInfo productInfo = new ProductInfo(data.Key, saveInfo);
 
             // _productInfosById
-            _productInfosById.Add(data.Key, productInfo);
+            if (productInfo.IsVaild)
+            {
+                _productInfosById.Add(data.Key, productInfo);
+            }
 
             // _productInfosByType
             if (!_productInfosByType.TryGetValue(data.Value.ItemType, out var typeList))
@@ -23,7 +30,10 @@ public class ProductModel : AbstractModel
                 typeList = new List<ProductInfo>();
                 _productInfosByType.Add(data.Value.ItemType, typeList);
             }
-            typeList.Add(productInfo);
+            if (productInfo.IsVaild)
+            {
+                typeList.Add(productInfo);
+            }
 
             // _productInfosByCategory
             if (!_productInfosByCategory.TryGetValue(data.Value.Category, out var categoryList))
@@ -31,7 +41,10 @@ public class ProductModel : AbstractModel
                 categoryList = new List<ProductInfo>();
                 _productInfosByCategory.Add(data.Value.Category, categoryList);
             }
-            categoryList.Add(productInfo);
+            if (productInfo.IsVaild)
+            {
+                categoryList.Add(productInfo);
+            }
         }
     }
 
@@ -63,5 +76,24 @@ public class ProductModel : AbstractModel
         }
 
         return null;
+    }
+
+    /// <summary>
+    /// 상품 구매
+    /// </summary>
+    public void Buy(ProductInfo info)
+    {
+        if (!_productInfosById.TryGetValue(info.Id, out var product)) return;
+
+        ProductSaveInfo saveInfo = product.SaveInfo;
+        saveInfo ??= new();
+        saveInfo.id = info.Id;
+        saveInfo.buyCnt += 1;
+
+        SaveManager.Save(saveInfo);
+        this.Set(ModelCenter.StartInfoSetData.productSaveInfo);
+
+        ModelCenter.Player.UseGold(info.sellPrice);
+        ModelCenter.Inventory.AddItem(info.InventoryItemID, info.Amount);
     }
 }

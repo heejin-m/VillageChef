@@ -9,6 +9,10 @@ public class ShopWantSellItem : MonoBehaviour
 
     #endregion
 
+    public int Id => _info.id;
+    public int Amount => _info.cnt;
+    public long Price => _info.GetPrice();
+
     private Button _button = null;
     private WantSellItemInfo _info = null;
     private System.Action<WantSellItemInfo> _onClick = null;

@@ -2,6 +2,10 @@ using System.Linq;
 
 public partial class RecipeData
 {
+    public void SetDictionaryData()
+    {
+    }
+
     /// <summary>
     /// 데이터 가져오기
     /// </summary>

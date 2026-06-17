@@ -33,6 +33,12 @@ public class ShopSellItem : MonoBehaviour
         UpdateUI();
     }
 
+    public void SetSelected(bool isSelected)
+    {
+        _isSelected = isSelected;
+        UpdateUI();
+    }
+
     private void UpdateUI()
     {
         selectedObj?.SetActive(_isSelected);

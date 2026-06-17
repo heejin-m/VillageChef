@@ -38,6 +38,7 @@ public class SaveManager
     private static StartInfoSet Normalize(StartInfoSet data)
     {
         data ??= new StartInfoSet();
+        data.playerSaveInfo ??= new PlayerSaveInfo();
         data.recipeSaveInfos ??= new List<RecipeSaveInfo>();
         data.inventoryItemSaveInfo ??= new List<InventoryItemSaveInfo>();
         data.productSaveInfo ??= new List<ProductSaveInfo>();
@@ -66,6 +67,17 @@ public class SaveManager
         {
             list.Add(saveInfo);
         }
+
+        if (isSave)
+        {
+            Save(ModelCenter.StartInfoSetData);
+        }
+    }
+
+    public static void Save(PlayerInfo Info, bool isSave = true)
+    {
+        ModelCenter.StartInfoSetData ??= new();
+        ModelCenter.StartInfoSetData.playerSaveInfo.gold = Info.Gold;
 
         if (isSave)
         {

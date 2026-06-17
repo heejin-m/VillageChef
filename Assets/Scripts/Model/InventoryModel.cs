@@ -73,7 +73,7 @@ public class InventoryModel : AbstractModel
     {
         if (_itemInfoDictByType.TryGetValue(type, out var list))
         {
-            return list;
+            return new List<InventoryItemInfo>(list);
         }
 
         return null;
@@ -108,7 +108,7 @@ public class InventoryModel : AbstractModel
         {
             if (list != null)
             {
-                return list.FindAll(d => d.IsHave);
+                return new List<InventoryItemInfo>(list);
             }
         }
 
@@ -136,15 +136,39 @@ public class InventoryModel : AbstractModel
     /// <summary>
     /// 아이템 추가
     /// </summary>
-    public void TESTSAVEItem(int id, int cnt)
+    public void AddItem(int id, int amount)
     {
-        InventoryItemSaveInfo saveInfo = new InventoryItemSaveInfo
+        if (amount <= 0) return;
+
+        if (!_itemInfoDictByID.TryGetValue(id, out var info))
         {
-            id = id,
-            cnt = cnt
-        };
+            return;
+        }
+
+        InventoryItemSaveInfo saveInfo = info.SaveInfo;
+        saveInfo ??= new InventoryItemSaveInfo();
+        saveInfo.id = id;
+        saveInfo.cnt += amount;
 
         SaveManager.Save(saveInfo);
-        Set(ModelCenter.StartInfoSetData.inventoryItemSaveInfo);
+        this.Set(ModelCenter.StartInfoSetData.inventoryItemSaveInfo);
+    }
+
+    /// <summary>
+    /// 아이템 삭제
+    /// </summary>
+    public void UseItem(int id, int amount)
+    {
+        if (amount <= 0) return;
+
+        if (!_itemInfoDictByID.TryGetValue(id, out var info)) return;
+
+        InventoryItemSaveInfo saveInfo = info.SaveInfo;
+        if (saveInfo == null || saveInfo.cnt < amount) return;
+
+        saveInfo.cnt -= amount;
+
+        SaveManager.Save(saveInfo);
+        this.Set(ModelCenter.StartInfoSetData.inventoryItemSaveInfo);
     }
 }

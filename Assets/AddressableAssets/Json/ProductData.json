@@ -3,7 +3,8 @@
         {
             "id": 1,
             "inventoryItemId": 1,
-            "price": 20,
+            "sellPrice": 20,
+            "buyPrice": 6,
             "amount": 1,
             "CanBuyCnt": -1,
             "isVaild": 1
@@ -11,7 +12,8 @@
         {
             "id": 2,
             "inventoryItemId": 5,
-            "price": 35,
+            "sellPrice": 35,
+            "buyPrice": 11,
             "amount": 1,
             "CanBuyCnt": -1,
             "isVaild": 1
@@ -19,7 +21,8 @@
         {
             "id": 3,
             "inventoryItemId": 13,
-            "price": 30,
+            "sellPrice": 30,
+            "buyPrice": 10,
             "amount": 1,
             "CanBuyCnt": -1,
             "isVaild": 1
@@ -27,7 +30,8 @@
         {
             "id": 4,
             "inventoryItemId": 19,
-            "price": 55,
+            "sellPrice": 55,
+            "buyPrice": 18,
             "amount": 1,
             "CanBuyCnt": -1,
             "isVaild": 1
@@ -35,7 +39,8 @@
         {
             "id": 5,
             "inventoryItemId": 35,
-            "price": 45,
+            "sellPrice": 45,
+            "buyPrice": 15,
             "amount": 1,
             "CanBuyCnt": -1,
             "isVaild": 1
@@ -43,7 +48,8 @@
         {
             "id": 6,
             "inventoryItemId": 45,
-            "price": 85,
+            "sellPrice": 85,
+            "buyPrice": 28,
             "amount": 1,
             "CanBuyCnt": -1,
             "isVaild": 1
@@ -51,7 +57,8 @@
         {
             "id": 7,
             "inventoryItemId": 48,
-            "price": 120,
+            "sellPrice": 120,
+            "buyPrice": 40,
             "amount": 1,
             "CanBuyCnt": -1,
             "isVaild": 1
@@ -59,7 +66,8 @@
         {
             "id": 8,
             "inventoryItemId": 55,
-            "price": 150,
+            "sellPrice": 150,
+            "buyPrice": 50,
             "amount": 1,
             "CanBuyCnt": -1,
             "isVaild": 1
@@ -67,7 +75,8 @@
         {
             "id": 9,
             "inventoryItemId": 61,
-            "price": 260,
+            "sellPrice": 260,
+            "buyPrice": 86,
             "amount": 1,
             "CanBuyCnt": -1,
             "isVaild": 1
@@ -75,7 +84,8 @@
         {
             "id": 10,
             "inventoryItemId": 73,
-            "price": 320,
+            "sellPrice": 320,
+            "buyPrice": 106,
             "amount": 1,
             "CanBuyCnt": -1,
             "isVaild": 1
@@ -83,7 +93,8 @@
         {
             "id": 11,
             "inventoryItemId": 85,
-            "price": 420,
+            "sellPrice": 420,
+            "buyPrice": 140,
             "amount": 1,
             "CanBuyCnt": -1,
             "isVaild": 1
@@ -91,7 +102,8 @@
         {
             "id": 12,
             "inventoryItemId": 91,
-            "price": 180,
+            "sellPrice": 180,
+            "buyPrice": 60,
             "amount": 1,
             "CanBuyCnt": 1,
             "isVaild": 1
@@ -99,7 +111,8 @@
         {
             "id": 13,
             "inventoryItemId": 104,
-            "price": 300,
+            "sellPrice": 300,
+            "buyPrice": 100,
             "amount": 1,
             "CanBuyCnt": 1,
             "isVaild": 1
@@ -107,7 +120,8 @@
         {
             "id": 14,
             "inventoryItemId": 116,
-            "price": 380,
+            "sellPrice": 380,
+            "buyPrice": 126,
             "amount": 1,
             "CanBuyCnt": 1,
             "isVaild": 1
@@ -115,7 +129,8 @@
         {
             "id": 15,
             "inventoryItemId": 128,
-            "price": 460,
+            "sellPrice": 460,
+            "buyPrice": 153,
             "amount": 1,
             "CanBuyCnt": 1,
             "isVaild": 1

@@ -16,6 +16,16 @@ public class WantSellItemInfo
     /// 수량
     /// </summary>
     public int cnt;
+    /// <summary>
+    /// 판매 가격
+    /// </summary>
+    public long GetPrice()
+    {
+        var productData = DataManager.Instance.GetData<ProductData>();
+        var data = productData.GetDataByInventoryId(id);
+
+        return data == null ? 0 : data.buyPrice;
+    }
 }
 
 public class ShopSellPage : MonoBehaviour
@@ -284,8 +294,35 @@ public class ShopSellPage : MonoBehaviour
         return _wantSellItemInfos.Exists(d => d.info != null && d.info.ID == itemInfo.ID);
     }
 
+    private void ClearSelectedSellItemUI()
+    {
+        if (scrollRect == null || scrollRect.content == null) return;
+
+        foreach (Transform child in scrollRect.content)
+        {
+            ShopSellItem item = child.GetComponent<ShopSellItem>();
+            item?.SetSelected(false);
+        }
+    }
+
     private void OnClickSellButton()
     {
+        if (_wantSellItemInfos == null || _wantSellItemInfos.Count <= 0) return;
+
+        foreach (var info in _wantSellItemInfos)
+        {
+            ModelCenter.Player.AddGold(info.GetPrice());
+            ModelCenter.Inventory.UseItem(info.id, info.cnt);
+        }
+
+        _wantSellItemInfos = new List<WantSellItemInfo>();
+        ClearSelectedSellItemUI();
+
         _onTalkNPC?.Invoke(eNPCTalk.Buy_Talk);
+
+        SetData();
+        UpdateUI();
+        SetScrollview(true);
+        SetSellScrollview(true);
     }
 }

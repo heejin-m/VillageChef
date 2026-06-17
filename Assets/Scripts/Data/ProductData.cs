@@ -67,5 +67,7 @@ public partial class ProductData : IData
         }
 
         Debug.Log($"{Datas.Count}개 로드");
+
+        SetDictionaryData();
     }
 }

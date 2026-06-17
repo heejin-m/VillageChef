@@ -1,5 +1,9 @@
 public partial class InventoryItemData
 {
+    public void SetDictionaryData()
+    {
+    }
+
     /// <summary>
     /// 데이터 가져오기
     /// </summary>

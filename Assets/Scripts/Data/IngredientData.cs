@@ -66,5 +66,7 @@ public partial class IngredientData : IData
         }
 
         Debug.Log($"{Datas.Count}개 로드");
+
+        SetDictionaryData();
     }
 }

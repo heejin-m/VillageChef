@@ -14,8 +14,9 @@ public class ShopBuyItem : MonoBehaviour
 
     #endregion
 
+    public ProductInfo productInfo = null;
+
     private Button _button;
-    private ProductInfo _Info = null;
     private System.Action<ShopBuyItem> _onClick = null;
     private bool _isSelected = false;
 
@@ -29,14 +30,14 @@ public class ShopBuyItem : MonoBehaviour
 
     public void Set(ProductInfo info, System.Action<ShopBuyItem> onClick)
     {
-        _Info = info;
+        productInfo = info;
         _onClick = onClick;
 
         var inventoryInfo = ModelCenter.Inventory.GetItemById(info.InventoryItemID);
         itemUI.Set(inventoryInfo);
         itemUI.SetCnt(info.Amount);
         title.text = inventoryInfo.Name;
-        price.text = string.Format("{0:n0}", info.Price);
+        price.text = string.Format("{0:n0}", info.sellPrice);
 
         SetSelected(false);
     }

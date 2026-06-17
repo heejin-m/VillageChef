@@ -8,6 +8,7 @@ public class ShopBuyPage : MonoBehaviour
 
     public LoopVerticalScrollRectCustom scrollRect;
     public UITabController typeTab;
+    public GameObject emptyObj;
     public Button buyButton;
     public GameObject enableButton;
     public GameObject disableButton;
@@ -61,7 +62,7 @@ public class ShopBuyPage : MonoBehaviour
         typeTab.SetTab((short)_currentTab);
         SetData();
         SetScrollview(true);
-        UpdateButtonUI();
+        UpdateUI();
     }
 
     public void CloseProcess()
@@ -75,18 +76,20 @@ public class ShopBuyPage : MonoBehaviour
         Unselect();
         SetData();
         SetScrollview(true);
-        UpdateButtonUI();
+        UpdateUI();
     }
 
     private void SetData()
     {
         _productInfos = ModelCenter.Product.GetProductListByType(_currentTab);
+        _productInfos.RemoveAll(d => !d.IsCanBuy); // 구매 불가 상품은 삭제
     }
 
-    private void UpdateButtonUI()
+    private void UpdateUI()
     {
         enableButton.SetActive(_selectedItem != null);
         disableButton.SetActive(_selectedItem == null);
+        emptyObj.SetActive(_productInfos == null || _productInfos.Count == 0);
     }
 
     /// <summary>
@@ -135,8 +138,18 @@ public class ShopBuyPage : MonoBehaviour
     private void OnClickBuyButton()
     {
         if (_selectedItem == null) return;
+         
+        bool isCanBuy = ModelCenter.Player.IsCanUseGold(_selectedItem.productInfo.sellPrice);
+        if (!isCanBuy) return;
+
+        ModelCenter.Product.Buy(_selectedItem.productInfo);
 
         _onTalkNPC?.Invoke(eNPCTalk.Sell_Talk);
+
+        Unselect();
+        SetData();
+        SetScrollview(true);
+        UpdateUI();
     }
 
     private void OnClickItem(ShopBuyItem item)
@@ -152,7 +165,7 @@ public class ShopBuyPage : MonoBehaviour
         Unselect();
         _selectedItem = item;
         _selectedItem.SetSelected(true);
-        UpdateButtonUI();
+        UpdateUI();
     }
 
     private void Unselect()
@@ -163,6 +176,6 @@ public class ShopBuyPage : MonoBehaviour
             _selectedItem = null;
 
         }
-        UpdateButtonUI();
+        UpdateUI();
     }
 }

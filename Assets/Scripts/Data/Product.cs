@@ -14,7 +14,11 @@ public partial class Product
     /// <summary>
     /// 판매 가격
     /// </summary>
-    public int price;
+    public int sellPrice;
+    /// <summary>
+    /// 구매 가격
+    /// </summary>
+    public int buyPrice;
     /// <summary>
     /// 판매 수량
     /// </summary>
@@ -22,7 +26,7 @@ public partial class Product
     /// <summary>
     /// 구매 제한 수량
     /// </summary>
-    public bool canBuyCnt;
+    public short canBuyCnt;
     /// <summary>
     /// 사용가능한 데이터인지
     /// </summary>
