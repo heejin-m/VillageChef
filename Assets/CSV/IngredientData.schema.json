@@ -1,0 +1,15 @@
+{
+    "key": "id",
+    "fields": [
+        {
+            "name": "id",
+            "type": "int",
+            "summary": "ID"
+        },
+        {
+            "name": "inventoryItemId",
+            "type": "int",
+            "summary": "인벤토리 데이터 ID"
+        }
+    ]
+}

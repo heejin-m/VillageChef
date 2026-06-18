@@ -1,0 +1,65 @@
+{
+    "key": "id",
+    "fields": [
+        {
+            "name": "id",
+            "type": "int",
+            "summary": "ID"
+        },
+        {
+            "name": "name",
+            "type": "string",
+            "summary": "이름"
+        },
+        {
+            "name": "description",
+            "type": "string",
+            "summary": "설명"
+        },
+        {
+            "name": "type",
+            "type": "byte",
+            "summary": "타입"
+        },
+        {
+            "name": "category",
+            "type": "byte",
+            "summary": "UI 분류 카테고리"
+        },
+        {
+            "name": "resourceName",
+            "type": "string",
+            "summary": "리소스 이름"
+        },
+        {
+            "name": "maxStack",
+            "type": "ushort",
+            "summary": "최대 소유 수량"
+        },
+        {
+            "name": "isCanUse",
+            "type": "bool",
+            "summary": "인벤토리에서 즉시 사용 가능 여부"
+        },
+        {
+            "name": "sortOrder",
+            "type": "byte",
+            "summary": "정렬 순서"
+        },
+        {
+            "name": "sellPrice",
+            "type": "int",
+            "summary": "판매 가격"
+        },
+        {
+            "name": "buyPrice",
+            "type": "int",
+            "summary": "구매 가격"
+        },
+        {
+            "name": "isDiscardable",
+            "type": "bool",
+            "summary": "버리기 가능 여부"
+        }
+    ]
+}

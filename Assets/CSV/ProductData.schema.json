@@ -1,0 +1,41 @@
+{
+    "key": "id",
+    "fields": [
+        {
+            "name": "id",
+            "type": "int",
+            "summary": "ID"
+        },
+        {
+            "name": "inventoryItemId",
+            "type": "int",
+            "summary": "판매 물품의 인벤토리 데이터 ID"
+        },
+        {
+            "name": "sellPrice",
+            "type": "int",
+            "summary": "판매 가격"
+        },
+        {
+            "name": "buyPrice",
+            "type": "int",
+            "summary": "구매 가격"
+        },
+        {
+            "name": "amount",
+            "type": "int",
+            "summary": "판매 수량"
+        },
+        {
+            "name": "canBuyCnt",
+            "csvName": "CanBuyCnt",
+            "type": "short",
+            "summary": "구매 제한 수량"
+        },
+        {
+            "name": "isVaild",
+            "type": "bool",
+            "summary": "사용 가능한 데이터인지"
+        }
+    ]
+}

@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.IO;
@@ -7,36 +8,42 @@ using UnityEngine;
 
 public class CSVImporter
 {
+    private const string CsvDirectory = "Assets/CSV";
+    private const string JsonDirectory = "Assets/AddressableAssets/Json";
+
     [MenuItem("Tools/Import CSV")]
     public static void Import()
     {
-        const string csvDirectory = "Assets/CSV";
-        const string jsonDirectory = "Assets/AddressableAssets/Json";
-
-        if (!Directory.Exists(csvDirectory))
+        if (!Directory.Exists(CsvDirectory))
         {
-            Debug.LogError($"CSV 폴더를 찾을 수 없습니다.\n{csvDirectory}");
+            Debug.LogError($"CSV 폴더를 찾을 수 없습니다.\n{CsvDirectory}");
             return;
         }
 
-        string[] csvPaths = Directory.GetFiles(csvDirectory, "*.csv", SearchOption.TopDirectoryOnly);
-        System.Array.Sort(csvPaths);
+        string[] csvPaths = Directory.GetFiles(CsvDirectory, "*.csv", SearchOption.TopDirectoryOnly);
+        Array.Sort(csvPaths);
 
         if (csvPaths.Length == 0)
         {
-            Debug.LogError($"CSV 파일을 찾을 수 없습니다.\n{csvDirectory}");
+            Debug.LogError($"CSV 파일을 찾을 수 없습니다.\n{CsvDirectory}");
             return;
         }
 
-        Directory.CreateDirectory(jsonDirectory);
+        Directory.CreateDirectory(JsonDirectory);
         int totalImportedCount = 0;
+        int failedCount = 0;
 
         foreach (string csvPath in csvPaths)
         {
-            string json = ImportCsv(csvPath, out int importedCount);
-            string jsonPath = Path.Combine(jsonDirectory, $"{Path.GetFileNameWithoutExtension(csvPath)}.json");
+            if (!TryImportCsv(csvPath, out string json, out int importedCount))
+            {
+                failedCount++;
+                continue;
+            }
 
-            File.WriteAllText(jsonPath, json);
+            string jsonPath = Path.Combine(JsonDirectory, $"{Path.GetFileNameWithoutExtension(csvPath)}.json");
+
+            File.WriteAllText(jsonPath, json, Encoding.UTF8);
             totalImportedCount += importedCount;
 
             Debug.Log($"{csvPath} -> {jsonPath} : {importedCount}개 Import 완료");
@@ -44,31 +51,57 @@ public class CSVImporter
 
         AssetDatabase.Refresh();
 
+        if (failedCount > 0)
+        {
+            Debug.LogError($"{failedCount}개 CSV Import 실패. schema 파일과 타입을 확인해주세요.");
+            return;
+        }
+
         Debug.Log($"{csvPaths.Length}개 CSV 파일에서 {totalImportedCount}개 Import 완료");
     }
 
-    private static string ImportCsv(string csvPath, out int importedCount)
+    private static bool TryImportCsv(string csvPath, out string json, out int importedCount)
     {
-        string[] lines = File.ReadAllLines(csvPath);
+        json = CreateEmptyJson();
         importedCount = 0;
 
+        string schemaPath = GetSchemaPath(csvPath);
+        if (!File.Exists(schemaPath))
+        {
+            Debug.LogError($"schema 파일을 찾을 수 없습니다. CSV마다 schema가 필요합니다.\nCSV: {csvPath}\nschema: {schemaPath}");
+            return false;
+        }
+
+        if (!DataSchemaUtility.TryLoad(schemaPath, out DataSchema schema))
+        {
+            return false;
+        }
+
+        string[] lines = File.ReadAllLines(csvPath);
         if (lines.Length == 0)
         {
             Debug.LogWarning($"{csvPath} 파일이 비어 있습니다.");
-            return CreateEmptyJson();
+            return true;
         }
 
         List<string> headers = ParseCsvLine(lines[0]);
         if (headers.Count == 0)
         {
             Debug.LogWarning($"{csvPath} 헤더가 비어 있습니다.");
-            return CreateEmptyJson();
+            return true;
         }
 
         headers[0] = headers[0].TrimStart('\uFEFF');
-        StringBuilder json = new();
-        json.AppendLine("{");
-        json.AppendLine("    \"rows\": [");
+        Dictionary<string, int> headerIndexes = CreateHeaderIndexes(headers);
+
+        if (!ValidateHeaders(csvPath, schema, headerIndexes))
+        {
+            return false;
+        }
+
+        StringBuilder builder = new();
+        builder.AppendLine("{");
+        builder.AppendLine("    \"rows\": [");
         bool hasImportedRow = false;
 
         for (int i = 1; i < lines.Length; i++)
@@ -84,33 +117,100 @@ public class CSVImporter
                 continue;
             }
 
-            if (hasImportedRow)
-                json.AppendLine(",");
-
-            json.AppendLine("        {");
-
-            for (int j = 0; j < headers.Count; j++)
+            if (!TryAppendRow(builder, csvPath, i + 1, values, schema, headerIndexes, hasImportedRow))
             {
-                json.Append("            ");
-                json.Append(ToJsonString(headers[j]));
-                json.Append(": ");
-                json.Append(ToJsonValue(values[j]));
-
-                if (j < headers.Count - 1)
-                    json.Append(",");
-
-                json.AppendLine();
+                return false;
             }
 
-            json.Append("        }");
             importedCount++;
             hasImportedRow = true;
         }
 
-        json.AppendLine();
-        json.AppendLine("    ]");
-        json.AppendLine("}");
-        return json.ToString();
+        builder.AppendLine();
+        builder.AppendLine("    ]");
+        builder.AppendLine("}");
+
+        json = builder.ToString();
+        return true;
+    }
+
+    private static bool TryAppendRow(
+        StringBuilder builder,
+        string csvPath,
+        int lineNumber,
+        List<string> values,
+        DataSchema schema,
+        Dictionary<string, int> headerIndexes,
+        bool appendComma)
+    {
+        if (appendComma)
+            builder.AppendLine(",");
+
+        builder.AppendLine("        {");
+
+        for (int i = 0; i < schema.fields.Count; i++)
+        {
+            DataSchemaField field = schema.fields[i];
+            string csvName = field.GetCsvName();
+            string value = values[headerIndexes[csvName]];
+
+            if (!TryConvertToJsonValue(value, field.type, out string jsonValue))
+            {
+                Debug.LogError($"{csvPath} {lineNumber}번째 줄 '{csvName}' 값을 '{field.type}' 타입으로 변환할 수 없습니다. value: {value}");
+                return false;
+            }
+
+            builder.Append("            ");
+            builder.Append(ToJsonString(field.name));
+            builder.Append(": ");
+            builder.Append(jsonValue);
+
+            if (i < schema.fields.Count - 1)
+                builder.Append(",");
+
+            builder.AppendLine();
+        }
+
+        builder.Append("        }");
+        return true;
+    }
+
+    private static bool ValidateHeaders(string csvPath, DataSchema schema, Dictionary<string, int> headerIndexes)
+    {
+        foreach (DataSchemaField field in schema.fields)
+        {
+            string csvName = field.GetCsvName();
+            if (!headerIndexes.ContainsKey(csvName))
+            {
+                Debug.LogError($"{csvPath}에서 schema 컬럼을 찾을 수 없습니다. field: {field.name}, csvName: {csvName}");
+                return false;
+            }
+        }
+
+        return true;
+    }
+
+    private static Dictionary<string, int> CreateHeaderIndexes(List<string> headers)
+    {
+        Dictionary<string, int> indexes = new();
+
+        for (int i = 0; i < headers.Count; i++)
+        {
+            string header = headers[i].Trim();
+            if (!indexes.ContainsKey(header))
+            {
+                indexes.Add(header, i);
+            }
+        }
+
+        return indexes;
+    }
+
+    private static string GetSchemaPath(string csvPath)
+    {
+        string directory = Path.GetDirectoryName(csvPath);
+        string fileName = Path.GetFileNameWithoutExtension(csvPath);
+        return Path.Combine(directory, $"{fileName}.schema.json");
     }
 
     private static string CreateEmptyJson()
@@ -155,23 +255,119 @@ public class CSVImporter
         return values;
     }
 
-    private static string ToJsonValue(string value)
+    private static bool TryConvertToJsonValue(string value, string type, out string jsonValue)
     {
         string trimmedValue = value.Trim();
 
-        if (string.IsNullOrEmpty(trimmedValue))
-            return "\"\"";
+        switch (DataSchemaUtility.NormalizeType(type))
+        {
+            case "string":
+                jsonValue = ToJsonString(value);
+                return true;
+            case "bool":
+                if (TryParseBool(trimmedValue, out bool boolValue))
+                {
+                    jsonValue = boolValue ? "true" : "false";
+                    return true;
+                }
+                break;
+            case "byte":
+                if (byte.TryParse(trimmedValue, NumberStyles.Integer, CultureInfo.InvariantCulture, out byte byteValue))
+                {
+                    jsonValue = byteValue.ToString(CultureInfo.InvariantCulture);
+                    return true;
+                }
+                break;
+            case "sbyte":
+                if (sbyte.TryParse(trimmedValue, NumberStyles.Integer, CultureInfo.InvariantCulture, out sbyte sbyteValue))
+                {
+                    jsonValue = sbyteValue.ToString(CultureInfo.InvariantCulture);
+                    return true;
+                }
+                break;
+            case "short":
+                if (short.TryParse(trimmedValue, NumberStyles.Integer, CultureInfo.InvariantCulture, out short shortValue))
+                {
+                    jsonValue = shortValue.ToString(CultureInfo.InvariantCulture);
+                    return true;
+                }
+                break;
+            case "ushort":
+                if (ushort.TryParse(trimmedValue, NumberStyles.Integer, CultureInfo.InvariantCulture, out ushort ushortValue))
+                {
+                    jsonValue = ushortValue.ToString(CultureInfo.InvariantCulture);
+                    return true;
+                }
+                break;
+            case "int":
+                if (int.TryParse(trimmedValue, NumberStyles.Integer, CultureInfo.InvariantCulture, out int intValue))
+                {
+                    jsonValue = intValue.ToString(CultureInfo.InvariantCulture);
+                    return true;
+                }
+                break;
+            case "uint":
+                if (uint.TryParse(trimmedValue, NumberStyles.Integer, CultureInfo.InvariantCulture, out uint uintValue))
+                {
+                    jsonValue = uintValue.ToString(CultureInfo.InvariantCulture);
+                    return true;
+                }
+                break;
+            case "long":
+                if (long.TryParse(trimmedValue, NumberStyles.Integer, CultureInfo.InvariantCulture, out long longValue))
+                {
+                    jsonValue = longValue.ToString(CultureInfo.InvariantCulture);
+                    return true;
+                }
+                break;
+            case "ulong":
+                if (ulong.TryParse(trimmedValue, NumberStyles.Integer, CultureInfo.InvariantCulture, out ulong ulongValue))
+                {
+                    jsonValue = ulongValue.ToString(CultureInfo.InvariantCulture);
+                    return true;
+                }
+                break;
+            case "float":
+                if (float.TryParse(trimmedValue, NumberStyles.Float, CultureInfo.InvariantCulture, out float floatValue))
+                {
+                    jsonValue = floatValue.ToString("R", CultureInfo.InvariantCulture);
+                    return true;
+                }
+                break;
+            case "double":
+                if (double.TryParse(trimmedValue, NumberStyles.Float, CultureInfo.InvariantCulture, out double doubleValue))
+                {
+                    jsonValue = doubleValue.ToString("R", CultureInfo.InvariantCulture);
+                    return true;
+                }
+                break;
+            default:
+                Debug.LogError($"지원하지 않는 schema 타입입니다. type: {type}");
+                break;
+        }
 
-        if (bool.TryParse(trimmedValue, out bool boolValue))
-            return boolValue ? "true" : "false";
+        jsonValue = null;
+        return false;
+    }
 
-        if (long.TryParse(trimmedValue, NumberStyles.Integer, CultureInfo.InvariantCulture, out _))
-            return trimmedValue;
+    private static bool TryParseBool(string value, out bool result)
+    {
+        if (bool.TryParse(value, out result))
+            return true;
 
-        if (double.TryParse(trimmedValue, NumberStyles.Float, CultureInfo.InvariantCulture, out _))
-            return trimmedValue;
+        if (value == "1")
+        {
+            result = true;
+            return true;
+        }
 
-        return ToJsonString(value);
+        if (value == "0")
+        {
+            result = false;
+            return true;
+        }
+
+        return false;
     }
 
     private static string ToJsonString(string value)

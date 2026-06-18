@@ -1,4 +1,4 @@
-{
+﻿{
     "rows": [
         {
             "id": 1,
@@ -8,11 +8,11 @@
             "category": 0,
             "resourceName": "Apple",
             "maxStack": 99,
-            "isCanUse": 0,
+            "isCanUse": false,
             "sortOrder": 1,
             "sellPrice": 0,
             "buyPrice": 0,
-            "isDiscardable": 1
+            "isDiscardable": true
         },
         {
             "id": 2,
@@ -22,11 +22,11 @@
             "category": 0,
             "resourceName": "Avocado",
             "maxStack": 99,
-            "isCanUse": 0,
+            "isCanUse": false,
             "sortOrder": 2,
             "sellPrice": 0,
             "buyPrice": 0,
-            "isDiscardable": 1
+            "isDiscardable": true
         },
         {
             "id": 3,
@@ -36,11 +36,11 @@
             "category": 2,
             "resourceName": "Bacon",
             "maxStack": 99,
-            "isCanUse": 0,
+            "isCanUse": false,
             "sortOrder": 3,
             "sellPrice": 0,
             "buyPrice": 0,
-            "isDiscardable": 1
+            "isDiscardable": true
         },
         {
             "id": 4,
@@ -50,11 +50,11 @@
             "category": 2,
             "resourceName": "Boar",
             "maxStack": 99,
-            "isCanUse": 0,
+            "isCanUse": false,
             "sortOrder": 4,
             "sellPrice": 0,
             "buyPrice": 0,
-            "isDiscardable": 1
+            "isDiscardable": true
         },
         {
             "id": 5,
@@ -64,11 +64,11 @@
             "category": 7,
             "resourceName": "Bread",
             "maxStack": 99,
-            "isCanUse": 0,
+            "isCanUse": false,
             "sortOrder": 5,
             "sellPrice": 0,
             "buyPrice": 0,
-            "isDiscardable": 1
+            "isDiscardable": true
         },
         {
             "id": 6,
@@ -78,11 +78,11 @@
             "category": 6,
             "resourceName": "Bug",
             "maxStack": 99,
-            "isCanUse": 0,
+            "isCanUse": false,
             "sortOrder": 6,
             "sellPrice": 0,
             "buyPrice": 0,
-            "isDiscardable": 1
+            "isDiscardable": true
         },
         {
             "id": 7,
@@ -92,11 +92,11 @@
             "category": 4,
             "resourceName": "Cheese",
             "maxStack": 99,
-            "isCanUse": 0,
+            "isCanUse": false,
             "sortOrder": 7,
             "sellPrice": 0,
             "buyPrice": 0,
-            "isDiscardable": 1
+            "isDiscardable": true
         },
         {
             "id": 8,
@@ -106,11 +106,11 @@
             "category": 0,
             "resourceName": "Cherry",
             "maxStack": 99,
-            "isCanUse": 0,
+            "isCanUse": false,
             "sortOrder": 8,
             "sellPrice": 0,
             "buyPrice": 0,
-            "isDiscardable": 1
+            "isDiscardable": true
         },
         {
             "id": 9,
@@ -120,11 +120,11 @@
             "category": 2,
             "resourceName": "Chicken",
             "maxStack": 99,
-            "isCanUse": 0,
+            "isCanUse": false,
             "sortOrder": 9,
             "sellPrice": 0,
             "buyPrice": 0,
-            "isDiscardable": 1
+            "isDiscardable": true
         },
         {
             "id": 10,
@@ -134,11 +134,11 @@
             "category": 2,
             "resourceName": "ChickenLeg",
             "maxStack": 99,
-            "isCanUse": 0,
+            "isCanUse": false,
             "sortOrder": 10,
             "sellPrice": 0,
             "buyPrice": 0,
-            "isDiscardable": 1
+            "isDiscardable": true
         },
         {
             "id": 11,
@@ -148,11 +148,11 @@
             "category": 0,
             "resourceName": "DragonFruit",
             "maxStack": 99,
-            "isCanUse": 0,
+            "isCanUse": false,
             "sortOrder": 11,
             "sellPrice": 0,
             "buyPrice": 0,
-            "isDiscardable": 1
+            "isDiscardable": true
         },
         {
             "id": 12,
@@ -162,11 +162,11 @@
             "category": 1,
             "resourceName": "Eggplant",
             "maxStack": 99,
-            "isCanUse": 0,
+            "isCanUse": false,
             "sortOrder": 12,
             "sellPrice": 0,
             "buyPrice": 0,
-            "isDiscardable": 1
+            "isDiscardable": true
         },
         {
             "id": 13,
@@ -176,11 +176,11 @@
             "category": 4,
             "resourceName": "Eggs",
             "maxStack": 99,
-            "isCanUse": 0,
+            "isCanUse": false,
             "sortOrder": 13,
             "sellPrice": 0,
             "buyPrice": 0,
-            "isDiscardable": 1
+            "isDiscardable": true
         },
         {
             "id": 14,
@@ -190,11 +190,11 @@
             "category": 3,
             "resourceName": "Fish",
             "maxStack": 99,
-            "isCanUse": 0,
+            "isCanUse": false,
             "sortOrder": 14,
             "sellPrice": 0,
             "buyPrice": 0,
-            "isDiscardable": 1
+            "isDiscardable": true
         },
         {
             "id": 15,
@@ -204,11 +204,11 @@
             "category": 3,
             "resourceName": "FishFillet",
             "maxStack": 99,
-            "isCanUse": 0,
+            "isCanUse": false,
             "sortOrder": 15,
             "sellPrice": 0,
             "buyPrice": 0,
-            "isDiscardable": 1
+            "isDiscardable": true
         },
         {
             "id": 16,
@@ -218,11 +218,11 @@
             "category": 3,
             "resourceName": "FishSteak",
             "maxStack": 99,
-            "isCanUse": 0,
+            "isCanUse": false,
             "sortOrder": 16,
             "sellPrice": 0,
             "buyPrice": 0,
-            "isDiscardable": 1
+            "isDiscardable": true
         },
         {
             "id": 17,
@@ -232,11 +232,11 @@
             "category": 6,
             "resourceName": "Grub",
             "maxStack": 99,
-            "isCanUse": 0,
+            "isCanUse": false,
             "sortOrder": 17,
             "sellPrice": 0,
             "buyPrice": 0,
-            "isDiscardable": 1
+            "isDiscardable": true
         },
         {
             "id": 18,
@@ -246,11 +246,11 @@
             "category": 6,
             "resourceName": "Grubs",
             "maxStack": 99,
-            "isCanUse": 0,
+            "isCanUse": false,
             "sortOrder": 18,
             "sellPrice": 0,
             "buyPrice": 0,
-            "isDiscardable": 1
+            "isDiscardable": true
         },
         {
             "id": 19,
@@ -260,11 +260,11 @@
             "category": 5,
             "resourceName": "Honey",
             "maxStack": 99,
-            "isCanUse": 0,
+            "isCanUse": false,
             "sortOrder": 19,
             "sellPrice": 0,
             "buyPrice": 0,
-            "isDiscardable": 1
+            "isDiscardable": true
         },
         {
             "id": 20,
@@ -274,11 +274,11 @@
             "category": 5,
             "resourceName": "Honeycomb",
             "maxStack": 99,
-            "isCanUse": 0,
+            "isCanUse": false,
             "sortOrder": 20,
             "sellPrice": 0,
             "buyPrice": 0,
-            "isDiscardable": 1
+            "isDiscardable": true
         },
         {
             "id": 21,
@@ -288,11 +288,11 @@
             "category": 5,
             "resourceName": "Jam",
             "maxStack": 99,
-            "isCanUse": 0,
+            "isCanUse": false,
             "sortOrder": 21,
             "sellPrice": 0,
             "buyPrice": 0,
-            "isDiscardable": 1
+            "isDiscardable": true
         },
         {
             "id": 22,
@@ -302,11 +302,11 @@
             "category": 0,
             "resourceName": "Lemon",
             "maxStack": 99,
-            "isCanUse": 0,
+            "isCanUse": false,
             "sortOrder": 22,
             "sellPrice": 0,
             "buyPrice": 0,
-            "isDiscardable": 1
+            "isDiscardable": true
         },
         {
             "id": 23,
@@ -316,11 +316,11 @@
             "category": 5,
             "resourceName": "Marmalade",
             "maxStack": 99,
-            "isCanUse": 0,
+            "isCanUse": false,
             "sortOrder": 23,
             "sellPrice": 0,
             "buyPrice": 0,
-            "isDiscardable": 1
+            "isDiscardable": true
         },
         {
             "id": 24,
@@ -330,11 +330,11 @@
             "category": 0,
             "resourceName": "MelonCantaloupe",
             "maxStack": 99,
-            "isCanUse": 0,
+            "isCanUse": false,
             "sortOrder": 24,
             "sellPrice": 0,
             "buyPrice": 0,
-            "isDiscardable": 1
+            "isDiscardable": true
         },
         {
             "id": 25,
@@ -344,11 +344,11 @@
             "category": 0,
             "resourceName": "MelonHoneydew",
             "maxStack": 99,
-            "isCanUse": 0,
+            "isCanUse": false,
             "sortOrder": 25,
             "sellPrice": 0,
             "buyPrice": 0,
-            "isDiscardable": 1
+            "isDiscardable": true
         },
         {
             "id": 26,
@@ -358,11 +358,11 @@
             "category": 0,
             "resourceName": "MelonWater",
             "maxStack": 99,
-            "isCanUse": 0,
+            "isCanUse": false,
             "sortOrder": 26,
             "sellPrice": 0,
             "buyPrice": 0,
-            "isDiscardable": 1
+            "isDiscardable": true
         },
         {
             "id": 27,
@@ -372,11 +372,11 @@
             "category": 1,
             "resourceName": "Olive",
             "maxStack": 99,
-            "isCanUse": 0,
+            "isCanUse": false,
             "sortOrder": 27,
             "sellPrice": 0,
             "buyPrice": 0,
-            "isDiscardable": 1
+            "isDiscardable": true
         },
         {
             "id": 28,
@@ -386,11 +386,11 @@
             "category": 1,
             "resourceName": "Onion",
             "maxStack": 99,
-            "isCanUse": 0,
+            "isCanUse": false,
             "sortOrder": 28,
             "sellPrice": 0,
             "buyPrice": 0,
-            "isDiscardable": 1
+            "isDiscardable": true
         },
         {
             "id": 29,
@@ -400,11 +400,11 @@
             "category": 0,
             "resourceName": "Peach",
             "maxStack": 99,
-            "isCanUse": 0,
+            "isCanUse": false,
             "sortOrder": 29,
             "sellPrice": 0,
             "buyPrice": 0,
-            "isDiscardable": 1
+            "isDiscardable": true
         },
         {
             "id": 30,
@@ -414,11 +414,11 @@
             "category": 1,
             "resourceName": "PepperGreen",
             "maxStack": 99,
-            "isCanUse": 0,
+            "isCanUse": false,
             "sortOrder": 30,
             "sellPrice": 0,
             "buyPrice": 0,
-            "isDiscardable": 1
+            "isDiscardable": true
         },
         {
             "id": 31,
@@ -428,11 +428,11 @@
             "category": 2,
             "resourceName": "Pepperoni",
             "maxStack": 99,
-            "isCanUse": 0,
+            "isCanUse": false,
             "sortOrder": 31,
             "sellPrice": 0,
             "buyPrice": 0,
-            "isDiscardable": 1
+            "isDiscardable": true
         },
         {
             "id": 32,
@@ -442,11 +442,11 @@
             "category": 1,
             "resourceName": "PepperRed",
             "maxStack": 99,
-            "isCanUse": 0,
+            "isCanUse": false,
             "sortOrder": 32,
             "sellPrice": 0,
             "buyPrice": 0,
-            "isDiscardable": 1
+            "isDiscardable": true
         },
         {
             "id": 33,
@@ -456,11 +456,11 @@
             "category": 1,
             "resourceName": "Pickle",
             "maxStack": 99,
-            "isCanUse": 0,
+            "isCanUse": false,
             "sortOrder": 33,
             "sellPrice": 0,
             "buyPrice": 0,
-            "isDiscardable": 1
+            "isDiscardable": true
         },
         {
             "id": 34,
@@ -470,11 +470,11 @@
             "category": 0,
             "resourceName": "Pineapple",
             "maxStack": 99,
-            "isCanUse": 0,
+            "isCanUse": false,
             "sortOrder": 34,
             "sellPrice": 0,
             "buyPrice": 0,
-            "isDiscardable": 1
+            "isDiscardable": true
         },
         {
             "id": 35,
@@ -484,11 +484,11 @@
             "category": 1,
             "resourceName": "Potato",
             "maxStack": 99,
-            "isCanUse": 0,
+            "isCanUse": false,
             "sortOrder": 35,
             "sellPrice": 0,
             "buyPrice": 0,
-            "isDiscardable": 1
+            "isDiscardable": true
         },
         {
             "id": 36,
@@ -498,11 +498,11 @@
             "category": 1,
             "resourceName": "PotatoRed",
             "maxStack": 99,
-            "isCanUse": 0,
+            "isCanUse": false,
             "sortOrder": 36,
             "sellPrice": 0,
             "buyPrice": 0,
-            "isDiscardable": 1
+            "isDiscardable": true
         },
         {
             "id": 37,
@@ -512,11 +512,11 @@
             "category": 2,
             "resourceName": "Ribs",
             "maxStack": 99,
-            "isCanUse": 0,
+            "isCanUse": false,
             "sortOrder": 37,
             "sellPrice": 0,
             "buyPrice": 0,
-            "isDiscardable": 1
+            "isDiscardable": true
         },
         {
             "id": 38,
@@ -526,11 +526,11 @@
             "category": 3,
             "resourceName": "Sardines",
             "maxStack": 99,
-            "isCanUse": 0,
+            "isCanUse": false,
             "sortOrder": 38,
             "sellPrice": 0,
             "buyPrice": 0,
-            "isDiscardable": 1
+            "isDiscardable": true
         },
         {
             "id": 39,
@@ -540,11 +540,11 @@
             "category": 2,
             "resourceName": "Sausages",
             "maxStack": 99,
-            "isCanUse": 0,
+            "isCanUse": false,
             "sortOrder": 39,
             "sellPrice": 0,
             "buyPrice": 0,
-            "isDiscardable": 1
+            "isDiscardable": true
         },
         {
             "id": 40,
@@ -554,11 +554,11 @@
             "category": 3,
             "resourceName": "Shrimp",
             "maxStack": 99,
-            "isCanUse": 0,
+            "isCanUse": false,
             "sortOrder": 40,
             "sellPrice": 0,
             "buyPrice": 0,
-            "isDiscardable": 1
+            "isDiscardable": true
         },
         {
             "id": 41,
@@ -568,11 +568,11 @@
             "category": 2,
             "resourceName": "Steak",
             "maxStack": 99,
-            "isCanUse": 0,
+            "isCanUse": false,
             "sortOrder": 41,
             "sellPrice": 0,
             "buyPrice": 0,
-            "isDiscardable": 1
+            "isDiscardable": true
         },
         {
             "id": 42,
@@ -582,11 +582,11 @@
             "category": 0,
             "resourceName": "Strawberry",
             "maxStack": 99,
-            "isCanUse": 0,
+            "isCanUse": false,
             "sortOrder": 42,
             "sellPrice": 0,
             "buyPrice": 0,
-            "isDiscardable": 1
+            "isDiscardable": true
         },
         {
             "id": 43,
@@ -596,11 +596,11 @@
             "category": 1,
             "resourceName": "Tomato",
             "maxStack": 99,
-            "isCanUse": 0,
+            "isCanUse": false,
             "sortOrder": 43,
             "sellPrice": 0,
             "buyPrice": 0,
-            "isDiscardable": 1
+            "isDiscardable": true
         },
         {
             "id": 44,
@@ -610,11 +610,11 @@
             "category": 1,
             "resourceName": "Turnip",
             "maxStack": 99,
-            "isCanUse": 0,
+            "isCanUse": false,
             "sortOrder": 44,
             "sellPrice": 0,
             "buyPrice": 0,
-            "isDiscardable": 1
+            "isDiscardable": true
         },
         {
             "id": 45,
@@ -624,11 +624,11 @@
             "category": 5,
             "resourceName": "Chocolate",
             "maxStack": 99,
-            "isCanUse": 0,
+            "isCanUse": false,
             "sortOrder": 45,
             "sellPrice": 0,
             "buyPrice": 0,
-            "isDiscardable": 1
+            "isDiscardable": true
         },
         {
             "id": 46,
@@ -638,11 +638,11 @@
             "category": 7,
             "resourceName": "Corn",
             "maxStack": 99,
-            "isCanUse": 0,
+            "isCanUse": false,
             "sortOrder": 46,
             "sellPrice": 0,
             "buyPrice": 0,
-            "isDiscardable": 1
+            "isDiscardable": true
         },
         {
             "id": 47,
@@ -652,11 +652,11 @@
             "category": 7,
             "resourceName": "Peanut",
             "maxStack": 99,
-            "isCanUse": 0,
+            "isCanUse": false,
             "sortOrder": 47,
             "sellPrice": 0,
             "buyPrice": 0,
-            "isDiscardable": 1
+            "isDiscardable": true
         },
         {
             "id": 48,
@@ -666,11 +666,11 @@
             "category": 8,
             "resourceName": "AppleWorm",
             "maxStack": 99,
-            "isCanUse": 1,
+            "isCanUse": true,
             "sortOrder": 1,
             "sellPrice": 0,
             "buyPrice": 0,
-            "isDiscardable": 1
+            "isDiscardable": true
         },
         {
             "id": 49,
@@ -680,11 +680,11 @@
             "category": 8,
             "resourceName": "Beer",
             "maxStack": 99,
-            "isCanUse": 1,
+            "isCanUse": true,
             "sortOrder": 2,
             "sellPrice": 0,
             "buyPrice": 0,
-            "isDiscardable": 1
+            "isDiscardable": true
         },
         {
             "id": 50,
@@ -694,11 +694,11 @@
             "category": 8,
             "resourceName": "Brownie",
             "maxStack": 99,
-            "isCanUse": 1,
+            "isCanUse": true,
             "sortOrder": 3,
             "sellPrice": 0,
             "buyPrice": 0,
-            "isDiscardable": 1
+            "isDiscardable": true
         },
         {
             "id": 51,
@@ -708,11 +708,11 @@
             "category": 8,
             "resourceName": "CherryBowl",
             "maxStack": 99,
-            "isCanUse": 1,
+            "isCanUse": true,
             "sortOrder": 4,
             "sellPrice": 0,
             "buyPrice": 0,
-            "isDiscardable": 1
+            "isDiscardable": true
         },
         {
             "id": 52,
@@ -722,11 +722,11 @@
             "category": 8,
             "resourceName": "ChocoChuros",
             "maxStack": 99,
-            "isCanUse": 1,
+            "isCanUse": true,
             "sortOrder": 5,
             "sellPrice": 0,
             "buyPrice": 0,
-            "isDiscardable": 1
+            "isDiscardable": true
         },
         {
             "id": 53,
@@ -736,11 +736,11 @@
             "category": 8,
             "resourceName": "chocolateSandwich",
             "maxStack": 99,
-            "isCanUse": 1,
+            "isCanUse": true,
             "sortOrder": 6,
             "sellPrice": 0,
             "buyPrice": 0,
-            "isDiscardable": 1
+            "isDiscardable": true
         },
         {
             "id": 54,
@@ -750,11 +750,11 @@
             "category": 8,
             "resourceName": "ChocoPopcorn",
             "maxStack": 99,
-            "isCanUse": 1,
+            "isCanUse": true,
             "sortOrder": 7,
             "sellPrice": 0,
             "buyPrice": 0,
-            "isDiscardable": 1
+            "isDiscardable": true
         },
         {
             "id": 55,
@@ -764,11 +764,11 @@
             "category": 8,
             "resourceName": "Coffee",
             "maxStack": 99,
-            "isCanUse": 1,
+            "isCanUse": true,
             "sortOrder": 8,
             "sellPrice": 0,
             "buyPrice": 0,
-            "isDiscardable": 1
+            "isDiscardable": true
         },
         {
             "id": 56,
@@ -778,11 +778,11 @@
             "category": 8,
             "resourceName": "Cookie",
             "maxStack": 99,
-            "isCanUse": 1,
+            "isCanUse": true,
             "sortOrder": 9,
             "sellPrice": 0,
             "buyPrice": 0,
-            "isDiscardable": 1
+            "isDiscardable": true
         },
         {
             "id": 57,
@@ -792,11 +792,11 @@
             "category": 8,
             "resourceName": "CottonCandy",
             "maxStack": 99,
-            "isCanUse": 1,
+            "isCanUse": true,
             "sortOrder": 10,
             "sellPrice": 0,
             "buyPrice": 0,
-            "isDiscardable": 1
+            "isDiscardable": true
         },
         {
             "id": 58,
@@ -806,11 +806,11 @@
             "category": 8,
             "resourceName": "EggBowl",
             "maxStack": 99,
-            "isCanUse": 1,
+            "isCanUse": true,
             "sortOrder": 11,
             "sellPrice": 0,
             "buyPrice": 0,
-            "isDiscardable": 1
+            "isDiscardable": true
         },
         {
             "id": 59,
@@ -820,11 +820,11 @@
             "category": 8,
             "resourceName": "GreenJuice",
             "maxStack": 99,
-            "isCanUse": 1,
+            "isCanUse": true,
             "sortOrder": 12,
             "sellPrice": 0,
             "buyPrice": 0,
-            "isDiscardable": 1
+            "isDiscardable": true
         },
         {
             "id": 60,
@@ -834,11 +834,11 @@
             "category": 8,
             "resourceName": "GreenTea",
             "maxStack": 99,
-            "isCanUse": 1,
+            "isCanUse": true,
             "sortOrder": 13,
             "sellPrice": 0,
             "buyPrice": 0,
-            "isDiscardable": 1
+            "isDiscardable": true
         },
         {
             "id": 61,
@@ -848,11 +848,11 @@
             "category": 8,
             "resourceName": "Hamburger",
             "maxStack": 99,
-            "isCanUse": 1,
+            "isCanUse": true,
             "sortOrder": 14,
             "sellPrice": 0,
             "buyPrice": 0,
-            "isDiscardable": 1
+            "isDiscardable": true
         },
         {
             "id": 62,
@@ -862,11 +862,11 @@
             "category": 8,
             "resourceName": "Jerky",
             "maxStack": 99,
-            "isCanUse": 1,
+            "isCanUse": true,
             "sortOrder": 15,
             "sellPrice": 0,
             "buyPrice": 0,
-            "isDiscardable": 1
+            "isDiscardable": true
         },
         {
             "id": 63,
@@ -876,11 +876,11 @@
             "category": 8,
             "resourceName": "JingerBread",
             "maxStack": 99,
-            "isCanUse": 1,
+            "isCanUse": true,
             "sortOrder": 16,
             "sellPrice": 0,
             "buyPrice": 0,
-            "isDiscardable": 1
+            "isDiscardable": true
         },
         {
             "id": 64,
@@ -890,11 +890,11 @@
             "category": 8,
             "resourceName": "JojaCola",
             "maxStack": 99,
-            "isCanUse": 1,
+            "isCanUse": true,
             "sortOrder": 17,
             "sellPrice": 0,
             "buyPrice": 0,
-            "isDiscardable": 1
+            "isDiscardable": true
         },
         {
             "id": 65,
@@ -904,11 +904,11 @@
             "category": 8,
             "resourceName": "Moonshine",
             "maxStack": 99,
-            "isCanUse": 1,
+            "isCanUse": true,
             "sortOrder": 18,
             "sellPrice": 0,
             "buyPrice": 0,
-            "isDiscardable": 1
+            "isDiscardable": true
         },
         {
             "id": 66,
@@ -918,11 +918,11 @@
             "category": 8,
             "resourceName": "Oatmeal",
             "maxStack": 99,
-            "isCanUse": 1,
+            "isCanUse": true,
             "sortOrder": 19,
             "sellPrice": 0,
             "buyPrice": 0,
-            "isDiscardable": 1
+            "isDiscardable": true
         },
         {
             "id": 67,
@@ -932,11 +932,11 @@
             "category": 8,
             "resourceName": "OpenPeanutChip",
             "maxStack": 99,
-            "isCanUse": 1,
+            "isCanUse": true,
             "sortOrder": 20,
             "sellPrice": 0,
             "buyPrice": 0,
-            "isDiscardable": 1
+            "isDiscardable": true
         },
         {
             "id": 68,
@@ -946,11 +946,11 @@
             "category": 8,
             "resourceName": "PeanutChip",
             "maxStack": 99,
-            "isCanUse": 1,
+            "isCanUse": true,
             "sortOrder": 21,
             "sellPrice": 0,
             "buyPrice": 0,
-            "isDiscardable": 1
+            "isDiscardable": true
         },
         {
             "id": 69,
@@ -960,11 +960,11 @@
             "category": 8,
             "resourceName": "PickledEggs",
             "maxStack": 99,
-            "isCanUse": 1,
+            "isCanUse": true,
             "sortOrder": 22,
             "sellPrice": 0,
             "buyPrice": 0,
-            "isDiscardable": 1
+            "isDiscardable": true
         },
         {
             "id": 70,
@@ -974,11 +974,11 @@
             "category": 8,
             "resourceName": "PieApple",
             "maxStack": 99,
-            "isCanUse": 1,
+            "isCanUse": true,
             "sortOrder": 23,
             "sellPrice": 0,
             "buyPrice": 0,
-            "isDiscardable": 1
+            "isDiscardable": true
         },
         {
             "id": 71,
@@ -988,11 +988,11 @@
             "category": 8,
             "resourceName": "PieLemon",
             "maxStack": 99,
-            "isCanUse": 1,
+            "isCanUse": true,
             "sortOrder": 24,
             "sellPrice": 0,
             "buyPrice": 0,
-            "isDiscardable": 1
+            "isDiscardable": true
         },
         {
             "id": 72,
@@ -1002,11 +1002,11 @@
             "category": 8,
             "resourceName": "PiePumpkin",
             "maxStack": 99,
-            "isCanUse": 1,
+            "isCanUse": true,
             "sortOrder": 25,
             "sellPrice": 0,
             "buyPrice": 0,
-            "isDiscardable": 1
+            "isDiscardable": true
         },
         {
             "id": 73,
@@ -1016,11 +1016,11 @@
             "category": 8,
             "resourceName": "Pizza",
             "maxStack": 99,
-            "isCanUse": 1,
+            "isCanUse": true,
             "sortOrder": 26,
             "sellPrice": 0,
             "buyPrice": 0,
-            "isDiscardable": 1
+            "isDiscardable": true
         },
         {
             "id": 74,
@@ -1030,11 +1030,11 @@
             "category": 8,
             "resourceName": "Popcorn",
             "maxStack": 99,
-            "isCanUse": 1,
+            "isCanUse": true,
             "sortOrder": 27,
             "sellPrice": 0,
             "buyPrice": 0,
-            "isDiscardable": 1
+            "isDiscardable": true
         },
         {
             "id": 75,
@@ -1044,11 +1044,11 @@
             "category": 8,
             "resourceName": "PotatoFried",
             "maxStack": 99,
-            "isCanUse": 1,
+            "isCanUse": true,
             "sortOrder": 28,
             "sellPrice": 0,
             "buyPrice": 0,
-            "isDiscardable": 1
+            "isDiscardable": true
         },
         {
             "id": 76,
@@ -1058,11 +1058,11 @@
             "category": 8,
             "resourceName": "Pretzel",
             "maxStack": 99,
-            "isCanUse": 1,
+            "isCanUse": true,
             "sortOrder": 29,
             "sellPrice": 0,
             "buyPrice": 0,
-            "isDiscardable": 1
+            "isDiscardable": true
         },
         {
             "id": 77,
@@ -1072,11 +1072,11 @@
             "category": 8,
             "resourceName": "RainbowCandy",
             "maxStack": 99,
-            "isCanUse": 1,
+            "isCanUse": true,
             "sortOrder": 30,
             "sellPrice": 0,
             "buyPrice": 0,
-            "isDiscardable": 1
+            "isDiscardable": true
         },
         {
             "id": 78,
@@ -1086,11 +1086,11 @@
             "category": 8,
             "resourceName": "Roll",
             "maxStack": 99,
-            "isCanUse": 1,
+            "isCanUse": true,
             "sortOrder": 31,
             "sellPrice": 0,
             "buyPrice": 0,
-            "isDiscardable": 1
+            "isDiscardable": true
         },
         {
             "id": 79,
@@ -1100,11 +1100,11 @@
             "category": 8,
             "resourceName": "Saki",
             "maxStack": 99,
-            "isCanUse": 1,
+            "isCanUse": true,
             "sortOrder": 32,
             "sellPrice": 0,
             "buyPrice": 0,
-            "isDiscardable": 1
+            "isDiscardable": true
         },
         {
             "id": 80,
@@ -1114,11 +1114,11 @@
             "category": 8,
             "resourceName": "Sashimi",
             "maxStack": 99,
-            "isCanUse": 1,
+            "isCanUse": true,
             "sortOrder": 33,
             "sellPrice": 0,
             "buyPrice": 0,
-            "isDiscardable": 1
+            "isDiscardable": true
         },
         {
             "id": 81,
@@ -1128,11 +1128,11 @@
             "category": 8,
             "resourceName": "StartCookie",
             "maxStack": 99,
-            "isCanUse": 1,
+            "isCanUse": true,
             "sortOrder": 34,
             "sellPrice": 0,
             "buyPrice": 0,
-            "isDiscardable": 1
+            "isDiscardable": true
         },
         {
             "id": 82,
@@ -1142,11 +1142,11 @@
             "category": 8,
             "resourceName": "Stein",
             "maxStack": 99,
-            "isCanUse": 1,
+            "isCanUse": true,
             "sortOrder": 35,
             "sellPrice": 0,
             "buyPrice": 0,
-            "isDiscardable": 1
+            "isDiscardable": true
         },
         {
             "id": 83,
@@ -1156,11 +1156,11 @@
             "category": 8,
             "resourceName": "SugarBall",
             "maxStack": 99,
-            "isCanUse": 1,
+            "isCanUse": true,
             "sortOrder": 36,
             "sellPrice": 0,
             "buyPrice": 0,
-            "isDiscardable": 1
+            "isDiscardable": true
         },
         {
             "id": 84,
@@ -1170,11 +1170,11 @@
             "category": 8,
             "resourceName": "SuperGreenJuice",
             "maxStack": 99,
-            "isCanUse": 1,
+            "isCanUse": true,
             "sortOrder": 37,
             "sellPrice": 0,
             "buyPrice": 0,
-            "isDiscardable": 1
+            "isDiscardable": true
         },
         {
             "id": 85,
@@ -1184,11 +1184,11 @@
             "category": 8,
             "resourceName": "Sushi",
             "maxStack": 99,
-            "isCanUse": 1,
+            "isCanUse": true,
             "sortOrder": 38,
             "sellPrice": 0,
             "buyPrice": 0,
-            "isDiscardable": 1
+            "isDiscardable": true
         },
         {
             "id": 86,
@@ -1198,11 +1198,11 @@
             "category": 8,
             "resourceName": "Tart",
             "maxStack": 99,
-            "isCanUse": 1,
+            "isCanUse": true,
             "sortOrder": 39,
             "sellPrice": 0,
             "buyPrice": 0,
-            "isDiscardable": 1
+            "isDiscardable": true
         },
         {
             "id": 87,
@@ -1212,11 +1212,11 @@
             "category": 8,
             "resourceName": "Waffles",
             "maxStack": 99,
-            "isCanUse": 1,
+            "isCanUse": true,
             "sortOrder": 40,
             "sellPrice": 0,
             "buyPrice": 0,
-            "isDiscardable": 1
+            "isDiscardable": true
         },
         {
             "id": 88,
@@ -1226,11 +1226,11 @@
             "category": 8,
             "resourceName": "WaterMelonJelly",
             "maxStack": 99,
-            "isCanUse": 1,
+            "isCanUse": true,
             "sortOrder": 41,
             "sellPrice": 0,
             "buyPrice": 0,
-            "isDiscardable": 1
+            "isDiscardable": true
         },
         {
             "id": 89,
@@ -1240,11 +1240,11 @@
             "category": 8,
             "resourceName": "Whiskey",
             "maxStack": 99,
-            "isCanUse": 1,
+            "isCanUse": true,
             "sortOrder": 42,
             "sellPrice": 0,
             "buyPrice": 0,
-            "isDiscardable": 1
+            "isDiscardable": true
         },
         {
             "id": 90,
@@ -1254,11 +1254,11 @@
             "category": 8,
             "resourceName": "Wine",
             "maxStack": 99,
-            "isCanUse": 1,
+            "isCanUse": true,
             "sortOrder": 43,
             "sellPrice": 0,
             "buyPrice": 0,
-            "isDiscardable": 1
+            "isDiscardable": true
         },
         {
             "id": 91,
@@ -1268,11 +1268,11 @@
             "category": 9,
             "resourceName": "recipeItem01",
             "maxStack": 99,
-            "isCanUse": 1,
+            "isCanUse": true,
             "sortOrder": 1,
             "sellPrice": 0,
             "buyPrice": 0,
-            "isDiscardable": 1
+            "isDiscardable": true
         },
         {
             "id": 92,
@@ -1282,11 +1282,11 @@
             "category": 9,
             "resourceName": "recipeItem01",
             "maxStack": 99,
-            "isCanUse": 1,
+            "isCanUse": true,
             "sortOrder": 2,
             "sellPrice": 0,
             "buyPrice": 0,
-            "isDiscardable": 1
+            "isDiscardable": true
         },
         {
             "id": 93,
@@ -1296,11 +1296,11 @@
             "category": 9,
             "resourceName": "recipeItem01",
             "maxStack": 99,
-            "isCanUse": 1,
+            "isCanUse": true,
             "sortOrder": 3,
             "sellPrice": 0,
             "buyPrice": 0,
-            "isDiscardable": 1
+            "isDiscardable": true
         },
         {
             "id": 94,
@@ -1310,11 +1310,11 @@
             "category": 9,
             "resourceName": "recipeItem01",
             "maxStack": 99,
-            "isCanUse": 1,
+            "isCanUse": true,
             "sortOrder": 4,
             "sellPrice": 0,
             "buyPrice": 0,
-            "isDiscardable": 1
+            "isDiscardable": true
         },
         {
             "id": 95,
@@ -1324,11 +1324,11 @@
             "category": 9,
             "resourceName": "recipeItem01",
             "maxStack": 99,
-            "isCanUse": 1,
+            "isCanUse": true,
             "sortOrder": 5,
             "sellPrice": 0,
             "buyPrice": 0,
-            "isDiscardable": 1
+            "isDiscardable": true
         },
         {
             "id": 96,
@@ -1338,11 +1338,11 @@
             "category": 9,
             "resourceName": "recipeItem01",
             "maxStack": 99,
-            "isCanUse": 1,
+            "isCanUse": true,
             "sortOrder": 6,
             "sellPrice": 0,
             "buyPrice": 0,
-            "isDiscardable": 1
+            "isDiscardable": true
         },
         {
             "id": 97,
@@ -1352,11 +1352,11 @@
             "category": 9,
             "resourceName": "recipeItem01",
             "maxStack": 99,
-            "isCanUse": 1,
+            "isCanUse": true,
             "sortOrder": 7,
             "sellPrice": 0,
             "buyPrice": 0,
-            "isDiscardable": 1
+            "isDiscardable": true
         },
         {
             "id": 98,
@@ -1366,11 +1366,11 @@
             "category": 9,
             "resourceName": "recipeItem01",
             "maxStack": 99,
-            "isCanUse": 1,
+            "isCanUse": true,
             "sortOrder": 8,
             "sellPrice": 0,
             "buyPrice": 0,
-            "isDiscardable": 1
+            "isDiscardable": true
         },
         {
             "id": 99,
@@ -1380,11 +1380,11 @@
             "category": 9,
             "resourceName": "recipeItem01",
             "maxStack": 99,
-            "isCanUse": 1,
+            "isCanUse": true,
             "sortOrder": 9,
             "sellPrice": 0,
             "buyPrice": 0,
-            "isDiscardable": 1
+            "isDiscardable": true
         },
         {
             "id": 100,
@@ -1394,11 +1394,11 @@
             "category": 9,
             "resourceName": "recipeItem01",
             "maxStack": 99,
-            "isCanUse": 1,
+            "isCanUse": true,
             "sortOrder": 10,
             "sellPrice": 0,
             "buyPrice": 0,
-            "isDiscardable": 1
+            "isDiscardable": true
         },
         {
             "id": 101,
@@ -1408,11 +1408,11 @@
             "category": 9,
             "resourceName": "recipeItem01",
             "maxStack": 99,
-            "isCanUse": 1,
+            "isCanUse": true,
             "sortOrder": 11,
             "sellPrice": 0,
             "buyPrice": 0,
-            "isDiscardable": 1
+            "isDiscardable": true
         },
         {
             "id": 102,
@@ -1422,11 +1422,11 @@
             "category": 9,
             "resourceName": "recipeItem01",
             "maxStack": 99,
-            "isCanUse": 1,
+            "isCanUse": true,
             "sortOrder": 12,
             "sellPrice": 0,
             "buyPrice": 0,
-            "isDiscardable": 1
+            "isDiscardable": true
         },
         {
             "id": 103,
@@ -1436,11 +1436,11 @@
             "category": 9,
             "resourceName": "recipeItem01",
             "maxStack": 99,
-            "isCanUse": 1,
+            "isCanUse": true,
             "sortOrder": 13,
             "sellPrice": 0,
             "buyPrice": 0,
-            "isDiscardable": 1
+            "isDiscardable": true
         },
         {
             "id": 104,
@@ -1450,11 +1450,11 @@
             "category": 9,
             "resourceName": "recipeItem01",
             "maxStack": 99,
-            "isCanUse": 1,
+            "isCanUse": true,
             "sortOrder": 14,
             "sellPrice": 0,
             "buyPrice": 0,
-            "isDiscardable": 1
+            "isDiscardable": true
         },
         {
             "id": 105,
@@ -1464,11 +1464,11 @@
             "category": 9,
             "resourceName": "recipeItem01",
             "maxStack": 99,
-            "isCanUse": 1,
+            "isCanUse": true,
             "sortOrder": 15,
             "sellPrice": 0,
             "buyPrice": 0,
-            "isDiscardable": 1
+            "isDiscardable": true
         },
         {
             "id": 106,
@@ -1478,11 +1478,11 @@
             "category": 9,
             "resourceName": "recipeItem01",
             "maxStack": 99,
-            "isCanUse": 1,
+            "isCanUse": true,
             "sortOrder": 16,
             "sellPrice": 0,
             "buyPrice": 0,
-            "isDiscardable": 1
+            "isDiscardable": true
         },
         {
             "id": 107,
@@ -1492,11 +1492,11 @@
             "category": 9,
             "resourceName": "recipeItem01",
             "maxStack": 99,
-            "isCanUse": 1,
+            "isCanUse": true,
             "sortOrder": 17,
             "sellPrice": 0,
             "buyPrice": 0,
-            "isDiscardable": 1
+            "isDiscardable": true
         },
         {
             "id": 108,
@@ -1506,11 +1506,11 @@
             "category": 9,
             "resourceName": "recipeItem01",
             "maxStack": 99,
-            "isCanUse": 1,
+            "isCanUse": true,
             "sortOrder": 18,
             "sellPrice": 0,
             "buyPrice": 0,
-            "isDiscardable": 1
+            "isDiscardable": true
         },
         {
             "id": 109,
@@ -1520,11 +1520,11 @@
             "category": 9,
             "resourceName": "recipeItem01",
             "maxStack": 99,
-            "isCanUse": 1,
+            "isCanUse": true,
             "sortOrder": 19,
             "sellPrice": 0,
             "buyPrice": 0,
-            "isDiscardable": 1
+            "isDiscardable": true
         },
         {
             "id": 110,
@@ -1534,11 +1534,11 @@
             "category": 9,
             "resourceName": "recipeItem01",
             "maxStack": 99,
-            "isCanUse": 1,
+            "isCanUse": true,
             "sortOrder": 20,
             "sellPrice": 0,
             "buyPrice": 0,
-            "isDiscardable": 1
+            "isDiscardable": true
         },
         {
             "id": 111,
@@ -1548,11 +1548,11 @@
             "category": 9,
             "resourceName": "recipeItem01",
             "maxStack": 99,
-            "isCanUse": 1,
+            "isCanUse": true,
             "sortOrder": 21,
             "sellPrice": 0,
             "buyPrice": 0,
-            "isDiscardable": 1
+            "isDiscardable": true
         },
         {
             "id": 112,
@@ -1562,11 +1562,11 @@
             "category": 9,
             "resourceName": "recipeItem01",
             "maxStack": 99,
-            "isCanUse": 1,
+            "isCanUse": true,
             "sortOrder": 22,
             "sellPrice": 0,
             "buyPrice": 0,
-            "isDiscardable": 1
+            "isDiscardable": true
         },
         {
             "id": 113,
@@ -1576,11 +1576,11 @@
             "category": 9,
             "resourceName": "recipeItem01",
             "maxStack": 99,
-            "isCanUse": 1,
+            "isCanUse": true,
             "sortOrder": 23,
             "sellPrice": 0,
             "buyPrice": 0,
-            "isDiscardable": 1
+            "isDiscardable": true
         },
         {
             "id": 114,
@@ -1590,11 +1590,11 @@
             "category": 9,
             "resourceName": "recipeItem01",
             "maxStack": 99,
-            "isCanUse": 1,
+            "isCanUse": true,
             "sortOrder": 24,
             "sellPrice": 0,
             "buyPrice": 0,
-            "isDiscardable": 1
+            "isDiscardable": true
         },
         {
             "id": 115,
@@ -1604,11 +1604,11 @@
             "category": 9,
             "resourceName": "recipeItem01",
             "maxStack": 99,
-            "isCanUse": 1,
+            "isCanUse": true,
             "sortOrder": 25,
             "sellPrice": 0,
             "buyPrice": 0,
-            "isDiscardable": 1
+            "isDiscardable": true
         },
         {
             "id": 116,
@@ -1618,11 +1618,11 @@
             "category": 9,
             "resourceName": "recipeItem01",
             "maxStack": 99,
-            "isCanUse": 1,
+            "isCanUse": true,
             "sortOrder": 26,
             "sellPrice": 0,
             "buyPrice": 0,
-            "isDiscardable": 1
+            "isDiscardable": true
         },
         {
             "id": 117,
@@ -1632,11 +1632,11 @@
             "category": 9,
             "resourceName": "recipeItem01",
             "maxStack": 99,
-            "isCanUse": 1,
+            "isCanUse": true,
             "sortOrder": 27,
             "sellPrice": 0,
             "buyPrice": 0,
-            "isDiscardable": 1
+            "isDiscardable": true
         },
         {
             "id": 118,
@@ -1646,11 +1646,11 @@
             "category": 9,
             "resourceName": "recipeItem01",
             "maxStack": 99,
-            "isCanUse": 1,
+            "isCanUse": true,
             "sortOrder": 28,
             "sellPrice": 0,
             "buyPrice": 0,
-            "isDiscardable": 1
+            "isDiscardable": true
         },
         {
             "id": 119,
@@ -1660,11 +1660,11 @@
             "category": 9,
             "resourceName": "recipeItem01",
             "maxStack": 99,
-            "isCanUse": 1,
+            "isCanUse": true,
             "sortOrder": 29,
             "sellPrice": 0,
             "buyPrice": 0,
-            "isDiscardable": 1
+            "isDiscardable": true
         },
         {
             "id": 120,
@@ -1674,11 +1674,11 @@
             "category": 9,
             "resourceName": "recipeItem01",
             "maxStack": 99,
-            "isCanUse": 1,
+            "isCanUse": true,
             "sortOrder": 30,
             "sellPrice": 0,
             "buyPrice": 0,
-            "isDiscardable": 1
+            "isDiscardable": true
         },
         {
             "id": 121,
@@ -1688,11 +1688,11 @@
             "category": 9,
             "resourceName": "recipeItem01",
             "maxStack": 99,
-            "isCanUse": 1,
+            "isCanUse": true,
             "sortOrder": 31,
             "sellPrice": 0,
             "buyPrice": 0,
-            "isDiscardable": 1
+            "isDiscardable": true
         },
         {
             "id": 122,
@@ -1702,11 +1702,11 @@
             "category": 9,
             "resourceName": "recipeItem01",
             "maxStack": 99,
-            "isCanUse": 1,
+            "isCanUse": true,
             "sortOrder": 32,
             "sellPrice": 0,
             "buyPrice": 0,
-            "isDiscardable": 1
+            "isDiscardable": true
         },
         {
             "id": 123,
@@ -1716,11 +1716,11 @@
             "category": 9,
             "resourceName": "recipeItem01",
             "maxStack": 99,
-            "isCanUse": 1,
+            "isCanUse": true,
             "sortOrder": 33,
             "sellPrice": 0,
             "buyPrice": 0,
-            "isDiscardable": 1
+            "isDiscardable": true
         },
         {
             "id": 124,
@@ -1730,11 +1730,11 @@
             "category": 9,
             "resourceName": "recipeItem01",
             "maxStack": 99,
-            "isCanUse": 1,
+            "isCanUse": true,
             "sortOrder": 34,
             "sellPrice": 0,
             "buyPrice": 0,
-            "isDiscardable": 1
+            "isDiscardable": true
         },
         {
             "id": 125,
@@ -1744,11 +1744,11 @@
             "category": 9,
             "resourceName": "recipeItem01",
             "maxStack": 99,
-            "isCanUse": 1,
+            "isCanUse": true,
             "sortOrder": 35,
             "sellPrice": 0,
             "buyPrice": 0,
-            "isDiscardable": 1
+            "isDiscardable": true
         },
         {
             "id": 126,
@@ -1758,11 +1758,11 @@
             "category": 9,
             "resourceName": "recipeItem01",
             "maxStack": 99,
-            "isCanUse": 1,
+            "isCanUse": true,
             "sortOrder": 36,
             "sellPrice": 0,
             "buyPrice": 0,
-            "isDiscardable": 1
+            "isDiscardable": true
         },
         {
             "id": 127,
@@ -1772,11 +1772,11 @@
             "category": 9,
             "resourceName": "recipeItem01",
             "maxStack": 99,
-            "isCanUse": 1,
+            "isCanUse": true,
             "sortOrder": 37,
             "sellPrice": 0,
             "buyPrice": 0,
-            "isDiscardable": 1
+            "isDiscardable": true
         },
         {
             "id": 128,
@@ -1786,11 +1786,11 @@
             "category": 9,
             "resourceName": "recipeItem01",
             "maxStack": 99,
-            "isCanUse": 1,
+            "isCanUse": true,
             "sortOrder": 38,
             "sellPrice": 0,
             "buyPrice": 0,
-            "isDiscardable": 1
+            "isDiscardable": true
         },
         {
             "id": 129,
@@ -1800,11 +1800,11 @@
             "category": 9,
             "resourceName": "recipeItem01",
             "maxStack": 99,
-            "isCanUse": 1,
+            "isCanUse": true,
             "sortOrder": 39,
             "sellPrice": 0,
             "buyPrice": 0,
-            "isDiscardable": 1
+            "isDiscardable": true
         },
         {
             "id": 130,
@@ -1814,11 +1814,11 @@
             "category": 9,
             "resourceName": "recipeItem01",
             "maxStack": 99,
-            "isCanUse": 1,
+            "isCanUse": true,
             "sortOrder": 40,
             "sellPrice": 0,
             "buyPrice": 0,
-            "isDiscardable": 1
+            "isDiscardable": true
         },
         {
             "id": 131,
@@ -1828,11 +1828,11 @@
             "category": 9,
             "resourceName": "recipeItem01",
             "maxStack": 99,
-            "isCanUse": 1,
+            "isCanUse": true,
             "sortOrder": 41,
             "sellPrice": 0,
             "buyPrice": 0,
-            "isDiscardable": 1
+            "isDiscardable": true
         },
         {
             "id": 132,
@@ -1842,11 +1842,11 @@
             "category": 9,
             "resourceName": "recipeItem01",
             "maxStack": 99,
-            "isCanUse": 1,
+            "isCanUse": true,
             "sortOrder": 42,
             "sellPrice": 0,
             "buyPrice": 0,
-            "isDiscardable": 1
+            "isDiscardable": true
         },
         {
             "id": 133,
@@ -1856,11 +1856,11 @@
             "category": 9,
             "resourceName": "recipeItem01",
             "maxStack": 99,
-            "isCanUse": 1,
+            "isCanUse": true,
             "sortOrder": 43,
             "sellPrice": 0,
             "buyPrice": 0,
-            "isDiscardable": 1
+            "isDiscardable": true
         }
     ]
 }

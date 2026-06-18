@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using UnityEngine;
@@ -11,10 +11,10 @@ public class IngredientDatabase
     public List<Ingredient> rows;
 }
 
-// 제이슨 파일을 가져와서 읽고 dictionary 형태의 자료구조로 정리.
+// Load data file and store rows in a dictionary.
 public partial class IngredientData : IData
 {
-    public Dictionary<int, Ingredient> Datas { get; private set; } = new();
+    public Dictionary<int, Ingredient> Datas { get; private set; } = null;
 
     private const string ADDRESS = "IngredientData.json";
     private AsyncOperationHandle<TextAsset> _handle;
@@ -41,19 +41,20 @@ public partial class IngredientData : IData
 
         if (jsonFile == null)
         {
-            Debug.LogError("Ingredient.json 없음");
+            Debug.LogError("IngredientData.json not found");
             return;
         }
 
         IngredientDatabase database = JsonUtility.FromJson<IngredientDatabase>(jsonFile.text);
 
+        Datas ??= new();
         Datas.Clear();
 
         List<Ingredient> rows = database.rows;
 
         if (rows == null)
         {
-            Debug.LogError("Ingredient.json 데이터 없음");
+            Debug.LogError("IngredientData.json data not found");
             return;
         }
 
@@ -65,8 +66,23 @@ public partial class IngredientData : IData
             }
         }
 
-        Debug.Log($"{Datas.Count}개 로드");
+        Debug.Log($"{Datas.Count} loaded");
 
         SetDictionaryData();
+    }
+
+    /// <summary>
+    /// Get data
+    /// </summary>
+    /// <param name="index">Index</param>
+    /// <returns></returns>
+    public Ingredient GetData(int index)
+    {
+        if (Datas != null && Datas.TryGetValue(index, out var data))
+        {
+            return data;
+        }
+
+        return null;
     }
 }

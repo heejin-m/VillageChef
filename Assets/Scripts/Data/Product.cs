@@ -1,14 +1,14 @@
-using System;
+﻿using System;
 
 [Serializable]
 public partial class Product
 {
     /// <summary>
-    /// Id
+    /// ID
     /// </summary>
     public int id;
     /// <summary>
-    /// 판매물품의 인벤토리 데이터 ID
+    /// 판매 물품의 인벤토리 데이터 ID
     /// </summary>
     public int inventoryItemId;
     /// <summary>
@@ -28,7 +28,7 @@ public partial class Product
     /// </summary>
     public short canBuyCnt;
     /// <summary>
-    /// 사용가능한 데이터인지
+    /// 사용 가능한 데이터인지
     /// </summary>
     public bool isVaild;
 }

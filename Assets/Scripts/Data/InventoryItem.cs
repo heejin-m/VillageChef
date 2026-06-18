@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 
 [Serializable]
 public partial class InventoryItem
@@ -20,7 +20,7 @@ public partial class InventoryItem
     /// </summary>
     public byte type;
     /// <summary>
-    /// UI 분류용 카테고리
+    /// UI 분류 카테고리
     /// </summary>
     public byte category;
     /// <summary>
@@ -28,13 +28,13 @@ public partial class InventoryItem
     /// </summary>
     public string resourceName;
     /// <summary>
-    /// 얼마나 소유할 수 있는지
+    /// 최대 소유 수량
     /// </summary>
-    public byte maxStack;
+    public ushort maxStack;
     /// <summary>
     /// 인벤토리에서 즉시 사용 가능 여부
     /// </summary>
-    public byte isCanUse;
+    public bool isCanUse;
     /// <summary>
     /// 정렬 순서
     /// </summary>
@@ -50,5 +50,5 @@ public partial class InventoryItem
     /// <summary>
     /// 버리기 가능 여부
     /// </summary>
-    public byte isDiscardable;
+    public bool isDiscardable;
 }

@@ -1,0 +1,70 @@
+{
+    "key": "id",
+    "fields": [
+        {
+            "name": "id",
+            "type": "int",
+            "summary": "ID"
+        },
+        {
+            "name": "dish_inventoryItemId",
+            "type": "int",
+            "summary": "완성품 인벤토리 데이터 ID"
+        },
+        {
+            "name": "recipe_inventoryItemId",
+            "type": "int",
+            "summary": "레시피 인벤토리 데이터 ID"
+        },
+        {
+            "name": "ingredientId1",
+            "type": "byte",
+            "summary": "재료 01 ID"
+        },
+        {
+            "name": "ingredientId2",
+            "type": "byte",
+            "summary": "재료 02 ID"
+        },
+        {
+            "name": "ingredientId3",
+            "type": "byte",
+            "summary": "재료 03 ID"
+        },
+        {
+            "name": "ingredientId4",
+            "type": "byte",
+            "summary": "재료 04 ID"
+        },
+        {
+            "name": "ingredientId5",
+            "type": "byte",
+            "summary": "재료 05 ID"
+        },
+        {
+            "name": "ingredientId6",
+            "type": "byte",
+            "summary": "재료 06 ID"
+        },
+        {
+            "name": "ingredientId7",
+            "type": "byte",
+            "summary": "재료 07 ID"
+        },
+        {
+            "name": "ingredientId8",
+            "type": "byte",
+            "summary": "재료 08 ID"
+        },
+        {
+            "name": "ingredientId9",
+            "type": "byte",
+            "summary": "재료 09 ID"
+        },
+        {
+            "name": "ingredientId10",
+            "type": "byte",
+            "summary": "재료 10 ID"
+        }
+    ]
+}

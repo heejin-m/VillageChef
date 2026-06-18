@@ -1,4 +1,4 @@
-{
+﻿{
     "rows": [
         {
             "id": 1,
@@ -6,8 +6,8 @@
             "sellPrice": 20,
             "buyPrice": 6,
             "amount": 1,
-            "CanBuyCnt": -1,
-            "isVaild": 1
+            "canBuyCnt": -1,
+            "isVaild": true
         },
         {
             "id": 2,
@@ -15,8 +15,8 @@
             "sellPrice": 35,
             "buyPrice": 11,
             "amount": 1,
-            "CanBuyCnt": -1,
-            "isVaild": 1
+            "canBuyCnt": -1,
+            "isVaild": true
         },
         {
             "id": 3,
@@ -24,8 +24,8 @@
             "sellPrice": 30,
             "buyPrice": 10,
             "amount": 1,
-            "CanBuyCnt": -1,
-            "isVaild": 1
+            "canBuyCnt": -1,
+            "isVaild": true
         },
         {
             "id": 4,
@@ -33,8 +33,8 @@
             "sellPrice": 55,
             "buyPrice": 18,
             "amount": 1,
-            "CanBuyCnt": -1,
-            "isVaild": 1
+            "canBuyCnt": -1,
+            "isVaild": true
         },
         {
             "id": 5,
@@ -42,8 +42,8 @@
             "sellPrice": 45,
             "buyPrice": 15,
             "amount": 1,
-            "CanBuyCnt": -1,
-            "isVaild": 1
+            "canBuyCnt": -1,
+            "isVaild": true
         },
         {
             "id": 6,
@@ -51,8 +51,8 @@
             "sellPrice": 85,
             "buyPrice": 28,
             "amount": 1,
-            "CanBuyCnt": -1,
-            "isVaild": 1
+            "canBuyCnt": -1,
+            "isVaild": true
         },
         {
             "id": 7,
@@ -60,8 +60,8 @@
             "sellPrice": 120,
             "buyPrice": 40,
             "amount": 1,
-            "CanBuyCnt": -1,
-            "isVaild": 1
+            "canBuyCnt": -1,
+            "isVaild": true
         },
         {
             "id": 8,
@@ -69,8 +69,8 @@
             "sellPrice": 150,
             "buyPrice": 50,
             "amount": 1,
-            "CanBuyCnt": -1,
-            "isVaild": 1
+            "canBuyCnt": -1,
+            "isVaild": true
         },
         {
             "id": 9,
@@ -78,8 +78,8 @@
             "sellPrice": 260,
             "buyPrice": 86,
             "amount": 1,
-            "CanBuyCnt": -1,
-            "isVaild": 1
+            "canBuyCnt": -1,
+            "isVaild": true
         },
         {
             "id": 10,
@@ -87,8 +87,8 @@
             "sellPrice": 320,
             "buyPrice": 106,
             "amount": 1,
-            "CanBuyCnt": -1,
-            "isVaild": 1
+            "canBuyCnt": -1,
+            "isVaild": true
         },
         {
             "id": 11,
@@ -96,8 +96,8 @@
             "sellPrice": 420,
             "buyPrice": 140,
             "amount": 1,
-            "CanBuyCnt": -1,
-            "isVaild": 1
+            "canBuyCnt": -1,
+            "isVaild": true
         },
         {
             "id": 12,
@@ -105,8 +105,8 @@
             "sellPrice": 180,
             "buyPrice": 60,
             "amount": 1,
-            "CanBuyCnt": 1,
-            "isVaild": 1
+            "canBuyCnt": 1,
+            "isVaild": true
         },
         {
             "id": 13,
@@ -114,8 +114,8 @@
             "sellPrice": 300,
             "buyPrice": 100,
             "amount": 1,
-            "CanBuyCnt": 1,
-            "isVaild": 1
+            "canBuyCnt": 1,
+            "isVaild": true
         },
         {
             "id": 14,
@@ -123,8 +123,8 @@
             "sellPrice": 380,
             "buyPrice": 126,
             "amount": 1,
-            "CanBuyCnt": 1,
-            "isVaild": 1
+            "canBuyCnt": 1,
+            "isVaild": true
         },
         {
             "id": 15,
@@ -132,8 +132,8 @@
             "sellPrice": 460,
             "buyPrice": 153,
             "amount": 1,
-            "CanBuyCnt": 1,
-            "isVaild": 1
+            "canBuyCnt": 1,
+            "isVaild": true
         }
     ]
 }
