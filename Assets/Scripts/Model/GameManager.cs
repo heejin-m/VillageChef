@@ -15,7 +15,7 @@ public class GameManager : SingletonBehaviour<GameManager>
     private AsyncOperationHandle<GameObject> _playerHandle = new();
     private GameObject _playerObject;
 
-    private void Awake()
+    private async void Awake()
     {
         if (Instance != null && Instance != this)
         {
@@ -25,7 +25,7 @@ public class GameManager : SingletonBehaviour<GameManager>
 
         DontDestroyOnLoad(this);
 
-        PopupManager.Instance.Initialize();
+        await PopupManager.Instance.Initialize();
         ModelCenter.ReleaseInstance();
     }
 

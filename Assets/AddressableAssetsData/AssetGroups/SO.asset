@@ -15,8 +15,8 @@ MonoBehaviour:
   m_GroupName: SO
   m_GUID: 949a335badc70d6489ddd57565c5c119
   m_SerializeEntries:
-  - m_GUID: c1e524fa7e9f7fb439cec829862ede63
-    m_Address: Assets/AddressableAssets/ScriptableObjects/ShopNPCTalk.asset
+  - m_GUID: 439221019e9fa3748827be78781a9ccf
+    m_Address: PopupConfig.asset
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0

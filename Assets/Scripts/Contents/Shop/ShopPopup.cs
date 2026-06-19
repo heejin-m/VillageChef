@@ -1,6 +1,6 @@
-using System.Collections.Generic;
 using System.Threading.Tasks;
 using TMPro;
+using UnityEngine;
 using UnityEngine.UI;
 
 public class ShopPopup : PopupWindow
@@ -23,11 +23,6 @@ public class ShopPopup : PopupWindow
     private const string NPC_PORTRAIT_NORMAL = "ShopKeeperPortrait_01";
     private const string NPC_PORTRAIT_HAPPY = "ShopKeeperPortrait_01_Smile";
 
-    /// <summary>
-    /// Shop NPC 대사 컬렉션
-    /// </summary>
-    private Dictionary<eNPCTalk, List<string>> _shopNPCTalkDict = new();
-
     public enum eShopTab
     {
         /// <summary>
@@ -44,16 +39,6 @@ public class ShopPopup : PopupWindow
     {
         base.Awake();
         shopTab.onChangeTabIndex += OnChangeTabIndex;
-
-        if (_shopNPCTalkDict.TryGetValue(eNPCTalk.Hello_Talk, out var list))
-        {
-            if (list == null || list.Count <= 0)
-            {
-                return;
-            }
-
-            npc_talk.text = RandomSelect(list);
-        }
     }
 
     public override async Task<bool> OpenReady()
@@ -65,29 +50,15 @@ public class ShopPopup : PopupWindow
     public override void StartProcess()
     {
         base.StartProcess();
-        SetData();
 
         Initialize();
+        SetNPCTalk(eNPCTalk.Hello_Talk);
         shopBuyPage.StartProcess(OnTalkNPC);
     }
 
     public override void CloseProcess()
     {
         base.CloseProcess();
-    }
-
-    private void SetData()
-    {
-        _shopNPCTalkDict.Clear();
-        foreach (var item in npcTalkSO.talkList)
-        {
-            if (!_shopNPCTalkDict.TryGetValue(item.eNPCTalk, out var list))
-            {
-                list = new List<string>();
-                _shopNPCTalkDict.Add(item.eNPCTalk, list);
-            }
-            list.Add(item.talk);
-        }
     }
 
     private void OnChangeTabIndex(ushort index)
@@ -115,15 +86,7 @@ public class ShopPopup : PopupWindow
 
     private void OnTalkNPC(eNPCTalk eNPCTalk)
     {
-        if (_shopNPCTalkDict.TryGetValue(eNPCTalk, out var list))
-        {
-            if (list == null || list.Count <= 0)
-            {
-                return;
-            }
-
-            npc_talk.text = RandomSelect(list);
-        }
+        SetNPCTalk(eNPCTalk);
 
         switch (eNPCTalk)
         {
@@ -139,9 +102,17 @@ public class ShopPopup : PopupWindow
         }
     }
 
-    private string RandomSelect(List<string> list)
+    private void SetNPCTalk(eNPCTalk eNPCTalk)
     {
-        int choice = UnityEngine.Random.Range(0, list.Count);
-        return list[choice];
+        if (npcTalkSO == null)
+        {
+            Debug.LogWarning("ShopNPCTalk is not assigned.");
+            return;
+        }
+
+        if (npcTalkSO.TryGetRandomTalk(eNPCTalk, out var talk))
+        {
+            npc_talk.text = talk;
+        }
     }
 }

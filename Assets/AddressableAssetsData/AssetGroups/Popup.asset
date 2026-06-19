@@ -15,17 +15,17 @@ MonoBehaviour:
   m_GroupName: Popup
   m_GUID: 16263a97f2c5a8c44b0826f1f3368869
   m_SerializeEntries:
-  - m_GUID: 3fc0efef78b471e4f8cd9ab7afc877ae
-    m_Address: Assets/AddressableAssets/Prefabs/Popup/RecipePopup.prefab
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 4b8d790cc1adf344181453f40e83b271
+  - m_GUID: 34db1f29972ab3049a8f338c76e02664
     m_Address: Assets/AddressableAssets/Prefabs/Popup/InventoryPopup.prefab
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: e9ca5c84201caba408d2d21840d2be3e
+  - m_GUID: 7de79b62cb00c7849a54ac2a1eb733f2
+    m_Address: Assets/AddressableAssets/Prefabs/Popup/RecipePopup.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c2bd589b5e61c564fa737a952dccf2ba
     m_Address: Assets/AddressableAssets/Prefabs/Popup/ShopPopup.prefab
     m_ReadOnly: 0
     m_SerializedLabels: []

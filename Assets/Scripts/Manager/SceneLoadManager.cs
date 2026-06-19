@@ -37,6 +37,8 @@ public class SceneLoadManager : SingletonBehaviour<SceneLoadManager>
 
     private async Task OpenSceneWindow(Scene scene)
     {
+        PopupManager.Instance.CloseAll();
+
         foreach (GameObject rootObject in scene.GetRootGameObjects())
         {
             FrameWindow frameWindow = rootObject.GetComponentInChildren<FrameWindow>(true);
