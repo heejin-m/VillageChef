@@ -8,9 +8,25 @@ using UnityEngine.SceneManagement;
 public class SceneLoadManager : SingletonBehaviour<SceneLoadManager>
 {
     private AsyncOperationHandle<SceneInstance> _currentSceneHandle = new();
+    public SceneConfig CurrentSceneConfig { get; private set; }
+    public string CurrentBgmKey => CurrentSceneConfig?.bgmKey ?? string.Empty;
+    public bool ShowLoadingScreen => CurrentSceneConfig?.showLoadingScreen ?? true;
 
-    public async Task SingleSceneLoad(eScene eScene)
+    /// <summary>
+    /// 단일 씬 로드
+    /// </summary>
+    /// <param name="eScene"></param>
+    /// <param name="config"></param>
+    /// <returns></returns>
+    public async Task SingleSceneLoad(eScene eScene, SceneConfig config = null)
     {
+        config ??= SceneConfig.CreateDefault(eScene);
+
+        if (config.sceneType != eScene)
+        {
+            Debug.LogWarning($"SceneConfig sceneType mismatch. request: {eScene}, config: {config.sceneType}");
+        }
+
         // 이전 씬 언로드
         if (_currentSceneHandle.IsValid())
         {
@@ -32,9 +48,15 @@ public class SceneLoadManager : SingletonBehaviour<SceneLoadManager>
         }
 
         _currentSceneHandle = handle;
+        CurrentSceneConfig = config;
         await OpenSceneWindow(scene.Scene);
     }
 
+    /// <summary>
+    /// 씬 FrameWindow 열기
+    /// </summary>
+    /// <param name="scene"></param>
+    /// <returns></returns>
     private async Task OpenSceneWindow(Scene scene)
     {
         PopupManager.Instance.CloseAll();
