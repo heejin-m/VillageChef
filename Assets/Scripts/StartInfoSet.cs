@@ -4,6 +4,11 @@ using System.Collections.Generic;
 public class StartInfoSet
 {
     /// <summary>
+    /// 세이브 버전
+    /// </summary>
+    public int saveVersion = 1;
+
+    /// <summary>
     /// 플레이어 정보 저장 데이터
     /// </summary>
     public PlayerSaveInfo playerSaveInfo = new();

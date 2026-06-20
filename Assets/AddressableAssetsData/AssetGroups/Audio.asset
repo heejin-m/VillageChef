@@ -10,23 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
-  m_Name: SO
+  m_Name: Audio
   m_EditorClassIdentifier: Unity.Addressables.Editor::UnityEditor.AddressableAssets.Settings.AddressableAssetGroup
-  m_GroupName: SO
-  m_GUID: 949a335badc70d6489ddd57565c5c119
+  m_GroupName: Audio
+  m_GUID: 5d0b3f65a2c24b529dc23e1f0d75c6e7
   m_SerializeEntries:
-  - m_GUID: 439221019e9fa3748827be78781a9ccf
-    m_Address: PopupConfig.asset
+  - m_GUID: 91b63f6112c449248a8f74efc4d6ecb1
+    m_Address: VillageChef_BGM
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: ab2aecb8aa0fbf941a85586360bfaa56
-    m_Address: SceneConfig.asset
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: f38f98584ce311847ad6cf2afb2e8717
-    m_Address: Assets/AddressableAssets/ScriptableObjects/DOTweenSettings.asset
+  - m_GUID: 4c325db7e3374b85b3257c97cfb0a2d4
+    m_Address: VillageChef_BGM_Cheerful
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
@@ -34,5 +29,5 @@ MonoBehaviour:
   m_Settings: {fileID: 11400000, guid: 991152a455d9cd2468c135036fc10c2f, type: 2}
   m_SchemaSet:
     m_Schemas:
-    - {fileID: 11400000, guid: f4e6d137543a49948964fd09b1159ef6, type: 2}
-    - {fileID: 11400000, guid: da0bbad763540b04c94cd2fd60b79378, type: 2}
+    - {fileID: 11400000, guid: 61b55099a0584da197fe55f8c2de7fd4, type: 2}
+    - {fileID: 11400000, guid: 905548b71f694c4cb331338ca8125fcb, type: 2}

@@ -26,12 +26,14 @@ public class GameManager : SingletonBehaviour<GameManager>
         DontDestroyOnLoad(this);
 
         await PopupManager.Instance.Initialize();
+        await SceneLoadManager.Instance.Initialize();
         ModelCenter.ReleaseInstance();
     }
 
     public void Release()
     {
         PopupManager.Instance.Release();
+        SceneLoadManager.Instance.Release();
         ModelCenter.ReleaseInstance();
     }
 

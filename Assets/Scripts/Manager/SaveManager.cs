@@ -1,17 +1,38 @@
 using System.Collections.Generic;
 using System.IO;
 using System;
+using System.Security.Cryptography;
+using System.Text;
 using UnityEngine;
 
 public class SaveManager
 {
+    private const int CURRENT_SAVE_VERSION = 1;
     private const string STARTINFO_FILE_NAME = "STARTINFO_FILE_NAME.json";
+    private const string CHECKSUM_SALT = "VillageChef_SaveData";
 
     private static string SavePath => Path.Combine(Application.persistentDataPath, STARTINFO_FILE_NAME);
 
+    [Serializable]
+    private class SaveFile
+    {
+        public string payload;
+        public string checksum;
+    }
+
     public static void Save(StartInfoSet data)
     {
-        string json = JsonUtility.ToJson(data, true);
+        data = Normalize(data);
+        data.saveVersion = CURRENT_SAVE_VERSION;
+
+        string payload = JsonUtility.ToJson(data, true);
+        SaveFile saveFile = new SaveFile
+        {
+            payload = payload,
+            checksum = CreateChecksum(payload),
+        };
+
+        string json = JsonUtility.ToJson(saveFile, true);
         File.WriteAllText(SavePath, json);
     }
 
@@ -25,7 +46,15 @@ public class SaveManager
         try
         {
             string json = File.ReadAllText(SavePath);
-            var data = JsonUtility.FromJson<StartInfoSet>(json);
+            SaveFile saveFile = JsonUtility.FromJson<SaveFile>(json);
+            if (saveFile == null || !IsValidChecksum(saveFile))
+            {
+                Debug.LogError("Save data checksum mismatch.");
+                return new StartInfoSet();
+            }
+
+            var data = JsonUtility.FromJson<StartInfoSet>(saveFile.payload);
+            data = Migrate(data);
             return Normalize(data);
         }
         catch (System.Exception e)
@@ -43,6 +72,53 @@ public class SaveManager
         data.inventoryItemSaveInfo ??= new List<InventoryItemSaveInfo>();
         data.productSaveInfo ??= new List<ProductSaveInfo>();
         return data;
+    }
+
+    private static StartInfoSet Migrate(StartInfoSet data)
+    {
+        data = Normalize(data);
+
+        if (data.saveVersion >= CURRENT_SAVE_VERSION)
+        {
+            return data;
+        }
+
+        switch (data.saveVersion)
+        {
+            default:
+                data.saveVersion = CURRENT_SAVE_VERSION;
+                break;
+        }
+
+        return data;
+    }
+
+    private static string CreateChecksum(string payload)
+    {
+        using (SHA256 sha256 = SHA256.Create())
+        {
+            byte[] bytes = Encoding.UTF8.GetBytes((payload ?? string.Empty) + CHECKSUM_SALT);
+            byte[] hash = sha256.ComputeHash(bytes);
+
+            StringBuilder builder = new StringBuilder(hash.Length * 2);
+            foreach (byte value in hash)
+            {
+                builder.Append(value.ToString("x2"));
+            }
+
+            return builder.ToString();
+        }
+    }
+
+    private static bool IsValidChecksum(SaveFile saveFile)
+    {
+        if (string.IsNullOrEmpty(saveFile.payload) || string.IsNullOrEmpty(saveFile.checksum))
+        {
+            return false;
+        }
+
+        string checksum = CreateChecksum(saveFile.payload);
+        return string.Equals(checksum, saveFile.checksum, StringComparison.Ordinal);
     }
 
     private static void SaveList<T>(List<T> saveInfos, Func<StartInfoSet, List<T>> getList, Func<T, int> getId)
