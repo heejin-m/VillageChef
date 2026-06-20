@@ -1,11 +1,20 @@
 using System;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.AddressableAssets;
+using UnityEngine.ResourceManagement.AsyncOperations;
 using UnityEngine.UI;
 
 public class LoginManager : MonoBehaviour
 {
+    #region Inspector
+
+    public Image bg;
     public Image gauge;
+
+    #endregion
+
+    private AsyncOperationHandle<Sprite> _handle;
 
     private void Awake()
     {
@@ -32,6 +41,7 @@ public class LoginManager : MonoBehaviour
         StartCoroutine(GaugeRoutine(minLoadingTime));
 
         WaterfallProcess waterfall = new();
+        waterfall.Add(LoadTitleBg);
         waterfall.Add(GetData);
         waterfall.Add(GetStartInfoSet);
         waterfall.Start(result =>
@@ -76,11 +86,40 @@ public class LoginManager : MonoBehaviour
         try
         {
             await SceneLoadManager.Instance.SingleSceneLoad(eScene.Home);
+
+            if (_handle.IsValid())
+            {
+                _handle.Release();
+            }
         }
         catch (Exception e)
         {
             Debug.LogError(e);
         }
+    }
+
+    private async void LoadTitleBg(Action<bool> onFinished)
+    {
+        if (_handle.IsValid())
+        {
+            _handle.Release();
+        }
+
+        _handle = Addressables.LoadAssetAsync<Sprite>("TitleBg");
+        Sprite sprite = await _handle.Task;
+
+        if (_handle.Status != AsyncOperationStatus.Succeeded || sprite == null)
+        {
+            if (_handle.IsValid())
+            {
+                Addressables.Release(_handle);
+            }
+
+            onFinished?.Invoke(false);
+        }
+
+        bg.sprite = sprite;
+        onFinished?.Invoke(true);
     }
 
     private async void GetData(Action<bool> onFinished)

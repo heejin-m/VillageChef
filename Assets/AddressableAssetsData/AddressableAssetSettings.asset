@@ -15,9 +15,9 @@ MonoBehaviour:
   m_DefaultGroup: 16263a97f2c5a8c44b0826f1f3368869
   m_currentHash:
     serializedVersion: 2
-    Hash: b21a3cf239c14d052a55a42e96d2be93
+    Hash: 00000000000000000000000000000000
   m_OptimizeCatalogSize: 0
-  m_BuildRemoteCatalog: 0
+  m_BuildRemoteCatalog: 1
   m_CatalogRequestsTimeout: 0
   m_DisableCatalogUpdateOnStart: 0
   m_InternalIdNamingMode: 0
@@ -52,10 +52,10 @@ MonoBehaviour:
   m_CheckForContentUpdateRestrictionsOption: 0
   m_MonoScriptBundleCustomNaming: 
   m_RemoteCatalogBuildPath:
-    m_Id: 
+    m_Id: ac22cdb261714a145b4928b3433dfcd5
   m_RemoteCatalogLoadPath:
-    m_Id: 
-  m_ContentStateBuildPathProfileVariableName: 
+    m_Id: 67e9a5128d1e8b44caf50b79f948a654
+  m_ContentStateBuildPathProfileVariableName: <default settings path>
   m_CustomContentStateBuildPath: 
   m_ContentStateBuildPath: 
   m_BuildAddressablesWithPlayerBuild: 0
@@ -64,7 +64,9 @@ MonoBehaviour:
   - {fileID: 11400000, guid: a48bda05293a2a748a59d83640e11558, type: 2}
   - {fileID: 11400000, guid: 8557f682acb4ce54f918c0fedbeaa39e, type: 2}
   - {fileID: 11400000, guid: 8b35b6714c5ee3147a127d299ec06b21, type: 2}
+  - {fileID: 11400000, guid: 401b76e1a9b01cc4381f6c88091c8ba2, type: 2}
   - {fileID: 11400000, guid: a19380146d152bb45be28150c76d1e2e, type: 2}
+  - {fileID: 11400000, guid: 970a2d52a28119743ac96466bcad059e, type: 2}
   - {fileID: 11400000, guid: fe3a194162b37e74682f272fc7602cf7, type: 2}
   - {fileID: 11400000, guid: 30c4f065237eb0b4a8be4cdc3ef6e0ad, type: 2}
   - {fileID: 11400000, guid: 1107ec143fd4f4a48949f5e3413d93d5, type: 2}
@@ -82,7 +84,7 @@ MonoBehaviour:
       - m_Id: 3ffda41d858200844884afd6bf2968e6
         m_Value: '{UnityEngine.AddressableAssets.Addressables.RuntimePath}/[BuildTarget]'
       - m_Id: 67e9a5128d1e8b44caf50b79f948a654
-        m_Value: <undefined>
+        m_Value: 'https://heejin-m.github.io/VillageChefRemoteAssets/Addressables/[BuildTarget]'
       - m_Id: 832ede7de5460b44286006d7acb5185c
         m_Value: '[UnityEditor.EditorUserBuildSettings.activeBuildTarget]'
       - m_Id: ac22cdb261714a145b4928b3433dfcd5
