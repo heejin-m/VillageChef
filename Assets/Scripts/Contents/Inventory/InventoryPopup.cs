@@ -11,6 +11,11 @@ public class InventoryPopup : PopupWindow
 
     #endregion
 
+    /// <summary>
+    /// 풀에 미리 생성할 개수
+    /// </summary>
+    private const int PREVIOUS_MAKE_POOL_CNT = 30;
+
     private eInventoryItemType _currentTab = eInventoryItemType.Ingredient;
     private List<InventoryItemInfo> inventoryItemInfos = new List<InventoryItemInfo>();
 
@@ -23,7 +28,7 @@ public class InventoryPopup : PopupWindow
 
     public override void StartProcess()
     {
-        pool.Create();
+        pool.Create(PREVIOUS_MAKE_POOL_CNT);
 
         base.StartProcess();
 

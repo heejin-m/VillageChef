@@ -20,8 +20,23 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 54a2afe6df833f34394eca41c0963eca
+    m_Address: Assets/AddressableAssets/Prefabs/Popup/SelectSupplymentPopup.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 653c6396b809a214782776082d5208f8
+    m_Address: Assets/AddressableAssets/Prefabs/Popup/FieldSupplyPopup.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 7de79b62cb00c7849a54ac2a1eb733f2
     m_Address: Assets/AddressableAssets/Prefabs/Popup/RecipePopup.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 93c9d9da2e8bcd24b9ed4a93fcc9c6a3
+    m_Address: Assets/AddressableAssets/Prefabs/Popup/OrcharSupplyPopup.prefab
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0

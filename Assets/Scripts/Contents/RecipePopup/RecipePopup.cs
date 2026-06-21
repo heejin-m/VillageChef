@@ -21,6 +21,11 @@ public class RecipePopup : PopupWindow
     #endregion
 
     /// <summary>
+    /// 풀에 미리 생성할 개수
+    /// Recipe 데이터 상의 재료 최대개수와 동일함
+    /// </summary>
+    private const int PREVIOUS_MAKE_POOL_CNT = 10; 
+    /// <summary>
     /// 레시피 데이터
     /// </summary>
     private RecipeData _recipeData = null;
@@ -32,7 +37,7 @@ public class RecipePopup : PopupWindow
 
     public override void Awake()
     {
-        pool.Create();
+        pool.Create(PREVIOUS_MAKE_POOL_CNT);
 
         leftArrow.SetOnClickEvent(OnClickLeftButton);
         rightArrow.SetOnClickEvent(OnClickRightButton);

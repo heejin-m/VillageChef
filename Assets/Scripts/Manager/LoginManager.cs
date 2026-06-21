@@ -142,8 +142,9 @@ public class LoginManager : MonoBehaviour
         ModelCenter.StartInfoSetData = data;
         ModelCenter.Player.Set(data.playerSaveInfo);
         ModelCenter.Recipe.Set(data.recipeSaveInfos);
-        ModelCenter.Inventory.Set(data.inventoryItemSaveInfo);
-        ModelCenter.Product.Set(data.productSaveInfo);
+        ModelCenter.Inventory.Set(data.inventoryItemSaveInfos);
+        ModelCenter.Product.Set(data.productSaveInfos);
+        ModelCenter.Supply.Set(data.ingredientSupplySaveInfos);
 
         onFinished?.Invoke(true);
     }

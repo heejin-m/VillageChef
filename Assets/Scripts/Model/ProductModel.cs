@@ -57,7 +57,7 @@ public class ProductModel : AbstractModel
     {
         if (_productInfosByType.TryGetValue(itemType, out var list))
         {
-            return list;
+            return new List<ProductInfo>(list);
         }
 
         return null;
@@ -72,7 +72,7 @@ public class ProductModel : AbstractModel
     {
         if (_productInfosByCategory.TryGetValue(category, out var list))
         {
-            return list;
+            return new List<ProductInfo>(list);
         }
 
         return null;
@@ -91,7 +91,7 @@ public class ProductModel : AbstractModel
         saveInfo.buyCnt += 1;
 
         SaveManager.Save(saveInfo);
-        this.Set(ModelCenter.StartInfoSetData.productSaveInfo);
+        this.Set(ModelCenter.StartInfoSetData.productSaveInfos);
 
         ModelCenter.Player.UseGold(info.sellPrice);
         ModelCenter.Inventory.AddItem(info.InventoryItemID, info.Amount);

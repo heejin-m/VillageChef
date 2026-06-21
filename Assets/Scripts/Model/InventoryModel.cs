@@ -136,13 +136,13 @@ public class InventoryModel : AbstractModel
     /// <summary>
     /// 아이템 추가
     /// </summary>
-    public void AddItem(int id, int amount)
+    public bool AddItem(int id, int amount)
     {
-        if (amount <= 0) return;
+        if (amount <= 0) return false;
 
         if (!_itemInfoDictByID.TryGetValue(id, out var info))
         {
-            return;
+            return false;
         }
 
         InventoryItemSaveInfo saveInfo = info.SaveInfo;
@@ -151,7 +151,8 @@ public class InventoryModel : AbstractModel
         saveInfo.cnt += amount;
 
         SaveManager.Save(saveInfo);
-        this.Set(ModelCenter.StartInfoSetData.inventoryItemSaveInfo);
+        this.Set(ModelCenter.StartInfoSetData.inventoryItemSaveInfos);
+        return true;
     }
 
     /// <summary>
@@ -169,6 +170,6 @@ public class InventoryModel : AbstractModel
         saveInfo.cnt -= amount;
 
         SaveManager.Save(saveInfo);
-        this.Set(ModelCenter.StartInfoSetData.inventoryItemSaveInfo);
+        this.Set(ModelCenter.StartInfoSetData.inventoryItemSaveInfos);
     }
 }

@@ -31,3 +31,21 @@ MonoBehaviour:
     closeOnDimClick: 0
     destroyOnClose: 0
     sortingOrder: 0
+  - popupType: 3
+    layer: 0
+    useDim: 1
+    closeOnDimClick: 0
+    destroyOnClose: 0
+    sortingOrder: 0
+  - popupType: 4
+    layer: 0
+    useDim: 1
+    closeOnDimClick: 0
+    destroyOnClose: 0
+    sortingOrder: 0
+  - popupType: 6
+    layer: 0
+    useDim: 1
+    closeOnDimClick: 0
+    destroyOnClose: 0
+    sortingOrder: 0

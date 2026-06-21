@@ -17,9 +17,9 @@ public class ObjectPool : MonoBehaviour
         Create();
     }
 
-    public void Create()
+    public void Create(int cnt = 0)
     {
-        int makeCnt = 0;
+        int makeCnt = cnt;
         _pool ??= new List<GameObject>();
 
         int addCnt = makeCnt >= _pool.Count ? makeCnt - _pool.Count : 0;

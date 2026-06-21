@@ -69,8 +69,9 @@ public class SaveManager
         data ??= new StartInfoSet();
         data.playerSaveInfo ??= new PlayerSaveInfo();
         data.recipeSaveInfos ??= new List<RecipeSaveInfo>();
-        data.inventoryItemSaveInfo ??= new List<InventoryItemSaveInfo>();
-        data.productSaveInfo ??= new List<ProductSaveInfo>();
+        data.inventoryItemSaveInfos ??= new List<InventoryItemSaveInfo>();
+        data.productSaveInfos ??= new List<ProductSaveInfo>();
+        data.ingredientSupplySaveInfos ??= new List<IngredientSupplySaveInfo>();
         return data;
     }
 
@@ -173,21 +174,30 @@ public class SaveManager
 
     public static void Save(List<InventoryItemSaveInfo> saveInfos)
     {
-        SaveList(saveInfos, data => data.inventoryItemSaveInfo, info => info.id);
+        SaveList(saveInfos, data => data.inventoryItemSaveInfos, info => info.id);
     }
 
     public static void Save(InventoryItemSaveInfo saveInfo, bool isSave = true)
     {
-        SaveItem(saveInfo, data => data.inventoryItemSaveInfo, info => info.id, isSave);
+        SaveItem(saveInfo, data => data.inventoryItemSaveInfos, info => info.id, isSave);
     }
 
     public static void Save(List<ProductSaveInfo> saveInfos)
     {
-        SaveList(saveInfos, data => data.productSaveInfo, info => info.id);
+        SaveList(saveInfos, data => data.productSaveInfos, info => info.id);
     }
 
+    public static void Save(IngredientSupplySaveInfo saveInfo)
+    {
+        SaveItem(saveInfo, data => data.ingredientSupplySaveInfos, info => info.id);
+    }
+
+    public static void Save(List<IngredientSupplySaveInfo> saveInfos)
+    {
+        SaveList(saveInfos, data => data.ingredientSupplySaveInfos, info => info.id);
+    }
     public static void Save(ProductSaveInfo saveInfo, bool isSave = true)
     {
-        SaveItem(saveInfo, data => data.productSaveInfo, info => info.id, isSave);
+        SaveItem(saveInfo, data => data.productSaveInfos, info => info.id, isSave);
     }
 }

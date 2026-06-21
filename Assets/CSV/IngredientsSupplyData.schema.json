@@ -1,0 +1,13 @@
+{
+  "key": "id",
+  "fields": [
+    { "name": "id", "type": "int" },
+    { "name": "supplyType", "type": "int" },
+    { "name": "inventoryItemId", "type": "int" },
+    { "name": "amount", "type": "int" },
+    { "name": "coolTime", "type": "int" },
+    { "name": "maxStack", "type": "int" },
+    { "name": "unlockRecipeId", "type": "int" },
+    { "name": "description", "type": "string" }
+  ]
+}

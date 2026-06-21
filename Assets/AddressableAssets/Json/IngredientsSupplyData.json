@@ -1,0 +1,64 @@
+﻿{
+    "rows": [
+        {
+            "id": 1,
+            "supplyType": 1,
+            "inventoryItemId": 1,
+            "amount": 1,
+            "coolTime": 60,
+            "maxStack": 5,
+            "unlockRecipeId": 0,
+            "description": "과수원"
+        },
+        {
+            "id": 2,
+            "supplyType": 1,
+            "inventoryItemId": 1,
+            "amount": 1,
+            "coolTime": 60,
+            "maxStack": 5,
+            "unlockRecipeId": 0,
+            "description": "과수원"
+        },
+        {
+            "id": 3,
+            "supplyType": 1,
+            "inventoryItemId": 1,
+            "amount": 1,
+            "coolTime": 60,
+            "maxStack": 5,
+            "unlockRecipeId": 0,
+            "description": "과수원"
+        },
+        {
+            "id": 4,
+            "supplyType": 2,
+            "inventoryItemId": 12,
+            "amount": 1,
+            "coolTime": 30,
+            "maxStack": 5,
+            "unlockRecipeId": 0,
+            "description": "밭"
+        },
+        {
+            "id": 5,
+            "supplyType": 2,
+            "inventoryItemId": 17,
+            "amount": 2,
+            "coolTime": 90,
+            "maxStack": 10,
+            "unlockRecipeId": 0,
+            "description": "밭"
+        },
+        {
+            "id": 6,
+            "supplyType": 2,
+            "inventoryItemId": 28,
+            "amount": 1,
+            "coolTime": 100,
+            "maxStack": 5,
+            "unlockRecipeId": 0,
+            "description": "밭"
+        }
+    ]
+}

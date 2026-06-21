@@ -8,6 +8,7 @@ using UnityEngine.ResourceManagement.AsyncOperations;
 public class PopupManager : SingletonBehaviour<PopupManager>
 {
     [SerializeField] private Transform popupRoot;
+    [SerializeField] private int popupSortingOrderStep = 10;
 
     /// <summary>
     /// 팝업 정책 관리용 SO
@@ -34,6 +35,7 @@ public class PopupManager : SingletonBehaviour<PopupManager>
         public ePopup PopupType;
         public PopupWindow Popup;
         public PopupConfigData Config;
+        public Canvas Canvas;
     }
 
     /// <summary>
@@ -142,6 +144,7 @@ public class PopupManager : SingletonBehaviour<PopupManager>
             return popup;
         }
 
+        ApplyNextSortingOrder(openedPopup);
         popup.ApplyConfig(openedPopup.Config, () => ClosePopup(openedPopup));
         await popup.Open();
 
@@ -236,6 +239,7 @@ public class PopupManager : SingletonBehaviour<PopupManager>
         }
 
         openedPopup.Popup.Close();
+        ResetSortingOrder(openedPopup);
 
         if (openedPopup.Config.destroyOnClose)
         {
@@ -254,6 +258,7 @@ public class PopupManager : SingletonBehaviour<PopupManager>
         {
             if (openedPopup?.Popup != null)
             {
+                ResetSortingOrder(openedPopup);
                 Destroy(openedPopup.Popup.gameObject);
             }
         }
@@ -262,6 +267,60 @@ public class PopupManager : SingletonBehaviour<PopupManager>
         _popupStack.Clear();
 
         ReleaseCache();
+    }
+
+    private void ApplyNextSortingOrder(OpenedPopup openedPopup)
+    {
+        if (openedPopup == null || openedPopup.Popup == null)
+            return;
+
+        Canvas canvas = GetOrCreateCanvas(openedPopup);
+        canvas.overrideSorting = true;
+        canvas.sortingOrder = GetMaxOpenedSortingOrder() + popupSortingOrderStep;
+    }
+
+    private void ResetSortingOrder(OpenedPopup openedPopup)
+    {
+        if (openedPopup == null || openedPopup.Popup == null)
+            return;
+
+        Canvas canvas = GetOrCreateCanvas(openedPopup);
+        canvas.overrideSorting = true;
+        canvas.sortingOrder = 0;
+    }
+
+    private Canvas GetOrCreateCanvas(OpenedPopup openedPopup)
+    {
+        if (openedPopup.Canvas != null)
+            return openedPopup.Canvas;
+
+        Canvas canvas = openedPopup.Popup.GetComponent<Canvas>();
+        if (canvas == null)
+        {
+            canvas = openedPopup.Popup.gameObject.AddComponent<Canvas>();
+        }
+
+        openedPopup.Canvas = canvas;
+        return canvas;
+    }
+
+    private int GetMaxOpenedSortingOrder()
+    {
+        int maxSortingOrder = 0;
+
+        foreach (var openedPopup in _openedPopups.Values)
+        {
+            if (openedPopup == null || openedPopup.Popup == null || !openedPopup.Popup.IsOpen)
+                continue;
+
+            Canvas canvas = openedPopup.Canvas != null ? openedPopup.Canvas : openedPopup.Popup.GetComponent<Canvas>();
+            if (canvas == null)
+                continue;
+
+            maxSortingOrder = Mathf.Max(maxSortingOrder, canvas.sortingOrder);
+        }
+
+        return maxSortingOrder;
     }
 
     /// <summary>
