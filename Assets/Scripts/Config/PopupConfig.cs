@@ -76,7 +76,6 @@ public class PopupConfigData
     public bool useDim;
     public bool closeOnDimClick;
     public bool destroyOnClose;
-    public int sortingOrder;
 
     public static PopupConfigData CreateDefault(ePopup popupType)
     {

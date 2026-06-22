@@ -40,6 +40,11 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b0b91f7d566009847ae65d65821b334e
+    m_Address: Assets/AddressableAssets/Prefabs/Popup/CookingPopup.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: c2bd589b5e61c564fa737a952dccf2ba
     m_Address: Assets/AddressableAssets/Prefabs/Popup/ShopPopup.prefab
     m_ReadOnly: 0

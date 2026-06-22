@@ -16,4 +16,6 @@ public enum ePopup
     PopupParents,
     [Description("Assets/AddressableAssets/Prefabs/Popup/SelectSupplymentPopup.prefab")]
     SelectSupplymentPopup,
+    [Description("Assets/AddressableAssets/Prefabs/Popup/CookingPopup.prefab")]
+    CookingPopup,
 }

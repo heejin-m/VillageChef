@@ -22,13 +22,13 @@ MonoBehaviour:
   - popupType: 1
     layer: 0
     useDim: 1
-    closeOnDimClick: 0
+    closeOnDimClick: 1
     destroyOnClose: 0
     sortingOrder: 0
   - popupType: 2
     layer: 0
     useDim: 1
-    closeOnDimClick: 0
+    closeOnDimClick: 1
     destroyOnClose: 0
     sortingOrder: 0
   - popupType: 3
@@ -44,6 +44,12 @@ MonoBehaviour:
     destroyOnClose: 0
     sortingOrder: 0
   - popupType: 6
+    layer: 0
+    useDim: 1
+    closeOnDimClick: 1
+    destroyOnClose: 0
+    sortingOrder: 0
+  - popupType: 7
     layer: 0
     useDim: 1
     closeOnDimClick: 0
