@@ -65,6 +65,11 @@
             "name": "ingredientId10",
             "type": "byte",
             "summary": "재료 10 ID"
+        },
+        {
+          "name": "cookTimeSec",
+          "type": "int",
+          "summary": "요리에 걸리는 시간"
         }
     ]
 }

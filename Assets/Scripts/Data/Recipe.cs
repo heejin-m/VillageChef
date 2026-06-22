@@ -55,4 +55,8 @@ public partial class Recipe
     /// 재료 10 ID
     /// </summary>
     public byte ingredientId10;
+    /// <summary>
+    /// 요리에 걸리는 시간
+    /// </summary>
+    public int cookTimeSec;
 }
