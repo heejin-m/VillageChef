@@ -1,7 +1,7 @@
 id,dish_inventoryItemId,recipe_inventoryItemId,ingredientId1,ingredientId2,ingredientId3,ingredientId4,ingredientId5,ingredientId6,ingredientId7,ingredientId8,ingredientId9,ingredientId10,cookTimeSec
 1,48,91,1,6,0,0,0,0,0,0,0,0,5
 2,49,92,46,19,0,0,0,0,0,0,0,0,5
-3,50,93,45,13,19,5,0,0,0,0,0,0,10
+26,73,116,5,7,30,31,32,43,0,0,0,0,30
 4,51,94,8,0,0,0,0,0,0,0,0,0,10
 5,52,95,45,5,13,19,0,0,0,0,0,0,10
 6,53,96,5,45,19,0,0,0,0,0,0,0,10
@@ -24,7 +24,7 @@ id,dish_inventoryItemId,recipe_inventoryItemId,ingredientId1,ingredientId2,ingre
 23,70,113,1,5,13,19,0,0,0,0,0,0,30
 24,71,114,5,13,19,22,0,0,0,0,0,0,30
 25,72,115,5,13,19,0,0,0,0,0,0,0,30
-26,73,116,5,7,30,31,32,43,0,0,0,0,30
+3,50,93,45,13,19,5,0,0,0,0,0,0,10
 27,74,117,46,0,0,0,0,0,0,0,0,0,30
 28,75,118,35,36,0,0,0,0,0,0,0,0,30
 29,76,119,5,0,0,0,0,0,0,0,0,0,30

@@ -33,6 +33,12 @@ public class CookingPopup : PopupWindow
         UpdateUI();
     }
 
+    public override void CloseProcess()
+    {
+        base.CloseProcess();
+        pool.HideAll();
+    }
+
     public void UpdateUI()
     {
         var list = ModelCenter.Recipe.GetHaveRecipeList();

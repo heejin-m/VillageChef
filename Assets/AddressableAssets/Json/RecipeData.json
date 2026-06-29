@@ -33,20 +33,20 @@
             "cookTimeSec": 5
         },
         {
-            "id": 3,
-            "dish_inventoryItemId": 50,
-            "recipe_inventoryItemId": 93,
-            "ingredientId1": 45,
-            "ingredientId2": 13,
-            "ingredientId3": 19,
-            "ingredientId4": 5,
-            "ingredientId5": 0,
-            "ingredientId6": 0,
+            "id": 26,
+            "dish_inventoryItemId": 73,
+            "recipe_inventoryItemId": 116,
+            "ingredientId1": 5,
+            "ingredientId2": 7,
+            "ingredientId3": 30,
+            "ingredientId4": 31,
+            "ingredientId5": 32,
+            "ingredientId6": 43,
             "ingredientId7": 0,
             "ingredientId8": 0,
             "ingredientId9": 0,
             "ingredientId10": 0,
-            "cookTimeSec": 10
+            "cookTimeSec": 30
         },
         {
             "id": 4,
@@ -401,20 +401,20 @@
             "cookTimeSec": 30
         },
         {
-            "id": 26,
-            "dish_inventoryItemId": 73,
-            "recipe_inventoryItemId": 116,
-            "ingredientId1": 5,
-            "ingredientId2": 7,
-            "ingredientId3": 30,
-            "ingredientId4": 31,
-            "ingredientId5": 32,
-            "ingredientId6": 43,
+            "id": 3,
+            "dish_inventoryItemId": 50,
+            "recipe_inventoryItemId": 93,
+            "ingredientId1": 45,
+            "ingredientId2": 13,
+            "ingredientId3": 19,
+            "ingredientId4": 5,
+            "ingredientId5": 0,
+            "ingredientId6": 0,
             "ingredientId7": 0,
             "ingredientId8": 0,
             "ingredientId9": 0,
             "ingredientId10": 0,
-            "cookTimeSec": 30
+            "cookTimeSec": 10
         },
         {
             "id": 27,

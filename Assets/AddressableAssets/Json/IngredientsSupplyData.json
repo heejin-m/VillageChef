@@ -5,7 +5,7 @@
             "supplyType": 1,
             "inventoryItemId": 1,
             "amount": 1,
-            "coolTime": 60,
+            "coolTime": 10,
             "maxStack": 5,
             "unlockRecipeId": 0,
             "description": "과수원"
@@ -15,7 +15,7 @@
             "supplyType": 1,
             "inventoryItemId": 1,
             "amount": 1,
-            "coolTime": 60,
+            "coolTime": 10,
             "maxStack": 5,
             "unlockRecipeId": 0,
             "description": "과수원"
@@ -25,7 +25,7 @@
             "supplyType": 1,
             "inventoryItemId": 1,
             "amount": 1,
-            "coolTime": 60,
+            "coolTime": 10,
             "maxStack": 5,
             "unlockRecipeId": 0,
             "description": "과수원"
@@ -35,7 +35,7 @@
             "supplyType": 2,
             "inventoryItemId": 12,
             "amount": 1,
-            "coolTime": 30,
+            "coolTime": 10,
             "maxStack": 5,
             "unlockRecipeId": 0,
             "description": "밭"
@@ -45,7 +45,7 @@
             "supplyType": 2,
             "inventoryItemId": 17,
             "amount": 2,
-            "coolTime": 90,
+            "coolTime": 10,
             "maxStack": 10,
             "unlockRecipeId": 0,
             "description": "밭"
@@ -55,7 +55,27 @@
             "supplyType": 2,
             "inventoryItemId": 28,
             "amount": 1,
-            "coolTime": 100,
+            "coolTime": 10,
+            "maxStack": 5,
+            "unlockRecipeId": 0,
+            "description": "밭"
+        },
+        {
+            "id": 7,
+            "supplyType": 2,
+            "inventoryItemId": 6,
+            "amount": 1,
+            "coolTime": 10,
+            "maxStack": 5,
+            "unlockRecipeId": 0,
+            "description": "밭"
+        },
+        {
+            "id": 8,
+            "supplyType": 2,
+            "inventoryItemId": 43,
+            "amount": 1,
+            "coolTime": 10,
             "maxStack": 5,
             "unlockRecipeId": 0,
             "description": "밭"

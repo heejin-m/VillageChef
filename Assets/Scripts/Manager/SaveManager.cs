@@ -12,6 +12,8 @@ public class SaveManager
     private const string CHECKSUM_SALT = "VillageChef_SaveData";
 
     private static string SavePath => Path.Combine(Application.persistentDataPath, STARTINFO_FILE_NAME);
+    public static string SaveFilePath => SavePath;
+    public static bool HasSaveFile => File.Exists(SavePath);
 
     [Serializable]
     private class SaveFile
@@ -61,6 +63,25 @@ public class SaveManager
         {
             Debug.LogError($"Failed to load save data: {e}");
             return new StartInfoSet();
+        }
+    }
+
+    public static bool DeleteSaveFile()
+    {
+        if (!File.Exists(SavePath))
+        {
+            return false;
+        }
+
+        try
+        {
+            File.Delete(SavePath);
+            return true;
+        }
+        catch (Exception exception)
+        {
+            Debug.LogError($"Failed to delete save data: {exception}");
+            return false;
         }
     }
 

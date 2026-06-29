@@ -148,7 +148,7 @@ public class ShopBuyPage : MonoBehaviour
 
         Unselect();
         SetData();
-        SetScrollview(true);
+        SetScrollview(false);
         UpdateUI();
     }
 
