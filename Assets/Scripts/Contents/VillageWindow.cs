@@ -8,6 +8,7 @@ public class VillageWindow : FrameWindow
     [SerializeField] private Transform playerSpawnPoint;
     [SerializeField] private CollisionEventTrigger2D doorCollider;
     [SerializeField] private CollisionEventTrigger2D supplyCollider;
+    [SerializeField] private CollisionEventTrigger2D homeCollider;
 
     #endregion
 
@@ -31,12 +32,14 @@ public class VillageWindow : FrameWindow
 
         doorCollider.triggerEntered += OnDoorEnter;
         supplyCollider.triggerEntered += OnSupplyEnter;
+        homeCollider.triggerEntered += OnHomeEnter;
     }
 
     public override void CloseProcess()
     {
         doorCollider.triggerExited -= OnDoorEnter;
         supplyCollider.triggerExited -= OnSupplyEnter;
+        homeCollider.triggerExited -= OnHomeEnter;
 
         base.CloseProcess();
     }
@@ -61,6 +64,16 @@ public class VillageWindow : FrameWindow
         }
 
         _ = await PopupManager.Instance.OpenPopup<SelectSupplymentPopup>(ePopup.SelectSupplymentPopup);
+    }
+
+    private async void OnHomeEnter(Collider2D other)
+    {
+        if (!other.gameObject.CompareTag("Player"))
+        {
+            return;
+        }
+
+        await SceneLoadManager.Instance.SingleSceneLoad(eScene.Home);
     }
 
     #endregion

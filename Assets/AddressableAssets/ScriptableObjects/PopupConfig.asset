@@ -18,40 +18,33 @@ MonoBehaviour:
     useDim: 1
     closeOnDimClick: 1
     destroyOnClose: 0
-    sortingOrder: 0
   - popupType: 1
     layer: 0
     useDim: 1
     closeOnDimClick: 1
     destroyOnClose: 0
-    sortingOrder: 0
   - popupType: 2
     layer: 0
     useDim: 1
     closeOnDimClick: 1
     destroyOnClose: 0
-    sortingOrder: 0
   - popupType: 3
     layer: 0
-    useDim: 1
+    useDim: 0
     closeOnDimClick: 0
     destroyOnClose: 0
-    sortingOrder: 0
   - popupType: 4
     layer: 0
-    useDim: 1
+    useDim: 0
     closeOnDimClick: 0
     destroyOnClose: 0
-    sortingOrder: 0
   - popupType: 6
     layer: 0
     useDim: 1
     closeOnDimClick: 1
     destroyOnClose: 0
-    sortingOrder: 0
   - popupType: 7
     layer: 0
-    useDim: 1
+    useDim: 0
     closeOnDimClick: 0
     destroyOnClose: 0
-    sortingOrder: 0

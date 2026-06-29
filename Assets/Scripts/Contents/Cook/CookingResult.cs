@@ -1,17 +1,17 @@
 public class CookingResult
 {
-    private bool _isSuccess;
-    private int _resultItemId;
-    private int _resultAmount;
-    private string _failReason;
+    public bool IsSuccess { get; private set; }
+    public int ResultItemId { get; private set; }
+    public int ResultAmount { get; private set; }
+    public string FailReason { get; private set; }
 
     public static CookingResult Success(int itemId, int amount)
     {
         return new CookingResult
         {
-            _isSuccess = true,
-            _resultItemId = itemId,
-            _resultAmount = amount
+            IsSuccess = true,
+            ResultItemId = itemId,
+            ResultAmount = amount
         };
     }
 
@@ -19,8 +19,8 @@ public class CookingResult
     {
         return new CookingResult
         {
-            _isSuccess = false,
-            _failReason = reason
+            IsSuccess = false,
+            FailReason = reason
         };
     }
 }

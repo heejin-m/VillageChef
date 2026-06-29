@@ -95,5 +95,10 @@ public class ProductModel : AbstractModel
 
         ModelCenter.Player.UseGold(info.sellPrice);
         ModelCenter.Inventory.AddItem(info.InventoryItemID, info.Amount);
+        if (info.InventoryItem.ItemType == eInventoryItemType.Recipe)
+        {
+            var recipeInfo = ModelCenter.Recipe.GetRecipeByInventoryId(info.InventoryItemID);
+            ModelCenter.Recipe.AddRecipe(recipeInfo.Id);
+        }
     }
 }

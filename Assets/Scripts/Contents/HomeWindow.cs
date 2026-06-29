@@ -9,6 +9,7 @@ public class HomeWindow : FrameWindow
     [SerializeField] private CollisionEventTrigger2D recipeBookCollider;
     [SerializeField] private CollisionEventTrigger2D bedCollider;
     [SerializeField] private CollisionEventTrigger2D doorCollider;
+    [SerializeField] private CollisionEventTrigger2D cookCollider;
 
     #endregion
 
@@ -34,6 +35,9 @@ public class HomeWindow : FrameWindow
         bedCollider.triggerEntered += OnBedEnter;
         bedCollider.triggerExited += OnBedExit;
         doorCollider.triggerEntered += OnDoorEnter;
+
+        cookCollider.collisionEntered += OnCookEnter;
+        cookCollider.collisionExited += OnCookExit;
     }
 
     public override void CloseProcess()
@@ -43,6 +47,9 @@ public class HomeWindow : FrameWindow
         bedCollider.triggerEntered -= OnBedEnter;
         bedCollider.triggerExited -= OnBedExit;
         doorCollider.triggerExited -= OnDoorEnter;
+
+        cookCollider.collisionEntered -= OnCookEnter;
+        cookCollider.collisionExited -= OnCookExit;
 
         base.CloseProcess();
     }
@@ -99,6 +106,26 @@ public class HomeWindow : FrameWindow
         }
 
         await SceneLoadManager.Instance.SingleSceneLoad(eScene.Village);
+    }
+
+    private async void OnCookEnter(Collision2D other)
+    {
+        if (!other.gameObject.CompareTag("Player"))
+        {
+            return;
+        }
+
+        var popup = await PopupManager.Instance.OpenPopup<CookingPopup>(ePopup.CookingPopup);
+    }
+
+    private async void OnCookExit(Collision2D other)
+    {
+        if (!other.gameObject.CompareTag("Player"))
+        {
+            return;
+        }
+
+        PopupManager.Instance.ClosePopup();
     }
 
     #endregion

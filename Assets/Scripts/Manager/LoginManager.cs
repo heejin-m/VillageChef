@@ -116,6 +116,7 @@ public class LoginManager : MonoBehaviour
             }
 
             onFinished?.Invoke(false);
+            return;
         }
 
         bg.sprite = sprite;

@@ -3,7 +3,7 @@ public class RecipeInfo
     /// <summary>
     /// ID
     /// </summary>
-    public int ID { get; private set; }
+    public int Id { get; private set; }
     /// <summary>
     /// 저장 정보
     /// </summary>
@@ -23,7 +23,7 @@ public class RecipeInfo
     {
         var data = DataManager.Instance.GetData<RecipeData>();
 
-        this.ID = id;
+        this.Id = id;
         this.Recipe = data.GetData(id);
         this.SaveInfo = info;
     }
