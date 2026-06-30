@@ -79,7 +79,7 @@ GitHub Pages를 활용하여 Remote Asset 서버도 직접 구성했습니다.
 
 * Object Pool 적용
 * ScrollView 재사용
-* Dictionary Lookup
+* Dictionary
 * Addressables 메모리 관리
 * 불필요한 Instantiate 최소화
 
