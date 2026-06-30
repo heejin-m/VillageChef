@@ -43,16 +43,6 @@ Village Chef는 플레이어가 재료를 수집하고 요리를 제작하며 �
 * Stack 구조를 이용한 팝업 관리
 * 새로운 팝업 추가 시 최소한의 수정만으로 확장 가능
 
-## 요리 시스템 (Command Pattern)
-
-요리 제작 과정을 Command Pattern으로 구현했습니다.
-
-* 재료 소비
-* 결과 아이템 지급
-* 다양한 요리 동작을 독립적인 Command로 분리
-
-이를 통해 새로운 요리를 추가하거나 기존 기능을 수정할 때 다른 코드에 영향을 최소화하도록 설계했습니다.
-
 ## 재료 수급 시스템 (Strategy Pattern)
 
 재료 획득 방식을 Strategy Pattern으로 분리했습니다.
@@ -70,10 +60,6 @@ Village Chef는 플레이어가 재료를 수집하고 요리를 제작하며 �
 * 리소스 비동기 로드
 * Remote Addressables 적용
 * 메모리 해제(Addressables.Release)
-* 다운로드 용량 확인
-* 캐싱 동작 확인
-
-GitHub Pages를 활용하여 Remote Asset 서버도 직접 구성했습니다.
 
 ## 최적화
 
